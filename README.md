@@ -10,7 +10,7 @@
 
 <div align= "center">
 
-[![Twitter Badge](https://img.shields.io/badge/-@devwithjay-1ca0f1?style=social&labelColor=red&logo=x&logoColor=black&link=https://twitter.com/devwithjay)](https://twitter.com/devwithjay)&nbsp;&nbsp;[![Linkedin Badge](https://img.shields.io/badge/@devwithjay-0e76a8)](https://www.linkedin.com/in/devwithjay/)&nbsp;&nbsp;[![Mail Badge](https://img.shields.io/badge/-hello@devwithjay.com-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=pink)](mailto:hello@devwithjay.com)&nbsp;&nbsp;[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+[![Twitter Badge](https://img.shields.io/badge/-@devwithjay-1ca0f1?style=social&labelColor=red&logo=x&logoColor=black&link=https://twitter.com/devwithjay)](https://twitter.com/devwithjay)&nbsp;&nbsp;[![Linkedin Badge](https://img.shields.io/badge/@devwithjay-0e76a8)](https://www.linkedin.com/in/devwithjay/)&nbsp;&nbsp;[![Mail Badge](https://img.shields.io/badge/-hello@devwithjay.com-c0392b?style=flat&labelColor=c0392b&logo=gmail&logoColor=pink)](mailto:hello@devwithjay.com)&nbsp;&nbsp;[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)&nbsp;&nbsp;[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 </div>
 
@@ -96,3 +96,9 @@ ChaiCode is an all-in-one platform that brings together the best coding resource
     ```
 
     Visit &nbsp;[http://localhost:3000](http://localhost:3000)&nbsp; to access your app.
+
+<br>
+
+## 🪪&nbsp;&nbsp; Licensing Information
+
+This project is licensed under the [MIT License](./LICENSE). Feel free to learn, add upon, and share!
