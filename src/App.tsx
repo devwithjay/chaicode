@@ -1,9 +1,10 @@
 import './App.css';
+import Navbar from './components/navbar';
 
 function App() {
   return (
     <>
-      <h1 className="mt-10 text-center text-7xl text-[#FE7743]">ChaiCode</h1>
+      <Navbar />
     </>
   );
 }
