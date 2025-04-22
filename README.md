@@ -99,6 +99,13 @@ ChaiCode is an all-in-one platform that brings together the best coding resource
 
 <br>
 
+## Contributing
+
+Contributions are always welcome!
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for ways to get started.
+
+
 ## 🪪&nbsp;&nbsp; Licensing Information
 
 This project is licensed under the [MIT License](./LICENSE). Feel free to learn, add upon, and share!
