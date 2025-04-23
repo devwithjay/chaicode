@@ -1,1 +1,22 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --text-primary: #1B1D22;
+  --text-secondary: #202020;
+  --text-brand: #FE7743;
+  --text-brand-hover: #ff5f1f;
+  --surface-primary: #ffffff;
+  --surface-brand: #fb8c2b;  
+  --surface-brand-hover: #f78018;
+}
+
+:root.dark {
+  --text-primary: #FAFBFC;
+  --text-secondary: #EFEFEF;
+  --text-brand: #ff9b74;
+  --text-brand-hover: #ff7749;
+  --surface-primary: #09090B;
+  --surface-brand: #FE9332;
+  --surface-brand-hover: #f68922;
+}
