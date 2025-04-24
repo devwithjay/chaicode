@@ -6,7 +6,7 @@ type Navlinks = {
 export const navlinks: Navlinks = [
   {
     title: 'Cohorts',
-    link: 'https://www.chaicode.com/learn',
+    link: 'https://courses.chaicode.com/learn',
   },
   {
     title: 'Udemy',
