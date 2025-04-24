@@ -1,22 +1,25 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --text-primary: #1B1D22;
-  --text-secondary: #202020;
-  --text-brand: #FE7743;
-  --text-brand-hover: #ff5f1f;
+  --text-primary: #1b1d22;
+  --text-secondary: #232323;
+  --text-brand: #fb8c2b;
+  --text-brand-hover: #f78018;
   --surface-primary: #ffffff;
-  --surface-brand: #fb8c2b;  
+  --surface-brand: #fb8c2b;
+  --surface-brand-secondary: #fff1e3;
   --surface-brand-hover: #f78018;
+  --border-primary: #f8c6ae;
 }
 
 :root.dark {
-  --text-primary: #FAFBFC;
-  --text-secondary: #EFEFEF;
-  --text-brand: #ff9b74;
-  --text-brand-hover: #ff7749;
-  --surface-primary: #09090B;
-  --surface-brand: #FE9332;
+  --text-primary: #fafbfc;
+  --text-secondary: #d9d9d9;
+  --text-brand: #fb8c2b;
+  --text-brand-hover: #f78018;
+  --surface-primary: #09090b;
+  --surface-brand: #fe9332;
   --surface-brand-hover: #f68922;
+  --border-primary: #946c5c;
 }

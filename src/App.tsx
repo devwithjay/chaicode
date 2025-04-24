@@ -1,11 +1,13 @@
-import './App.css';
-
+import Hero from '@/components/hero';
 import Navbar from '@/components/navbar';
+
+import './App.css';
 
 function App() {
   return (
-    <main className="bg-[var(--surface-primary)] min-h-screen">
+    <main className="min-h-screen bg-[var(--surface-primary)]">
       <Navbar />
+      <Hero />
     </main>
   );
 }

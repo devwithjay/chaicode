@@ -46,109 +46,140 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 md:px-8 md:py-6 lg:px-12">
-      <div className="flex cursor-pointer items-center space-x-2">
-        <a href="/" className="flex items-center gap-0.5">
-          <ChaiLogo />
-          <ChaiCodeText />
-        </a>
-      </div>
+    <>
+      <nav className="sticky top-0 z-50 flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 backdrop-blur-2xl md:px-8 md:py-6 lg:px-12">
+        <div className="flex cursor-pointer items-center space-x-2">
+          <a href="/" className="flex items-center gap-0.5">
+            <ChaiLogo />
+            <ChaiCodeText />
+          </a>
+        </div>
 
-      <ul className="hidden items-center space-x-4 text-base text-[var(--text-secondary)] md:flex lg:space-x-8 lg:text-lg">
-        {navlinks.map((item, index) => (
-          <li key={index}>
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 transition-transform hover:scale-[1.03]"
-            >
-              {getIconForNavItem(item, index)}
-              {item.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-
-      <div className="flex items-center md:gap-2 lg:gap-4">
-        <ThemeToggler />
-        <a
-          href="https://courses.chaicode.com/learn/account/signin"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:block"
-        >
-          <button className="cursor-pointer rounded-lg bg-[var(--surface-brand)] px-3 py-1.5 text-sm font-medium text-[var(--text-primary)] transition-transform duration-200 hover:scale-105 hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-2 md:px-5 md:text-base">
-            Login
-          </button>
-        </a>
-
-        <button
-          className="p-1 text-[var(--text-secondary)] md:hidden"
-          onClick={toggleMobileMenu}
-          aria-label="Toggle mobile menu"
-          aria-expanded={mobileMenuOpen}
-        >
-          <AnimatePresence mode="wait" initial={false}>
-            {mobileMenuOpen ? (
-              <motion.div
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
+        <ul className="hidden items-center space-x-4 text-base text-[var(--text-secondary)] md:flex lg:space-x-8 lg:text-lg">
+          {navlinks.map((item, index) => (
+            <li key={index}>
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5"
               >
-                <IoCloseOutline size={24} />
-              </motion.div>
-            ) : (
-              <motion.div
-                key="menu"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <IoMenuOutline size={24} />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </button>
-      </div>
+                {getIconForNavItem(item, index)}
+                {item.title}
+              </a>
+            </li>
+          ))}
+        </ul>
 
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            className="fixed inset-0 top-16 z-50 flex flex-col bg-[var(--surface-primary)] px-6 py-4 md:hidden"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{
-              duration: 0.25,
-              ease: 'easeInOut',
-            }}
+        <div className="flex items-center md:gap-2 lg:gap-4">
+          <ThemeToggler />
+          <a
+            href="https://courses.chaicode.com/learn/account/signin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:block"
           >
-            <motion.ul
-              className="mt-4 flex flex-col space-y-4 text-lg text-[var(--text-secondary)]"
-              initial="closed"
-              animate="open"
-              exit="closed"
-              variants={{
-                open: {
-                  transition: { staggerChildren: 0.07, delayChildren: 0.1 },
-                },
-                closed: {
-                  transition: { staggerChildren: 0.05, staggerDirection: -1 },
-                },
+            <button className="cursor-pointer rounded-lg bg-[var(--surface-brand)] px-3 py-1.5 text-sm font-medium text-white md:px-5 md:text-base">
+              Login
+            </button>
+          </a>
+
+          <button
+            className="p-1 text-[var(--text-secondary)] md:hidden"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+            aria-expanded={mobileMenuOpen}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {mobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <IoCloseOutline size={24} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <IoMenuOutline size={24} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
+        </div>
+
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              className="fixed inset-0 top-16 z-50 flex flex-col bg-[var(--surface-primary)] px-6 py-4 md:hidden"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{
+                duration: 0.25,
+                ease: 'easeInOut',
               }}
             >
-              {navlinks.map((item, index) => (
+              <motion.ul
+                className="mt-4 flex flex-col space-y-4 bg-[var(--surface-primary)] text-lg text-[var(--text-secondary)]"
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={{
+                  open: {
+                    transition: { staggerChildren: 0.07, delayChildren: 0.1 },
+                  },
+                  closed: {
+                    transition: {
+                      staggerChildren: 0.05,
+                      staggerDirection: -1,
+                    },
+                  },
+                }}
+              >
+                {navlinks.map((item, index) => (
+                  <motion.li
+                    key={index}
+                    variants={{
+                      open: {
+                        opacity: 1,
+                        y: 0,
+                        transition: { duration: 0.2 },
+                      },
+                      closed: {
+                        opacity: 0,
+                        y: -20,
+                        transition: { duration: 0.2 },
+                      },
+                    }}
+                  >
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 py-2 transition-transform hover:translate-x-1"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {getIconForNavItem(item, index)}
+                      {item.title}
+                    </a>
+                  </motion.li>
+                ))}
                 <motion.li
-                  key={index}
+                  className="pt-4"
                   variants={{
                     open: {
                       opacity: 1,
                       y: 0,
-                      transition: { duration: 0.3 },
+                      transition: { duration: 0.3, delay: 0.3 },
                     },
                     closed: {
                       opacity: 0,
@@ -158,49 +189,34 @@ const Navbar = () => {
                   }}
                 >
                   <a
-                    href={item.link}
+                    href="https://courses.chaicode.com/learn/account/signin"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 py-2 transition-transform hover:translate-x-1"
+                    className="block w-full"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {getIconForNavItem(item, index)}
-                    {item.title}
+                    <button className="w-full cursor-pointer rounded-lg bg-[var(--surface-brand)] px-5 py-3 text-base font-medium text-white hover:bg-[var(--surface-brand-hover)]">
+                      Login
+                    </button>
                   </a>
                 </motion.li>
-              ))}
-              <motion.li
-                className="pt-4"
-                variants={{
-                  open: {
-                    opacity: 1,
-                    y: 0,
-                    transition: { duration: 0.3, delay: 0.3 },
-                  },
-                  closed: {
-                    opacity: 0,
-                    y: -20,
-                    transition: { duration: 0.3 },
-                  },
-                }}
-              >
-                <a
-                  href="https://courses.chaicode.com/learn/account/signin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block w-full"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <button className="w-full cursor-pointer rounded-lg bg-[var(--surface-brand)] px-5 py-3 text-base font-medium text-[var(--text-primary)] hover:bg-[var(--surface-brand-hover)]">
-                    Login
-                  </button>
-                </a>
-              </motion.li>
-            </motion.ul>
-          </motion.div>
+              </motion.ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div
+            className="bg-background/60 fixed inset-x-0 top-[64px] bottom-0 z-40 backdrop-blur-sm md:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+          />
         )}
       </AnimatePresence>
-    </nav>
+    </>
   );
 };
 
