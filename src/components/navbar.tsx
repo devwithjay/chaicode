@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 backdrop-blur-2xl md:px-8 md:py-6 lg:px-12">
+      <nav className="sticky top-0 z-50 flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 md:px-8 md:py-6 lg:px-12">
         <div className="flex cursor-pointer items-center space-x-2">
           <a href="/" className="flex items-center gap-0.5">
             <ChaiLogo />
@@ -195,7 +195,7 @@ const Navbar = () => {
                     className="block w-full"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    <button className="w-full cursor-pointer rounded-lg bg-[var(--surface-brand)] px-5 py-3 text-base font-medium text-white hover:bg-[var(--surface-brand-hover)]">
+                    <button className="mb-4 w-full cursor-pointer rounded-lg bg-[var(--surface-brand)] px-5 py-3 text-base font-medium text-white hover:bg-[var(--surface-brand-hover)]">
                       Login
                     </button>
                   </a>
