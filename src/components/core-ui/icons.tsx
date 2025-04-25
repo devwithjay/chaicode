@@ -13,7 +13,7 @@ export const ChaiLogo = () => (
     <svg
       viewBox="0 0 2000 2000"
       xmlns="http://www.w3.org/2000/svg"
-      className="fill-[#B0B0B0] h-7 md:h-10 stroke-[#B0B0B0] dark:fill-[#ffffff] dark:stroke-[#ffffff]"
+      className="fill-[#B0B0B0] -ml-0.5 md:-ml-2 h-7 md:h-10 stroke-[#B0B0B0] dark:fill-[#ffffff] dark:stroke-[#ffffff]"
     >
       <motion.path
         d="M1507.79 760.427c-.65 63.101-207.62 111.366-468.81 108.688-261.194-2.678-465.548-45.025-464.901-108.125s206.05-123.061 467.241-120.383 467.11 56.719 466.47 119.82Z"

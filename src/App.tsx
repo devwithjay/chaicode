@@ -1,14 +1,20 @@
-import Hero from '@/components/hero';
-import Navbar from '@/components/navbar';
+import Testimonials from '@/components/core-ui/testimonials';
+import Hero from '@/components/core-ui/hero';
+import Navbar from '@/components/core-ui/navbar';
 
 import './App.css';
 
 function App() {
   return (
-    <main className="min-h-screen bg-[var(--surface-primary)]">
-      <Navbar />
-      <Hero />
-    </main>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main>
+        <Hero />
+        <Testimonials />
+      </main>
+    </>
   );
 }
 
