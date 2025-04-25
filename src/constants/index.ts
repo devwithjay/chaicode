@@ -1,13 +1,8 @@
 import BharatUIImg from '@assets/images/bharat-ui.jpg';
 import BoardifyImg from '@assets/images/boardify.jpg';
 import ChocoUIImg from '@assets/images/choco-ui.jpg';
-import CHImg from '@assets/images/coding-hero.jpg';
-import DSImg from '@assets/images/data-science.jpg';
-import DevOpsImg from '@assets/images/devops.jpg';
-import GenAiImg from '@assets/images/gen-ai.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
-import WDCImg from '@assets/images/webdevcohort.jpg';
 
 type Navlinks = {
   title: string;
@@ -56,7 +51,7 @@ type PricingData = {
     duration: string;
     price: number;
     originalPrice: number;
-    imageUrl: string;
+    videoId: string;
     learnMoreText: string;
     learnMoreLink: string;
   }[];
@@ -193,7 +188,7 @@ export const pricingData: PricingData = {
       duration: '6 months',
       price: 6999,
       originalPrice: 8999,
-      imageUrl: DSImg,
+      videoId: 'Kjd-SWpe1do',
       learnMoreText: 'Learn More',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=227817',
@@ -205,9 +200,10 @@ export const pricingData: PricingData = {
       duration: '1-2 months',
       price: 4999,
       originalPrice: 7999,
-      imageUrl: GenAiImg,
+      videoId: 'VNb_LawBBWU',
       learnMoreText: 'Learn More',
-      learnMoreLink: 'https://courses.chaicode.com/learn/batch/about?bundleId=227321',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=227321',
     },
     {
       title: 'DevOps for developers 1.0',
@@ -216,9 +212,10 @@ export const pricingData: PricingData = {
       duration: '1-2 months',
       price: 4999,
       originalPrice: 7999,
-      imageUrl: DevOpsImg,
+      videoId: 'oBLpqSHc3lA',
       learnMoreText: 'Learn More',
-      learnMoreLink: 'https://courses.chaicode.com/learn/batch/about?bundleId=227963',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=227963',
     },
     {
       title: 'Web Dev Cohort 1.0',
@@ -227,9 +224,10 @@ export const pricingData: PricingData = {
       duration: '6 months',
       price: 6999,
       originalPrice: 8999,
-      imageUrl: WDCImg,
+      videoId: 'yG8JMlldoCE',
       learnMoreText: 'Learn More',
-      learnMoreLink: 'https://courses.chaicode.com/learn/batch/about?bundleId=214297',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=214297',
     },
     {
       title: 'Coding Hero 2025',
@@ -238,9 +236,10 @@ export const pricingData: PricingData = {
       duration: 'Always running',
       price: 299,
       originalPrice: 599,
-      imageUrl: CHImg,
+      videoId: 'Fw3FezexzV0',
       learnMoreText: 'Learn More',
-      learnMoreLink: 'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
     },
   ],
 };

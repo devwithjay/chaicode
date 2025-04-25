@@ -11,7 +11,7 @@ const Pricing = () => {
         {pricingData.subHeading}
       </h3>
 
-      <div className="mt-12 mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 mb-12 grid grid-cols-1 gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {pricingData.courses.map((course, index) => (
           <div key={index} className="w-full">
             <PricingCard
@@ -21,7 +21,7 @@ const Pricing = () => {
               duration={course.duration}
               price={course.price}
               originalPrice={course.originalPrice}
-              imageUrl={course.imageUrl}
+              videoId={course.videoId}
               learnMoreText={course.learnMoreText}
               learnMoreLink={course.learnMoreLink}
             />

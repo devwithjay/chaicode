@@ -13,7 +13,7 @@ const Achievements = () => {
         {achievementsData.subHeading}
       </h3>
 
-      <div className="mt-12 md:mt-18  mb-12 w-full">
+      <div className="mt-16 md:mt-18 mb-12 w-full">
         <Carousel className="w-full" itemClassName="gap-6">
           {achievementsData.productsData.map((product) => (
             <div

@@ -61,7 +61,7 @@ const Hero = () => {
         {heroData.tagTitles.map((tag, index) => (
           <span
             key={index}
-            className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-3 py-1 text-xs font-medium text-[var(--text-primary)] md:py-1.5 md:text-sm lg:py-2"
+            className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-3 py-1 text-xs font-normal text-[var(--text-primary)] md:py-1.5 md:text-sm lg:py-2"
           >
             <span className="text-[var(--text-brand)]">
               {getIconForTag(tag, index)}

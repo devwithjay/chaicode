@@ -46,11 +46,11 @@ export const ProductCard = ({
       </a>
 
       <div className="flex flex-1 flex-col bg-[var(--surface-secondary)] p-4">
-        <h3 className="mb-2 text-xl font-bold text-[var(--text-primary)]">
+        <h3 className="mb-2 text-lg md:text-xl font-bold text-[var(--text-primary)]">
           {title}
         </h3>
 
-        <p className="mb-4 flex-1 text-[var(--text-secondary)]">
+        <p className="mb-4 flex-1 text-sm md:text-md text-[var(--text-secondary)]">
           {description}
         </p>
 
