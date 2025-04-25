@@ -85,7 +85,7 @@ export function Carousel({
           {children}
         </div>
         <button
-          className="absolute left-2 w-fit top-1/2 -translate-y-1/2 border border-neutral-800 hover:bg-neutral-50 bg-neutral-50/80 rounded-xl items-center justify-center disabled:hover:none disabled:bg-neutral-400 transition-all duration-300 cursor-pointer shadow-md p-2 text-neutral-800 disabled:opacity-0 opacity-100 flex"
+          className="absolute left-2 w-fit top-1/2 -translate-y-1/2 border border-neutral-800 hover:bg-neutral-50 bg-neutral-50/80 rounded-full items-center justify-center disabled:hover:none disabled:bg-neutral-400 transition-all duration-300 cursor-pointer shadow-md p-2 text-neutral-800 disabled:opacity-0 opacity-100 flex"
           onClick={scrollLeft}
           disabled={!canScrollLeft}
         >
@@ -93,7 +93,7 @@ export function Carousel({
         </button>
 
         <button
-          className="absolute right-2 w-fit top-1/2 -translate-y-1/2 border border-neutral-800 hover:bg-neutral-50 bg-neutral-50/80 rounded-xl items-center justify-center disabled:hover:none disabled:bg-neutral-400 transition-all duration-300 cursor-pointer shadow-md p-2 text-neutral-800 disabled:opacity-0 opacity-100 flex"
+          className="absolute right-2 w-fit top-1/2 -translate-y-1/2 border border-neutral-800 hover:bg-neutral-50 bg-neutral-50/80 rounded-full items-center justify-center disabled:hover:none disabled:bg-neutral-400 transition-all duration-300 cursor-pointer shadow-md p-2 text-neutral-800 disabled:opacity-0 opacity-100 flex"
           onClick={scrollRight}
           disabled={!canScrollRight}
         >
