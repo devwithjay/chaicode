@@ -8,7 +8,7 @@ const Testimonials = () => {
       <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
         {testimonialsData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-4xl text-[14px] leading-tight font-medium text-[var(--text-secondary)] md:text-[18px] lg:text-[22px]">
+      <h3 className="mx-auto mt-2 max-w-2xl text-[14px]  text-[var(--text-secondary)] md:text-[18px] text-center">
         {testimonialsData.subHeading}
       </h3>
       <section className="relative mt-6 md:mt-12 lg:mt-18 flex w-full flex-grow flex-col gap-4 overflow-hidden rounded-2xl border-none transition-all duration-300">

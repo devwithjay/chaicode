@@ -7,6 +7,7 @@
   --text-brand: #fb8c2b;
   --text-brand-hover: #f78018;
   --surface-primary: #ffffff;
+  --surface-secondary: #f6f6f6;
   --surface-brand: #fb8c2b;
   --surface-brand-secondary: #fff1e3;
   --surface-brand-hover: #f78018;
@@ -19,6 +20,7 @@
   --text-brand: #fb8c2b;
   --text-brand-hover: #f78018;
   --surface-primary: #09090b;
+  --surface-secondary:#141418; 
   --surface-brand: #fe9332;
   --surface-brand-hover: #f68922;
   --border-primary: #946c5c;

@@ -47,7 +47,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 md:px-8 md:py-6 lg:px-12">
+      <nav className="flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 md:px-8 lg:px-12">
         <div className="flex cursor-pointer items-center space-x-2">
           <a href="/" className="flex items-center gap-0.5">
             <ChaiLogo />

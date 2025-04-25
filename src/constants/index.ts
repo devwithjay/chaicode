@@ -1,3 +1,9 @@
+import BharatUIImg from '@assets/images/bharat-ui.jpg';
+import ChocoUIImg from '@assets/images/choco-ui.jpg';
+import SwingUIImg from '@assets/images/swing-ui.jpg';
+import SnappyUIImg from '@assets/images/snappy-ui.jpg';
+import BoardifyImg from '@assets/images/boardify.jpg';
+
 type Navlinks = {
   title: string;
   link: string;
@@ -16,6 +22,23 @@ type HeroData = {
 type TestimonialsData = {
   heading: string;
   subHeading: string;
+};
+
+type AchievementsData = {
+  heading: string;
+  subHeading: string;
+  productsData: {
+    id: string;
+    imageUrl: string;
+    title: string;
+    description: string;
+    websiteUrl: string;
+    socialLinks?: {
+      twitter?: string;
+      linkedin?: string;
+      github?: string;
+    };
+  }[];
 };
 
 export const navlinks: Navlinks = [
@@ -41,7 +64,7 @@ export const heroData: HeroData = {
   heading: 'Consistency and Community',
   subHeading: 'An unmatched Learning Experience for coding courses.',
   description:
-    'Content is every where, we provide a learning experience that is unmatched - bounties, peer learning, code reviews, virtual hostel, alumni network, doubt sessions and group projects.',
+    'Content is everywhere, we provide a learning experience that is unmatched - bounties, peer learning, code reviews, virtual hostel, alumni network, doubt sessions, and group projects.',
   tagTitles: [
     'Peer Learning',
     'Code Reviews',
@@ -75,3 +98,69 @@ export const tweetIds = [
   '1907859532208095374',
   '1906393735203836076',
 ];
+
+export const achievementsData: AchievementsData = {
+  heading: 'Achievements',
+  subHeading:
+    'Our students are not only working in big tech companies but are now founders of funded startups and product creators.',
+  productsData: [
+    {
+      id: '1',
+      imageUrl: BharatUIImg, 
+      title: 'BharatUI',
+      description: 'Powering Aatmanirbhar Design',
+      websiteUrl: 'https://www.bharatui.com/',
+      socialLinks: {
+        twitter: 'https://x.com/bharatUI',
+      },
+    },
+    {
+      id: '2',
+      imageUrl: ChocoUIImg, 
+      title: 'ChocoUI',
+      description:
+        'A curated collection of responsive, accessible React components.',
+      websiteUrl: 'https://www.chocoui.live/',
+      socialLinks: {
+        twitter: 'https://x.com/chocoui001',
+      },
+    },
+    {
+      id: '3',
+      imageUrl: SwingUIImg, 
+      title: 'SwingUI',
+      description:
+        'A modern Tailwind CSS component library that helps you sign sleek, responsive interfaces.',
+      websiteUrl: 'https://swingui.com/',
+      socialLinks: {
+        twitter: 'https://x.com/swing_ui',
+      },
+    },
+    {
+      id: '4',
+      imageUrl: SnappyUIImg, 
+      title: 'SnappyUI',
+      description:
+        'A minimal and intuitive component library.',
+      websiteUrl: 'https://snappyui.in/',
+      socialLinks: {
+        twitter: 'https://x.com/snappyui',
+        linkedin: 'https://www.linkedin.com/company/snappyui/',  
+
+      },
+    },
+    {
+      id: '5',
+      imageUrl: BoardifyImg, 
+      title: 'Boardify',
+      description:
+        'Better Kanban Board for your tasks.',
+      websiteUrl: 'https://the-boardify.vercel.app',
+      socialLinks: {
+        twitter: 'https://x.com/devwithjay',
+        linkedin: 'https://www.linkedin.com/in/devwithjay/',
+        github: 'https://github.com/devwithjay/boardify'
+      },
+    },
+  ],
+};
