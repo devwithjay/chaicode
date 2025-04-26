@@ -4,6 +4,7 @@ import Navbar from '@/components/core-ui/navbar';
 import Testimonials from '@/components/core-ui/testimonials';
 import Cohorts from '@/components/core-ui/cohorts';
 import Reviews from '@/components/core-ui/reviews';
+import Udemy from '@/components/core-ui/udemy';
 
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
         <Achievements />
         <Cohorts />
         <Reviews />
+        <Udemy />
       </main>
     </>
   );

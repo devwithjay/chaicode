@@ -60,6 +60,23 @@ type PricingData = {
 type ReviewsData = {
   heading: string;
   subHeading: string;
+  ctaText: string;
+  ctaLink: string;
+};
+
+type UdemyData = {
+  heading: string;
+  subHeading: string;
+  courses: {
+    title: string;
+    description: string;
+    rating: string;
+    price: number;
+    originalPrice: number;
+    videoId: string;
+    learnMoreText: string;
+    learnMoreLink: string;
+  }[];
 };
 
 export const navlinks: Navlinks = [
@@ -253,4 +270,44 @@ export const reviewsData: ReviewsData = {
   heading: 'Our Students Feedbacks',
   subHeading:
     'Explore the incredible advantages of enrolling in our courses and enhancing your skills.',
+  ctaText: 'Join Live Cohorts Now',
+  ctaLink: 'https://courses.chaicode.com/learn/view-all?show=batch&type=17',
+};
+
+export const udemyData: UdemyData = {
+  heading: 'Our Courses on Udemy',
+  subHeading: 'Join thousands of students who have transformed their careers with our comprehensive courses.',
+  courses: [
+    {
+      title: 'Complete web development course',
+      description: 'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
+      rating: "4.7",
+      price: 299,
+      originalPrice: 599,
+      videoId: 'KZ31wDjYleI',
+      learnMoreText: 'Learn More',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+    },{
+      title: 'Complete web development course',
+      description: 'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
+      rating: "4.7",
+      price: 299,
+      originalPrice: 599,
+      videoId: 'KZ31wDjYleI',
+      learnMoreText: 'Learn More',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+    },{
+      title: 'Complete web development course',
+      description: 'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
+      rating: "4.7",
+      price: 299,
+      originalPrice: 599,
+      videoId: 'KZ31wDjYleI',
+      learnMoreText: 'Learn More',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+    },
+  ],
 };

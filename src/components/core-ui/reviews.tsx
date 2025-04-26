@@ -1,5 +1,6 @@
 import DynamicClientTweetCard from '@/components/ui/dynamic-client-tweet-card';
 import { reviewsData, tweetIds } from '@/constants';
+import { LuExternalLink } from "react-icons/lu";
 
 const Reviews = () => {
   return (
@@ -18,6 +19,15 @@ const Reviews = () => {
             </div>
           ))}
         </div>
+      </div>
+      <div className="mt-10 md:mt-15 mb-6">
+        <a
+          href={reviewsData.ctaLink}
+          className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-[var(--text-primary)] sm:px-6 sm:py-3 sm:text-base"
+        >
+          {reviewsData.ctaText}
+          <LuExternalLink size={20} />
+        </a>
       </div>
     </section>
   );
