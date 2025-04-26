@@ -3,6 +3,7 @@ import Hero from '@/components/core-ui/hero';
 import Navbar from '@/components/core-ui/navbar';
 import Testimonials from '@/components/core-ui/testimonials';
 import Cohorts from '@/components/core-ui/cohorts';
+import Reviews from '@/components/core-ui/reviews';
 
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
         <Testimonials />
         <Achievements />
         <Cohorts />
+        <Reviews />
       </main>
     </>
   );

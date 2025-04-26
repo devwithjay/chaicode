@@ -57,6 +57,11 @@ type PricingData = {
   }[];
 };
 
+type ReviewsData = {
+  heading: string;
+  subHeading: string;
+};
+
 export const navlinks: Navlinks = [
   {
     title: 'Cohorts',
@@ -110,7 +115,6 @@ export const tweetIds = [
   '1913569806923497600',
   '1893719871722074340',
   '1894827186106048771',
-  '1893355231586529741',
   '1907859532208095374',
   '1906393735203836076',
 ];
@@ -177,6 +181,7 @@ export const achievementsData: AchievementsData = {
     },
   ],
 };
+
 export const pricingData: PricingData = {
   heading: 'Cohorts',
   subHeading: 'Live Training Classes',
@@ -242,4 +247,10 @@ export const pricingData: PricingData = {
         'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
     },
   ],
+};
+
+export const reviewsData: ReviewsData = {
+  heading: 'Our Students Feedbacks',
+  subHeading:
+    'Explore the incredible advantages of enrolling in our courses and enhancing your skills.',
 };
