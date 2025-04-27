@@ -1,7 +1,8 @@
-"use client";
+'use client';
 
-import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react';
+
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 interface CarouselProps {
   children: React.ReactNode;
@@ -28,13 +29,13 @@ export function Carousel({
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
     }
   };
 
@@ -49,13 +50,12 @@ export function Carousel({
   useEffect(() => {
     checkScrollability();
     const currentRef = carouselRef.current;
-    
 
     const resizeObserver = new ResizeObserver(checkScrollability);
     if (currentRef) {
       resizeObserver.observe(currentRef);
     }
-    
+
     return () => {
       if (currentRef) {
         resizeObserver.unobserve(currentRef);
@@ -66,15 +66,15 @@ export function Carousel({
   return (
     <div className="relative w-full">
       <div
-        className={`relative flex flex-col gap-4 group w-full overflow-hidden ${className}`}
+        className={`group relative flex w-full flex-col gap-4 overflow-hidden ${className}`}
       >
         <div
           className={`flex overflow-x-auto scroll-smooth px-6 ${itemClassName}`}
           ref={carouselRef}
           onScroll={handleScroll}
           style={{
-            scrollbarWidth: 'none', 
-            msOverflowStyle: 'none', 
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
           }}
         >
           <style>{`
@@ -85,19 +85,19 @@ export function Carousel({
           {children}
         </div>
         <button
-          className="absolute left-2 w-fit top-1/2 -translate-y-1/2 border border-neutral-800 hover:bg-neutral-50 bg-neutral-50/80 rounded-full items-center justify-center disabled:hover:none disabled:bg-neutral-400 transition-all duration-300 cursor-pointer shadow-md p-2 text-neutral-800 disabled:opacity-0 opacity-100 flex"
+          className="disabled:hover:none absolute top-1/2 left-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-1 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0"
           onClick={scrollLeft}
           disabled={!canScrollLeft}
         >
-          <ChevronLeftIcon className="size-5 text-neutral-800" />
+          <ChevronLeftIcon className="size-8" />
         </button>
 
         <button
-          className="absolute right-2 w-fit top-1/2 -translate-y-1/2 border border-neutral-800 hover:bg-neutral-50 bg-neutral-50/80 rounded-full items-center justify-center disabled:hover:none disabled:bg-neutral-400 transition-all duration-300 cursor-pointer shadow-md p-2 text-neutral-800 disabled:opacity-0 opacity-100 flex"
+          className="disabled:hover:none absolute top-1/2 right-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-1 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0"
           onClick={scrollRight}
           disabled={!canScrollRight}
         >
-          <ChevronRightIcon className="size-5" />
+          <ChevronRightIcon className="size-8" />
         </button>
       </div>
     </div>
