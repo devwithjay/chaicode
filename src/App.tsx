@@ -5,6 +5,7 @@ import Testimonials from '@/components/core-ui/testimonials';
 import Cohorts from '@/components/core-ui/cohorts';
 import Reviews from '@/components/core-ui/reviews';
 import Udemy from '@/components/core-ui/udemy';
+import Benefits from '@/components/core-ui/benefits';
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
         <Cohorts />
         <Reviews />
         <Udemy />
+        <Benefits/>
       </main>
     </>
   );

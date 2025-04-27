@@ -1,6 +1,13 @@
 import BharatUIImg from '@assets/images/bharat-ui.jpg';
 import BoardifyImg from '@assets/images/boardify.jpg';
+import BountiesImg from '@assets/images/bounties.jpg';
 import ChocoUIImg from '@assets/images/choco-ui.jpg';
+import CodingHostelImg from '@assets/images/coding-hostel.jpg';
+import JKImg from '@assets/images/jk.png';
+import LeetlabImg from '@assets/images/leetlab.jpg';
+import PeerReviewImg from '@assets/images/peer-review.jpg';
+import ProfessionalTeachingImg from '@assets/images/professional-teaching.jpg';
+import RevisionClassImg from '@assets/images/revision-class.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
 
@@ -77,6 +84,21 @@ type UdemyData = {
     learnMoreText: string;
     learnMoreLink: string;
   }[];
+};
+
+type BenefitsData = {
+  heading: string;
+  subHeading: string;
+  benefits: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  }[];
+  alumni: {
+    heading: string;
+    description: string;
+    imageUrls: string[];
+  };
 };
 
 export const navlinks: Navlinks = [
@@ -276,32 +298,38 @@ export const reviewsData: ReviewsData = {
 
 export const udemyData: UdemyData = {
   heading: 'Our Courses on Udemy',
-  subHeading: 'Join thousands of students who have transformed their careers with our comprehensive courses.',
+  subHeading:
+    'Join thousands of students who have transformed their careers with our comprehensive courses.',
   courses: [
     {
       title: 'Complete web development course',
-      description: 'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
-      rating: "4.7",
+      description:
+        'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
+      rating: '4.7',
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
       learnMoreText: 'Learn More',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
-    },{
+    },
+    {
       title: 'Complete web development course',
-      description: 'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
-      rating: "4.7",
+      description:
+        'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
+      rating: '4.7',
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
       learnMoreText: 'Learn More',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
-    },{
+    },
+    {
       title: 'Complete web development course',
-      description: 'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
-      rating: "4.7",
+      description:
+        'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
+      rating: '4.7',
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
@@ -310,4 +338,67 @@ export const udemyData: UdemyData = {
         'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
     },
   ],
+};
+
+export const benefitsData: BenefitsData = {
+  heading: 'Key Benefits of Cohorts',
+  subHeading:
+    'Cohorts are best way to learn because you finish the course in a timely manner',
+  benefits: [
+    {
+      title: 'Taught by Professionals',
+      description:
+        'Our cohorts are being taught by top industry experts and educators.',
+      imageUrl: ProfessionalTeachingImg,
+    },
+    {
+      title: 'Bounties',
+      description:
+        'Earn rewards, from Cash to MacBook. Keeps you motivated to work hard.',
+      imageUrl: BountiesImg,
+    },
+    {
+      title: 'Coding Hostels',
+      description:
+        'There is nothing like late night discussion with fellow learners and solving bugs.',
+      imageUrl: CodingHostelImg,
+    },
+    {
+      title: 'Peer Code Reviews',
+      description:
+        'With our internal tools like Masterji, every code assignment gets feedback to improve your code.',
+      imageUrl: PeerReviewImg,
+    },
+    {
+      title: 'Leet Lab',
+      description:
+        'Our in-house built LeetCode style platform that helps you to understand foundation of programming language.',
+      imageUrl: LeetlabImg,
+    },
+    {
+      title: 'Revision Classes',
+      description:
+        'We have so many peer classes by fellow learners that you get so many chances to learn that topic.',
+      imageUrl: RevisionClassImg,
+    },
+  ],
+  alumni: {
+    heading: 'Alumni Network and Job Listings',
+    description: `The alumni network that you always wished for in your college. We have a dedicated platform where students get to know each other, do projects, make agencies, and join Hackathons.\nOur HR team also posts regular job updates that you can apply directly whenever you are ready.`,
+    imageUrls: [
+      JKImg,
+      'https://pbs.twimg.com/profile_images/1900208613383376896/vZFa9ezR_400x400.jpg',
+      'https://pbs.twimg.com/profile_images/1743580215765590016/GABZN__C_400x400.jpg',
+      'https://pbs.twimg.com/profile_images/1911152877298458624/S1urBdQX_400x400.jpg',
+      'https://pbs.twimg.com/profile_images/1894995896145977346/AEs7pesh_400x400.jpg',
+      'https://media.licdn.com/dms/image/v2/D4D03AQHx9vUumgZWLQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731353865679?e=1751500800&v=beta&t=fBLCffr4NfZXg99l3f5zBwDtk_fpVyYFZDGdptwbiJ8',
+      'https://pbs.twimg.com/profile_images/1879974632683683840/iL4zMCRJ_400x400.jpg',
+      'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww',
+      'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
+      'https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE3fHxhdmF0YXJ8ZW58MHx8MHx8fDA%3D',
+      'https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM3fHxhdmF0YXJ8ZW58MHx8MHx8fDA%3D',
+    ],
+  },
 };
