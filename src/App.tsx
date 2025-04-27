@@ -6,6 +6,7 @@ import Cohorts from '@/components/core-ui/cohorts';
 import Reviews from '@/components/core-ui/reviews';
 import Udemy from '@/components/core-ui/udemy';
 import Benefits from '@/components/core-ui/benefits';
+import WhyChaiCode from '@/components/core-ui/why-chaicode';
 
 import './App.css';
 
@@ -22,7 +23,8 @@ function App() {
         <Cohorts />
         <Reviews />
         <Udemy />
-        <Benefits/>
+        <Benefits />
+        <WhyChaiCode />
       </main>
     </>
   );

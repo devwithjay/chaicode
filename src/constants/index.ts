@@ -10,6 +10,7 @@ import ProfessionalTeachingImg from '@assets/images/professional-teaching.jpg';
 import RevisionClassImg from '@assets/images/revision-class.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
+import HiteshChoudharyImg from '@assets/images/hitesh-choudhary.jpg';   
 
 type Navlinks = {
   title: string;
@@ -99,6 +100,32 @@ type BenefitsData = {
     description: string;
     imageUrls: string[];
   };
+};
+
+type WhyChaiCodeData = {
+  heading: string;
+  subHeading: string;
+  cards: {
+    title: string;
+    description: string;
+  }[];
+  featured: {
+    name: string;
+    description: string;
+    approachTitle: string;
+    approachDescription: string;
+    imageUrl: string;
+    socialLinks: {
+      github?: string;
+      twitter?: string;
+      linkedin?: string;
+      instagram?: string;
+      youtube?: string;
+      discord?: string;
+    };
+  };
+  ctaText: string;
+  ctaLink: string;
 };
 
 export const navlinks: Navlinks = [
@@ -401,4 +428,60 @@ export const benefitsData: BenefitsData = {
       'https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM3fHxhdmF0YXJ8ZW58MHx8MHx8fDA%3D',
     ],
   },
+};
+
+export const whyChaiCodeData: WhyChaiCodeData = {
+  heading: 'But Why ChaiCode?',
+  subHeading: 'ChaiCode exists because we love tech and teaching',
+  cards: [
+    {
+      title: 'Comprehensive Curriculum',
+      description:
+        'Master key concepts and hands-on skills with clarity and confidence. Learn what truly matters, the right way — thorough, practical, and easy to understand.',
+    },
+    {
+      title: 'Code and Chill',
+      description:
+        'Coding should be fun, not frightening. It might feel tough at first, but with time and practice, everything starts to click and fall into place.',
+    },
+    {
+      title: 'You finish it',
+      description:
+        'Our cohorts are a collaborative journey — students learn together, stay motivated, and complete the course on time as a community.',
+    },
+    {
+      title: 'Improve Communication',
+      description:
+        'One of the best ways to boost communication skills is through practice. Our peer classes make it happen where co-learners teach, share, and grow together.',
+    },
+    {
+      title: 'Industry Guests',
+      description:
+        'We’re connected with industry experts and regularly bring them into our classes for engaging, fun, and insightful sessions with students.',
+    },
+    {
+      title: 'Bounties',
+      description:
+        'Every cohort comes with exciting cash prizes and even some MacBook giveaways! It’s our way of keeping motivation high and the learning fun.',
+    },
+  ],
+  featured: {
+    name: 'Hitesh Choudhary',
+    description:
+      'Retired from corporate and now a full-time YouTuber, founder of LCO (acquired), ex-CTO, and Sr. Director at PW. Built 2 YT channels (950k & 470k) and stepped into 43 countries.',
+    approachTitle: 'Approach',
+    approachDescription:
+      'Project-based courses with peer learning, bounties, and fun activities to keep learning exciting and practical.',
+    imageUrl: HiteshChoudharyImg,
+    socialLinks: {
+      github: 'https://github.com/hiteshchoudhary',
+      twitter: 'https://twitter.com/hiteshdotcom',
+      linkedin: 'https://www.linkedin.com/in/hiteshchoudhary/',
+      instagram: 'https://www.instagram.com/hiteshchoudharyofficial/',
+      youtube: 'https://www.youtube.com/@chaiaurcode',
+      discord: 'https://discord.com/invite/WDrH3zuWFb',
+    },
+  },
+  ctaText: 'Join Live Cohorts Now',
+  ctaLink: 'https://courses.chaicode.com/learn/view-all?show=batch&type=17',
 };
