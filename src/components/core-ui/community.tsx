@@ -14,7 +14,7 @@ const Community = () => {
 
       <div className="mt-14 mb-8 flex w-full max-w-7xl flex-col-reverse items-center justify-center gap-12 md:flex-row lg:gap-20">
         <div className="flex max-w-lg flex-col items-center justify-center text-center md:items-start md:text-left">
-          <h2 className="text-[26px] leading-snug font-extrabold text-[var(--text-brand)] md:text-[32px] lg:text-[38px]">
+          <h2 className="text-[26px] leading-snug font-extrabold text-[var(--text-primary)] md:text-[32px] lg:text-[38px]">
             {communityData.description}
           </h2>
 

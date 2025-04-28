@@ -10,6 +10,7 @@ import WhyChaiCode from '@/components/core-ui/why-chaicode';
 import TopicsCloud from '@/components/core-ui/topics-cloud';
 import Community from '@/components/core-ui/community';
 import FreeAPI from '@/components/core-ui/free-api';
+import ChaiApp from '@/components/core-ui/chai-app';
 
 import './App.css';
 
@@ -30,7 +31,8 @@ function App() {
         <WhyChaiCode />
         <TopicsCloud />
         <Community />
-        <FreeAPI/>
+        <FreeAPI />
+        <ChaiApp/>
       </main>
     </>
   );

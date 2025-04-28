@@ -12,6 +12,8 @@ import RevisionClassImg from '@assets/images/revision-class.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
 import CommunityImg from '@assets/images/community.png';
+import IphoneMockupImg from '@assets/images/iphone-mockup.png';
+import AndroidMockupImg from '@assets/images/android-mockup.png';
 
 type Navlinks = {
   title: string;
@@ -154,6 +156,17 @@ type FreeApiData = {
   ctaText: string;
   ctaLink: string;
   videoLink: string;
+};
+
+type AppData = {
+  heading: string;
+  subHeading: string;
+  description: string;
+  descriptionPoints: string[];
+  appStoreLink: string;
+  playStoreLink: string;
+  iphoneImageUrl: string;
+  androidImageUrl: string;
 };
 
 export const navlinks: Navlinks = [
@@ -636,4 +649,19 @@ export const freeApiData: FreeApiData = {
   ctaText: 'Check FreeAPI Docs',
   ctaLink: 'https://freeapi.app/', 
   videoLink: 'https://youtu.be/DxedlhTyR7Q?feature=shared', 
+};
+
+export const appData: AppData = {
+  heading: 'Learn on the go',
+  subHeading: 'Take your coding journey anywhere with ChaiCode Mobile App.',
+  description: 'Access courses, join live sessions, and connect with the community — all from your pocket.',
+  descriptionPoints: [
+    'Offline course access',
+    'Live session notifications',
+    'Revision while commuting',
+  ],
+  appStoreLink: 'https://apps.apple.com/',    
+  playStoreLink: 'https://play.google.com/store', 
+  iphoneImageUrl: IphoneMockupImg,
+  androidImageUrl: AndroidMockupImg,
 };
