@@ -4,7 +4,7 @@ import { LuExternalLink } from "react-icons/lu";
 
 const Reviews = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 sm:px-8 md:pt-10">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-6 lg:px-14 md:pt-10">
       <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
         {reviewsData.heading}
       </h1>

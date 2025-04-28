@@ -147,6 +147,14 @@ type CommunityData = {
   imageUrl: string;
 };
 
+type FreeApiData = {
+  heading: string;
+  subHeading: string;
+  descriptionPoints: string[];
+  ctaText: string;
+  ctaLink: string;
+  videoLink: string;
+};
 
 export const navlinks: Navlinks = [
   {
@@ -615,4 +623,17 @@ export const communityData: CommunityData = {
   ctaText: 'Join our Discord',
   ctaLink: 'https://discord.com/invite/WDrH3zuWFb',
   imageUrl: CommunityImg,
+};
+
+export const freeApiData: FreeApiData = {
+  heading: 'FreeAPI - Open Source',
+  subHeading: 'Unlock Your Potential with Our API Hub',
+  descriptionPoints: [
+    'Our API Hub is designed to streamline your learning experience in API handling across various programming languages.',
+    'With this resource, you can effortlessly build and showcase your front-end portfolio in both web and mobile applications.',
+    'Join us to enhance your skills and take your coding projects to the next level!',
+  ],
+  ctaText: 'Check FreeAPI Docs',
+  ctaLink: 'https://freeapi.app/', 
+  videoLink: 'https://youtu.be/DxedlhTyR7Q?feature=shared', 
 };
