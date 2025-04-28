@@ -23,7 +23,7 @@ const Reviews = () => {
       <div className="mt-10 md:mt-15 mb-6">
         <a
           href={reviewsData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-[var(--text-primary)] sm:px-6 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white sm:px-6 sm:py-3 sm:text-base"
         >
           {reviewsData.ctaText}
           <LuExternalLink size={20} />

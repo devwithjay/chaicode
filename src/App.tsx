@@ -8,6 +8,7 @@ import Udemy from '@/components/core-ui/udemy';
 import Benefits from '@/components/core-ui/benefits';
 import WhyChaiCode from '@/components/core-ui/why-chaicode';
 import TopicsCloud from '@/components/core-ui/topics-cloud';
+import Community from '@/components/core-ui/community';
 
 import './App.css';
 
@@ -27,6 +28,7 @@ function App() {
         <Benefits />
         <WhyChaiCode />
         <TopicsCloud />
+        <Community />
       </main>
     </>
   );

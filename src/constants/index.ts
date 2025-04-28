@@ -11,6 +11,7 @@ import ProfessionalTeachingImg from '@assets/images/professional-teaching.jpg';
 import RevisionClassImg from '@assets/images/revision-class.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
+import CommunityImg from '@assets/images/community.png';
 
 type Navlinks = {
   title: string;
@@ -136,6 +137,16 @@ type TopicsCloudData = {
     youtubeLink: string;
   }[];
 };
+
+type CommunityData = {
+  heading: string;
+  subHeading: string
+  description: string
+  ctaText: string;
+  ctaLink: string;
+  imageUrl: string;
+};
+
 
 export const navlinks: Navlinks = [
   {
@@ -353,7 +364,7 @@ export const udemyData: UdemyData = {
       title: 'Complete web development course',
       description:
         'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
-      rating: '4.7',
+      rating: '5.0',
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
@@ -365,7 +376,7 @@ export const udemyData: UdemyData = {
       title: 'Complete web development course',
       description:
         'Only web development course that you will need. Covers HTML, CSS, Tailwind, Node, React, MongoDB, Prisma, Deployment etc.',
-      rating: '4.7',
+      rating: '4.2',
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
@@ -595,4 +606,13 @@ export const topicsCloudData: TopicsCloudData = {
         'https://youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N&feature=shared',
     },
   ],
+};
+
+export const communityData: CommunityData = {
+  heading: 'Community',
+  subHeading: '80,000+ Active Coders on Discord',
+  description: 'Join our community where creativity thrives.',
+  ctaText: 'Join our Discord',
+  ctaLink: 'https://discord.com/invite/WDrH3zuWFb',
+  imageUrl: CommunityImg,
 };
