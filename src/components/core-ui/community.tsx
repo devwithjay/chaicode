@@ -31,7 +31,7 @@ const Community = () => {
         </div>
 
         {communityData.imageUrl && (
-          <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-black/80 shadow-lg dark:bg-white/10">
+          <div className="relative w-full max-w-lg overflow-hidden hover:bg-black/90 rounded-2xl bg-black/80 shadow-lg dark:bg-white/10 dark:hover:bg-white/15">
             <img
               src={communityData.imageUrl}
               alt="Community"

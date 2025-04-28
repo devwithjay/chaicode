@@ -660,8 +660,8 @@ export const appData: AppData = {
     'Live session notifications',
     'Revision while commuting',
   ],
-  appStoreLink: 'https://apps.apple.com/',    
-  playStoreLink: 'https://play.google.com/store', 
+  appStoreLink: 'https://apps.apple.com/in/app/chaicode/id6504993143',    
+  playStoreLink: 'https://play.google.com/store/apps/details?id=com.chaicode.courses&pcampaignid=web_share', 
   iphoneImageUrl: IphoneMockupImg,
   androidImageUrl: AndroidMockupImg,
 };

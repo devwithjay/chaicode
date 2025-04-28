@@ -55,7 +55,7 @@ const ChaiApp = () => {
               href={appData.appStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-[160px] items-center gap-2 rounded-lg bg-[var(--surface-brand)] p-3 text-white hover:bg-[var(--surface-brand-hover)]"
+              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-4 py-3 text-white hover:bg-[var(--surface-brand-hover)]"
             >
               <FiDownload size={24} />
               <div className="flex flex-col text-left">
@@ -68,7 +68,7 @@ const ChaiApp = () => {
               href={appData.playStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-[160px] items-center gap-2 rounded-lg bg-[var(--surface-brand)] p-3 text-white hover:bg-[var(--surface-brand-hover)]"
+              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-4 py-3 text-white hover:bg-[var(--surface-brand-hover)]"
             >
               <FiDownload size={24} />
               <div className="flex flex-col text-left">
@@ -86,18 +86,18 @@ const ChaiApp = () => {
         >
           <motion.div
             animate={floatingAnimation}
-            className="relative size-full md:h-[350px]"
+            className="relative h-[400px] w-full md:h-[350px]"
           >
             <motion.img
               src={appData.androidImageUrl}
               alt="Android Mockup"
-              className="absolute top-8 left-6 w-[180px] rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-3 md:w-[220px] lg:w-[250px]"
+              className="absolute top-8 left-6 w-[180px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[220px] lg:w-[250px]"
             />
 
             <motion.img
               src={appData.iphoneImageUrl}
               alt="iPhone Mockup"
-              className="absolute top-0 right-6 z-10 w-[180px] rounded-2xl object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:rotate-3 md:w-[220px] lg:w-[250px]"
+              className="absolute top-0 right-6 z-10 w-[180px] -rotate-6 rounded-2xl object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[220px] lg:w-[250px]"
             />
           </motion.div>
         </div>

@@ -104,7 +104,7 @@ export function Slider({ children, className, itemClassName }: SliderProps) {
           )}
         </div>
 
-        <div className="mt-6 flex items-center justify-center gap-6">
+        <div className="mt-6 flex items-center justify-center gap-1">
           <button
             onClick={scrollLeft}
             className="flex items-center justify-center p-2 text-[var(--text-brand)] disabled:text-gray-400"
