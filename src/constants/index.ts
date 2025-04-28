@@ -3,6 +3,7 @@ import BoardifyImg from '@assets/images/boardify.jpg';
 import BountiesImg from '@assets/images/bounties.jpg';
 import ChocoUIImg from '@assets/images/choco-ui.jpg';
 import CodingHostelImg from '@assets/images/coding-hostel.jpg';
+import HiteshChoudharyImg from '@assets/images/hitesh-choudhary.jpg';
 import JKImg from '@assets/images/jk.png';
 import LeetlabImg from '@assets/images/leetlab.jpg';
 import PeerReviewImg from '@assets/images/peer-review.jpg';
@@ -10,7 +11,6 @@ import ProfessionalTeachingImg from '@assets/images/professional-teaching.jpg';
 import RevisionClassImg from '@assets/images/revision-class.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
-import HiteshChoudharyImg from '@assets/images/hitesh-choudhary.jpg';   
 
 type Navlinks = {
   title: string;
@@ -126,6 +126,15 @@ type WhyChaiCodeData = {
   };
   ctaText: string;
   ctaLink: string;
+};
+
+type TopicsCloudData = {
+  heading: string;
+  subHeading: string;
+  topics: {
+    title: string;
+    youtubeLink: string;
+  }[];
 };
 
 export const navlinks: Navlinks = [
@@ -484,4 +493,106 @@ export const whyChaiCodeData: WhyChaiCodeData = {
   },
   ctaText: 'Join Live Cohorts Now',
   ctaLink: 'https://courses.chaicode.com/learn/view-all?show=batch&type=17',
+};
+
+export const topicsCloudData: TopicsCloudData = {
+  heading: 'Topics Cloud',
+  subHeading: 'You can find videos and courses on topics and much more',
+  topics: [
+    {
+      title: 'Django',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoDOf-6vAcKmazT92uLnWAgy&feature=shared',
+    },
+    {
+      title: 'Python',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s&feature=shared',
+    },
+    {
+      title: 'React',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&feature=shared',
+    },
+    {
+      title: 'HTML',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI&feature=shared',
+    },
+    {
+      title: 'Javascript',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&feature=shared',
+    },
+    {
+      title: 'NextJS',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBAaWGtn9GA2PTw0HO0tXzq&feature=shared',
+    },
+    {
+      title: 'C++',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoCPfgKZS8UE0MDuwiKvL8zi&feature=shared',
+    },
+    {
+      title: 'MCP Server',
+      youtubeLink: 'https://youtu.be/dZyQNy3-HjU?feature=shared',
+    },
+    {
+      title: 'Kubernetes',
+      youtubeLink: 'https://youtu.be/7XDeI5fyj3w?feature=shared',
+    },
+
+    {
+      title: 'React Native',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoAKL_sTfg5CgCxlrpH5b2jS&feature=shared',
+    },
+
+    {
+      title: 'Docker',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWTJLvDP4Veld5F05rJAmOcp&feature=shared',
+    },
+    {
+      title: 'Backend',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW&feature=shared',
+    },
+    {
+      title: 'Git',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWT4v4iK1h6qejyhGObFH9_o&feature=shared',
+    },
+    {
+      title: 'React Native',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWSjBBJ-egNNOd4mdblt1P4c&feature=shared',
+    },
+    {
+      title: 'TypeScript',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWRPSfKzwZsIm-Axxq-LxqhW&feature=shared',
+    },
+    {
+      title: 'Vue JS',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWTpHQgiV4rZFlnuS8XDl71A&feature=shared',
+    },
+    {
+      title: 'Flutter',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWT-ooTYHCqgxMTGA233JMrP&feature=shared',
+    },
+    {
+      title: 'Linux',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWSH1yebxsz5BVF2acAV5hhw&feature=shared',
+    },
+    {
+      title: 'Golang',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N&feature=shared',
+    },
+  ],
 };
