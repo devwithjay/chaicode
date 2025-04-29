@@ -12,6 +12,7 @@ import Community from '@/components/core-ui/community';
 import FreeAPI from '@/components/core-ui/free-api';
 import ChaiApp from '@/components/core-ui/chai-app';
 import Mentors from '@/components/core-ui/mentors';
+import Footer from '@/components/core-ui/footer';
 
 import './App.css';
 
@@ -35,6 +36,7 @@ function App() {
         <Community />
         <FreeAPI />
         <ChaiApp />
+        <Footer />
       </main>
     </>
   );

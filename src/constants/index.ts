@@ -1,9 +1,12 @@
+import AndroidMockupImg from '@assets/images/android-mockup.png';
 import BharatUIImg from '@assets/images/bharat-ui.jpg';
 import BoardifyImg from '@assets/images/boardify.jpg';
 import BountiesImg from '@assets/images/bounties.jpg';
 import ChocoUIImg from '@assets/images/choco-ui.jpg';
 import CodingHostelImg from '@assets/images/coding-hostel.jpg';
+import CommunityImg from '@assets/images/community.png';
 import HiteshChoudharyImg from '@assets/images/hitesh-choudhary.jpg';
+import IphoneMockupImg from '@assets/images/iphone-mockup.png';
 import JKImg from '@assets/images/jk.png';
 import LeetlabImg from '@assets/images/leetlab.jpg';
 import PeerReviewImg from '@assets/images/peer-review.jpg';
@@ -11,9 +14,6 @@ import ProfessionalTeachingImg from '@assets/images/professional-teaching.jpg';
 import RevisionClassImg from '@assets/images/revision-class.jpg';
 import SnappyUIImg from '@assets/images/snappy-ui.jpg';
 import SwingUIImg from '@assets/images/swing-ui.jpg';
-import CommunityImg from '@assets/images/community.png';
-import IphoneMockupImg from '@assets/images/iphone-mockup.png';
-import AndroidMockupImg from '@assets/images/android-mockup.png';
 
 type Navlinks = {
   title: string;
@@ -142,8 +142,8 @@ type TopicsCloudData = {
 
 type CommunityData = {
   heading: string;
-  subHeading: string
-  description: string
+  subHeading: string;
+  description: string;
   ctaText: string;
   ctaLink: string;
   imageUrl: string;
@@ -179,7 +179,32 @@ type MentorData = {
     description?: string;
     workingAt: string;
     image: string;
-  }[],
+  }[];
+};
+
+export type FooterData = {
+  about: {
+    tagline: string;
+    copyright: string;
+    socialLinks: {
+      label: string;
+      url: string;
+    }[];
+  };
+  products: {
+    title: string;
+    links: {
+      name: string;
+      url: string;
+    }[];
+  };
+  resources: {
+    title: string;
+    links: {
+      name: string;
+      url: string;
+    }[];
+  };
 };
 
 export const navlinks: Navlinks = [
@@ -660,79 +685,145 @@ export const freeApiData: FreeApiData = {
     'Join us to enhance your skills and take your coding projects to the next level!',
   ],
   ctaText: 'Check FreeAPI Docs',
-  ctaLink: 'https://freeapi.app/', 
-  videoLink: 'https://youtu.be/DxedlhTyR7Q?feature=shared', 
+  ctaLink: 'https://freeapi.app/',
+  videoLink: 'https://youtu.be/DxedlhTyR7Q?feature=shared',
 };
 
 export const appData: AppData = {
   heading: 'Learn on the go',
   subHeading: 'Take your coding journey anywhere with ChaiCode Mobile App.',
-  description: 'Access courses, join live sessions, and connect with the community — all from your pocket.',
+  description:
+    'Access courses, join live sessions, and connect with the community — all from your pocket.',
   descriptionPoints: [
     'Offline course access',
     'Live session notifications',
     'Revision while commuting',
   ],
-  appStoreLink: 'https://apps.apple.com/in/app/chaicode/id6504993143',    
-  playStoreLink: 'https://play.google.com/store/apps/details?id=com.chaicode.courses&pcampaignid=web_share', 
+  appStoreLink: 'https://apps.apple.com/in/app/chaicode/id6504993143',
+  playStoreLink:
+    'https://play.google.com/store/apps/details?id=com.chaicode.courses&pcampaignid=web_share',
   iphoneImageUrl: IphoneMockupImg,
   androidImageUrl: AndroidMockupImg,
 };
 
 export const mentorsData: MentorData = {
   heading: 'Meet our Experts',
-  subHeading: 'Our team is filled with passionate teachers and mentors who love helping the next generation of developers grow fast.',
+  subHeading:
+    'Our team is filled with passionate teachers and mentors who love helping the next generation of developers grow fast.',
   mentor: [
     {
-      id: "1",
-      name: "Hitesh Choudhary",
-      slug: "hitesh-choudhary",
+      id: '1',
+      name: 'Hitesh Choudhary',
+      slug: 'hitesh-choudhary',
       description:
-        "Founder of ChaiCohort, passionate about building the next generation of developers.",
-      workingAt: "Founder of Chai Cohort",
-      image: 'https://pbs.twimg.com/profile_images/1724344976715468800/MasktpKz_400x400.jpg',
+        'Founder of ChaiCohort, passionate about building the next generation of developers.',
+      workingAt: 'Founder of Chai Cohort',
+      image:
+        'https://pbs.twimg.com/profile_images/1724344976715468800/MasktpKz_400x400.jpg',
     },
     {
-      id: "2",
-      name: "Piyush Garg",
-      slug: "piyush-garg",
-      workingAt: "Teacher at Chai Cohort",
-      image: 'https://pbs.twimg.com/profile_images/1879075502356586496/V9wQzW7V_400x400.jpg',
+      id: '2',
+      name: 'Piyush Garg',
+      slug: 'piyush-garg',
+      workingAt: 'Teacher at Chai Cohort',
+      image:
+        'https://pbs.twimg.com/profile_images/1879075502356586496/V9wQzW7V_400x400.jpg',
     },
     {
-      id: "3",
-      name: "Priya Bhatia",
-      slug: "priya-bhatia",
-      workingAt: "Teacher at Chai Cohort",
-      image: "https://media.licdn.com/dms/image/v2/C4E03AQEqNUPkoCmJCA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1663956505952?e=1751500800&v=beta&t=gA18L0d93S5UFqJ-QQ8WGKRaos5wblkE30hF7dsjvyY"
+      id: '3',
+      name: 'Priya Bhatia',
+      slug: 'priya-bhatia',
+      workingAt: 'Teacher at Chai Cohort',
+      image:
+        'https://media.licdn.com/dms/image/v2/C4E03AQEqNUPkoCmJCA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1663956505952?e=1751500800&v=beta&t=gA18L0d93S5UFqJ-QQ8WGKRaos5wblkE30hF7dsjvyY',
     },
     {
-      id: "4",
-      name: "Rakesh K",
-      slug: "rakesh-k",
-      workingAt: "Teacher at Chai Cohort",
-      image: "https://pbs.twimg.com/profile_images/1770738495029415936/kG8LRvM3_400x400.jpg"
+      id: '4',
+      name: 'Rakesh K',
+      slug: 'rakesh-k',
+      workingAt: 'Teacher at Chai Cohort',
+      image:
+        'https://pbs.twimg.com/profile_images/1770738495029415936/kG8LRvM3_400x400.jpg',
     },
     {
-      id: "5",
-      name: "Anirudh Jwala",
-      slug: "anirudh-jwala",
-      workingAt: "Teaching Assistant at Chai Cohort",
-      image: 'https://pbs.twimg.com/profile_images/1877597004169359361/9Vu5A11t_400x400.jpg',
+      id: '5',
+      name: 'Anirudh Jwala',
+      slug: 'anirudh-jwala',
+      workingAt: 'Teaching Assistant at Chai Cohort',
+      image:
+        'https://pbs.twimg.com/profile_images/1877597004169359361/9Vu5A11t_400x400.jpg',
     },
     {
-      id: "6",
-      name: "Akash Kadlag",
-      slug: "akash-kadlag",
-      workingAt: "Teaching Assistant at Chai Cohort",
-      image: 'https://pbs.twimg.com/profile_images/1886363558432165888/3R_sXNG8_400x400.jpg',
+      id: '6',
+      name: 'Akash Kadlag',
+      slug: 'akash-kadlag',
+      workingAt: 'Teaching Assistant at Chai Cohort',
+      image:
+        'https://pbs.twimg.com/profile_images/1886363558432165888/3R_sXNG8_400x400.jpg',
     },
     {
-      id: "7",
-      name: "Mukul Padwal",
-      slug: "mukul-padwal",
-      workingAt: "Teaching Assistant at Chai Cohort",
-      image: 'https://media.licdn.com/dms/image/v2/D5603AQG631iml-x3_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667485027386?e=1751500800&v=beta&t=Lw18V7CeeizpdMgNYTNvjk_8jjJORmua8DCyzuydc54',
+      id: '7',
+      name: 'Mukul Padwal',
+      slug: 'mukul-padwal',
+      workingAt: 'Teaching Assistant at Chai Cohort',
+      image:
+        'https://media.licdn.com/dms/image/v2/D5603AQG631iml-x3_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667485027386?e=1751500800&v=beta&t=Lw18V7CeeizpdMgNYTNvjk_8jjJORmua8DCyzuydc54',
     },
   ],
-}
+};
+
+export const footerData: FooterData = {
+  about: {
+    tagline: 'Home for programmers',
+    copyright: '© 2025 ChaiCode. All rights reserved.',
+    socialLinks: [
+      { label: 'YouTube', url: 'https://www.youtube.com/@chaiaurcode' },
+      { label: 'Twitter', url: 'https://twitter.com/hiteshdotcom' },
+      { label: 'GitHub', url: 'https://github.com/hiteshchoudhary' },
+      {
+        label: 'LinkedIn',
+        url: 'https://www.linkedin.com/in/hiteshchoudhary/',
+      },
+      {
+        label: 'Instagram',
+        url: 'https://www.instagram.com/hiteshchoudharyofficial/',
+      },
+      { label: 'Discord', url: 'https://discord.com/invite/WDrH3zuWFb' },
+    ],
+  },
+  products: {
+    title: 'Products',
+    links: [
+      { name: 'Courses', url: 'https://courses.chaicode.com/learn' },
+      {
+        name: 'Cohorts',
+        url: 'https://courses.chaicode.com/learn/view-all?show=batch&type=17',
+      },
+      {
+        name: 'Coding Hero',
+        url: 'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+      },
+      { name: 'FreeAPI', url: 'https://freeapi.app/' },
+      { name: 'Masterji', url: 'https://masterji.co/login' },
+    ],
+  },
+  resources: {
+    title: 'Resources',
+    links: [
+      { name: 'Docs', url: 'https://docs.chaicode.com/' },
+      {
+        name: 'Privacy Policy',
+        url: 'https://www.chaicode.com/privacy-policy',
+      },
+      {
+        name: 'Terms of Service',
+        url: 'https://www.chaicode.com/terms-of-services',
+      },
+      {
+        name: 'Pricing Policy',
+        url: 'https://www.chaicode.com/pricing-policy',
+      },
+      { name: 'Refund Policy', url: 'https://www.chaicode.com/refund-policy' },
+    ],
+  },
+};

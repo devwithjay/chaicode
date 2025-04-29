@@ -12,8 +12,8 @@ import {
 
 import { navlinks } from '@/constants';
 
-import ThemeToggler from '../ui/theme-toggler';
-import { ChaiCodeText, ChaiLogo } from '../ui/icons';
+import ThemeToggler from '@/components/ui/theme-toggler';
+import { ChaiCodeText, ChaiLogo } from '@/components/ui/icons';
 
 interface NavItem {
   title: string;
