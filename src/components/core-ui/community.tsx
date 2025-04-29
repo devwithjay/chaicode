@@ -5,7 +5,7 @@ import { communityData } from '@/constants';
 const Community = () => {
   return (
     <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-14 lg:px-14 lg:pt-20">
-      <h1 className="mx-auto max-w-4xl text-center text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[36px] lg:text-[44px]">
+      <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
         {communityData.heading}
       </h1>
       <h3 className="mx-auto mt-3 max-w-2xl text-center text-[15px] text-[var(--text-secondary)] md:text-[18px]">
@@ -31,7 +31,7 @@ const Community = () => {
         </div>
 
         {communityData.imageUrl && (
-          <div className="relative w-full max-w-lg overflow-hidden hover:bg-black/90 rounded-2xl bg-black/80 shadow-lg dark:bg-white/10 dark:hover:bg-white/15">
+          <div className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-black/80 shadow-lg hover:bg-black/90 dark:bg-white/10 dark:hover:bg-white/15">
             <img
               src={communityData.imageUrl}
               alt="Community"

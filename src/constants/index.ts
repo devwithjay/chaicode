@@ -391,6 +391,18 @@ export const pricingData: PricingData = {
         'https://courses.chaicode.com/learn/batch/about?bundleId=214297',
     },
     {
+      title: 'DSA with C++ 1.0',
+      description: 'Focus on DSA with C++ for interview preparation.',
+      startDate: 'May 3, 2025',
+      duration: '2-3 months',
+      price: 5999,
+      originalPrice: 7999,
+      videoId: 'dz5C-r0Z9AA',
+      learnMoreText: 'Learn More',
+      learnMoreLink:
+        'https://courses.chaicode.com/learn/batch/about?bundleId=230409',
+    },
+    {
       title: 'Coding Hero 2025',
       description: 'Our Community focused program for students.',
       startDate: 'Starts Constantly going',

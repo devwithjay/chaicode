@@ -1,6 +1,6 @@
 'use client';
 
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRightLong } from 'react-icons/fa6';
 import { LuExternalLink } from 'react-icons/lu';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const Reviews = () => {
 
   return (
     <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-6 md:pt-12 lg:px-14 lg:pt-16">
-      <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
+      <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {reviewsData.heading}
       </h1>
       <h3 className="mx-auto mt-2 max-w-xl text-center text-[14px] text-[var(--text-secondary)] md:text-[18px]">
@@ -36,7 +36,7 @@ const Reviews = () => {
             onClick={handleShowMore}
             className="mb-4 cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-medium text-black shadow-md"
           >
-            Show More <FaArrowRight className="ml-1 inline" size={16} />
+            Show More <FaArrowRightLong className="ml-1 inline" size={16} />
           </button>
         </div>
       </div>

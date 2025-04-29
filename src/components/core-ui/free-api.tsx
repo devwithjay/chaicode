@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+
 import { freeApiData } from '@/constants';
 
 const FreeAPI = () => {
@@ -8,7 +9,7 @@ const FreeAPI = () => {
 
   return (
     <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-16 lg:px-14 lg:pt-20">
-      <h1 className="mx-auto max-w-5xl text-center text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[36px] lg:text-[44px]">
+      <h1 className="mx-auto max-w-5xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
         {freeApiData.heading}
       </h1>
       <h3 className="mx-auto mt-4 max-w-2xl text-center text-[14px] text-[var(--text-secondary)] md:text-[18px]">
@@ -87,7 +88,7 @@ const FreeAPI = () => {
             ></iframe>
             <button
               onClick={() => setActiveVideo(null)}
-              className="absolute top-2 cursor-pointer right-2 rounded bg-black/60 px-3 py-1 text-2xl text-white"
+              className="absolute top-2 right-2 cursor-pointer rounded bg-black/60 px-3 py-1 text-2xl text-white"
             >
               ✕
             </button>

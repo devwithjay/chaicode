@@ -4,7 +4,7 @@ import { benefitsData } from '@/constants';
 const Benefits = () => {
   return (
     <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 sm:px-8 md:pt-14">
-      <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
+      <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {benefitsData.heading}
       </h1>
 
@@ -12,8 +12,9 @@ const Benefits = () => {
         {benefitsData.subHeading}
       </h3>
 
-      <div className='mt-8 md:mt-10 lg:mt-12'>
-      <BenefitsCard {...benefitsData} /></div>
+      <div className="mt-8 md:mt-10 lg:mt-12">
+        <BenefitsCard {...benefitsData} />
+      </div>
     </section>
   );
 };

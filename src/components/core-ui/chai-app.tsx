@@ -25,7 +25,7 @@ const ChaiApp = () => {
   return (
     <section className="flex flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-6 pt-16 sm:px-8 md:pt-20 lg:px-14 lg:pt-24">
       <div className="text-center">
-        <h1 className="text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[36px] lg:text-[44px]">
+        <h1 className="text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
           {appData.heading}
         </h1>
         <h3 className="mt-3 text-[15px] text-[var(--text-secondary)] md:text-[18px]">
@@ -96,13 +96,13 @@ const ChaiApp = () => {
             <motion.img
               src={appData.androidImageUrl}
               alt="Android Mockup"
-              className="absolute top-8 left-6 w-[180px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[220px] lg:w-[250px] xl:w-[280px]"
+              className="absolute top-8 left-6 w-[280px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2"
             />
 
             <motion.img
               src={appData.iphoneImageUrl}
               alt="iPhone Mockup"
-              className="absolute top-0 right-6 z-10 w-[180px] -rotate-6 rounded-2xl object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[220px] lg:w-[250px] xl:w-[280px]"
+              className="rounded-5xl absolute top-0 right-6 z-10 w-[280px] -rotate-6 object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2"
             />
           </motion.div>
         </div>
