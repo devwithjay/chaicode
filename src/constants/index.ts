@@ -16,6 +16,15 @@ import {
   SnappyUIImg,
   SwingUIImg,
 } from '@/assets';
+import {
+  AkashImg,
+  AnirudhImg,
+  HiteshImg,
+  MukulImg,
+  PiyushImg,
+  PriyaImg,
+  RakeshImg,
+} from '@/assets/mentors';
 
 type Navlinks = {
   title: string;
@@ -720,56 +729,49 @@ export const mentorsData: MentorData = {
       description:
         'Founder of ChaiCohort, passionate about building the next generation of developers.',
       workingAt: 'Founder of Chai Cohort',
-      image:
-        'https://pbs.twimg.com/profile_images/1724344976715468800/MasktpKz_400x400.jpg',
+      image: HiteshImg,
     },
     {
       id: '2',
       name: 'Piyush Garg',
       slug: 'piyush-garg',
       workingAt: 'Teacher at Chai Cohort',
-      image:
-        'https://pbs.twimg.com/profile_images/1879075502356586496/V9wQzW7V_400x400.jpg',
+      image: PiyushImg,
     },
     {
       id: '3',
       name: 'Priya Bhatia',
       slug: 'priya-bhatia',
       workingAt: 'Teacher at Chai Cohort',
-      image:
-        'https://media.licdn.com/dms/image/v2/C4E03AQEqNUPkoCmJCA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1663956505952?e=1751500800&v=beta&t=gA18L0d93S5UFqJ-QQ8WGKRaos5wblkE30hF7dsjvyY',
+      image: PriyaImg,
     },
     {
       id: '4',
       name: 'Rakesh K',
       slug: 'rakesh-k',
       workingAt: 'Teacher at Chai Cohort',
-      image:
-        'https://pbs.twimg.com/profile_images/1770738495029415936/kG8LRvM3_400x400.jpg',
+      image: RakeshImg,
     },
     {
       id: '5',
       name: 'Anirudh Jwala',
       slug: 'anirudh-jwala',
       workingAt: 'Teaching Assistant at Chai Cohort',
-      image:
-        'https://pbs.twimg.com/profile_images/1877597004169359361/9Vu5A11t_400x400.jpg',
+      image: AnirudhImg,
     },
     {
       id: '6',
       name: 'Akash Kadlag',
       slug: 'akash-kadlag',
       workingAt: 'Teaching Assistant at Chai Cohort',
-      image:
-        'https://pbs.twimg.com/profile_images/1886363558432165888/3R_sXNG8_400x400.jpg',
+      image: AkashImg,
     },
     {
       id: '7',
       name: 'Mukul Padwal',
       slug: 'mukul-padwal',
       workingAt: 'Teaching Assistant at Chai Cohort',
-      image:
-        'https://media.licdn.com/dms/image/v2/D5603AQG631iml-x3_g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667485027386?e=1751500800&v=beta&t=Lw18V7CeeizpdMgNYTNvjk_8jjJORmua8DCyzuydc54',
+      image: MukulImg,
     },
   ],
 };

@@ -88,7 +88,7 @@ const PricingCard = ({
       </div>
 
       <a href={learnMoreLink} target="_blank" rel="noopener noreferrer">
-        <button className="w-full cursor-pointer rounded-md bg-[var(--surface-brand)] py-2 text-white transition-all duration-300 hover:bg-[var(--surface-brand-hover)]">
+        <button className="w-full cursor-pointer rounded-b-md bg-[var(--surface-brand)] py-2 text-white hover:bg-[var(--surface-brand-hover)]">
           {learnMoreText}
         </button>
       </a>
