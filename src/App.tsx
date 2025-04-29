@@ -11,6 +11,7 @@ import TopicsCloud from '@/components/core-ui/topics-cloud';
 import Community from '@/components/core-ui/community';
 import FreeAPI from '@/components/core-ui/free-api';
 import ChaiApp from '@/components/core-ui/chai-app';
+import Mentors from '@/components/core-ui/mentors';
 
 import './App.css';
 
@@ -25,6 +26,7 @@ function App() {
         <Testimonials />
         <Achievements />
         <Cohorts />
+        <Mentors />
         <Reviews />
         <Udemy />
         <Benefits />
@@ -32,7 +34,7 @@ function App() {
         <TopicsCloud />
         <Community />
         <FreeAPI />
-        <ChaiApp/>
+        <ChaiApp />
       </main>
     </>
   );

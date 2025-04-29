@@ -1,11 +1,10 @@
-import { achievementsData } from '@/constants';
-
-import { Carousel } from '@/components/ui/carousal';
+import { Carousel } from '@/components/ui/carousel';
 import { ProductCard } from '@/components/ui/product-card';
+import { achievementsData } from '@/constants';
 
 const Achievements = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] pt-12 md:pt-16 ">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] pt-12 md:pt-16">
       <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
         {achievementsData.heading}
       </h1>
@@ -13,7 +12,7 @@ const Achievements = () => {
         {achievementsData.subHeading}
       </h3>
 
-      <div className="mt-16 md:mt-18 mb-12 w-full">
+      <div className="mt-16 mb-12 w-full md:mt-18">
         <Carousel className="w-full" itemClassName="gap-6">
           {achievementsData.productsData.map((product) => (
             <div
