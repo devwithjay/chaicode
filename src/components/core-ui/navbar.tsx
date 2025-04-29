@@ -10,10 +10,9 @@ import {
   IoPlayOutline,
 } from 'react-icons/io5';
 
-import { navlinks } from '@/constants';
-
-import ThemeToggler from '@/components/ui/theme-toggler';
 import { ChaiCodeText, ChaiLogo } from '@/components/ui/icons';
+import ThemeToggler from '@/components/ui/theme-toggler';
+import { navlinks } from '@/constants';
 
 interface NavItem {
   title: string;

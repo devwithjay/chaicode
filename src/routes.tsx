@@ -1,18 +1,22 @@
 import { createBrowserRouter } from 'react-router-dom';
+
+import {
+  HomePage,
+  NotFound,
+  PricingPolicy,
+  PrivacyPolicy,
+  RefundPolicy,
+  TermsOfService,
+} from '@/pages';
+
 import App from './App';
-import HomePage from './pages/HomePage';
-import PrivacyPolicy from './pages/PrivacyPolicy';
-import TermsOfService from './pages/TermsOfService';
-import PricingPolicy from './pages/PricingPolicy';
-import RefundPolicy from './pages/RefundPolicy';
-import NotFound from './pages/NotFound';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
-      { index: true, element: <HomePage /> }, 
+      { index: true, element: <HomePage /> },
       { path: 'privacy-policy', element: <PrivacyPolicy /> },
       { path: 'terms-of-service', element: <TermsOfService /> },
       { path: 'pricing-policy', element: <PricingPolicy /> },

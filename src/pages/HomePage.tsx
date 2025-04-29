@@ -1,16 +1,18 @@
-import Hero from '@/components/core-ui/hero';
-import Testimonials from '@/components/core-ui/testimonials';
-import Achievements from '@/components/core-ui/achievements';
-import Cohorts from '@/components/core-ui/cohorts';
-import Mentors from '@/components/core-ui/mentors';
-import Reviews from '@/components/core-ui/reviews';
-import Udemy from '@/components/core-ui/udemy';
-import Benefits from '@/components/core-ui/benefits';
-import WhyChaiCode from '@/components/core-ui/why-chaicode';
-import TopicsCloud from '@/components/core-ui/topics-cloud';
-import Community from '@/components/core-ui/community';
-import FreeAPI from '@/components/core-ui/free-api';
-import ChaiApp from '@/components/core-ui/chai-app';
+import {
+  Achievements,
+  Benefits,
+  ChaiApp,
+  Cohorts,
+  Community,
+  FreeAPI,
+  Hero,
+  Mentors,
+  Reviews,
+  Testimonials,
+  TopicsCloud,
+  Udemy,
+  WhyChaiCode,
+} from '@/components/core-ui';
 
 const HomePage = () => {
   return (

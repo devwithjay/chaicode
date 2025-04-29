@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import moonIcon from '@assets/icons/moonIcon.svg';
-import sunIcon from '@assets/icons/sunIcon.svg';
+import { MoonIcon, SunIcon } from '@/assets';
 
 const ThemeToggler = () => {
   const getInitialTheme = () => {
@@ -31,7 +30,7 @@ const ThemeToggler = () => {
   return (
     <div className="mr-2 flex items-start justify-end max-lg:mr-5 max-lg:flex-1">
       <img
-        src={theme === 'dark' ? sunIcon : moonIcon}
+        src={theme === 'dark' ? SunIcon : MoonIcon}
         alt="ThemeToggler"
         width={24}
         height={24}

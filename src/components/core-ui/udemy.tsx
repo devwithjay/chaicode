@@ -1,6 +1,6 @@
-import { Slider } from '@/components/ui/slider';
+import Slider from '@/components/ui/slider';
+import UdemyCard from '@/components/ui/udemy-card';
 import { udemyData } from '@/constants';
-import UdemyCard from '../ui/udemy-card';
 
 const Udemy = () => {
   return (
@@ -15,7 +15,7 @@ const Udemy = () => {
       <div className="mt-16 mb-12 w-full md:mt-18">
         <Slider className="" itemClassName="gap-8">
           {udemyData.courses.map((course, index) => (
-            <div key={index} className="flex-shrink-0 w-full max-w-[1200px]">
+            <div key={index} className="w-full max-w-[1200px] flex-shrink-0">
               <UdemyCard course={course} />
             </div>
           ))}

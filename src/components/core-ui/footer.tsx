@@ -42,9 +42,11 @@ export function Footer() {
     <footer className="w-full bg-[var(--surface-primary)] px-6 py-12 md:px-12">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 sm:gap-10 md:flex-row">
         <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-1">
-            <ChaiLogo />
-            <ChaiCodeText />
+          <div>
+            <a href="/" className="flex items-center gap-0.5">
+              <ChaiLogo />
+              <ChaiCodeText />
+            </a>
           </div>
           <p className="mb-1 text-[12px] text-[var(--text-secondary)] sm:text-[14px] md:text-[15px] lg:text-[16px]">
             {footerData.about.tagline}
@@ -70,7 +72,7 @@ export function Footer() {
 
         <div className="grid grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           <div className="flex flex-col gap-2">
-            <h4 className="text-sm font-semibold mb-1.5 md:mb-3 text-[var(--text-primary)] sm:text-lg ">
+            <h4 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
               {footerData.products.title}
             </h4>
             {footerData.products.links.map((link) => (
@@ -85,7 +87,7 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h4 className="text-sm font-semibold mb-1.5 md:mb-3 text-[var(--text-primary)] sm:text-lg ">
+            <h4 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
               {footerData.resources.title}
             </h4>
             {footerData.resources.links.map((link) => (
@@ -98,8 +100,6 @@ export function Footer() {
               </a>
             ))}
           </div>
-
-        
         </div>
       </div>
     </footer>

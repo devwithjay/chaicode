@@ -2,7 +2,7 @@ import { LuExternalLink } from 'react-icons/lu';
 
 import { whyChaiCodeData } from '@/constants';
 
-import { WhyChaiCodeCard, WhyChaiCodeFeatured } from '../ui/why-chaicode-cards';
+import { WhyChaiCodeCard, WhyChaiCodeFeatured } from '@/components/ui/why-chaicode-cards';
 
 const WhyChaiCode = () => {
   return (

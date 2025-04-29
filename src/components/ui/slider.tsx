@@ -10,7 +10,7 @@ interface SliderProps {
   itemClassName?: string;
 }
 
-export function Slider({ children, className, itemClassName }: SliderProps) {
+const Slider = ({ children, className, itemClassName }: SliderProps)  => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
@@ -139,3 +139,5 @@ export function Slider({ children, className, itemClassName }: SliderProps) {
     </div>
   );
 }
+
+export default Slider;
