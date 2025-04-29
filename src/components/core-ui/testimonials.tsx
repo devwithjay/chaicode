@@ -1,6 +1,6 @@
 import ClientTweetCard from '@/components/ui/client-tweet-card';
 import Marquee from '@/components/ui/marquee';
-import { testimonialsData, tweetIds } from '@/constants';
+import { testimonialsData, tweetLoveIds } from '@/constants';
 
 const Testimonials = () => {
   return (
@@ -14,7 +14,7 @@ const Testimonials = () => {
       <section className="relative mt-6 md:mt-12 lg:mt-18 flex w-full flex-grow flex-col gap-4 overflow-hidden rounded-2xl border-none transition-all duration-300">
         <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl">
           <Marquee pauseOnHover className="gap-2 p-8 [--duration:100s]">
-            {tweetIds.map((id) => (
+            {tweetLoveIds.map((id) => (
               <ClientTweetCard key={id} id={id} />
             ))}
           </Marquee>
