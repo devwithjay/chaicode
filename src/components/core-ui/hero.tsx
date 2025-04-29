@@ -74,7 +74,7 @@ const Hero = () => {
       <div className="mt-10 md:mt-15">
         <a
           href={heroData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--text-brand)] px-6 py-3 text-sm font-medium text-white sm:px-8 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-6 py-3 text-sm font-medium text-white sm:px-8 sm:py-3 sm:text-base"
         >
           <BsBroadcastPin size={20} />
           {heroData.ctaText}

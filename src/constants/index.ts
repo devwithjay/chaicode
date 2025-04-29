@@ -15,7 +15,7 @@ import {
   RevisionClassImg,
   SnappyUIImg,
   SwingUIImg,
-} from '@/assets';
+} from '@/assets/images';
 import {
   AkashImg,
   AnirudhImg,
@@ -166,7 +166,7 @@ type FreeApiData = {
   descriptionPoints: string[];
   ctaText: string;
   ctaLink: string;
-  videoLink: string;
+  videoId: string;
 };
 
 type AppData = {
@@ -536,7 +536,7 @@ export const benefitsData: BenefitsData = {
       'https://pbs.twimg.com/profile_images/1743580215765590016/GABZN__C_400x400.jpg',
       'https://pbs.twimg.com/profile_images/1911152877298458624/S1urBdQX_400x400.jpg',
       'https://pbs.twimg.com/profile_images/1894995896145977346/AEs7pesh_400x400.jpg',
-      'https://media.licdn.com/dms/image/v2/D4D03AQHx9vUumgZWLQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731353865679?e=1751500800&v=beta&t=fBLCffr4NfZXg99l3f5zBwDtk_fpVyYFZDGdptwbiJ8',
+      'https://images.unsplash.com/photo-1736194689767-9e3c4e7bd7f6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU1fHxtYWxlJTIwaGVhZHNob3R8ZW58MHx8MHx8fDA%3D',
       'https://pbs.twimg.com/profile_images/1879974632683683840/iL4zMCRJ_400x400.jpg',
       'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww',
       'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
@@ -725,7 +725,7 @@ export const freeApiData: FreeApiData = {
   ],
   ctaText: 'Check FreeAPI Docs',
   ctaLink: 'https://freeapi.app/',
-  videoLink: 'https://youtu.be/DxedlhTyR7Q?feature=shared',
+  videoId: 'DxedlhTyR7Q',
 };
 
 export const appData: AppData = {

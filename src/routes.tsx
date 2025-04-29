@@ -6,8 +6,8 @@ import {
   PricingPolicy,
   PrivacyPolicy,
   RefundPolicy,
-  TermsOfService,
   Reviews,
+  TermsOfService,
 } from '@/pages';
 
 import App from './App';
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       { path: 'terms-of-service', element: <TermsOfService /> },
       { path: 'pricing-policy', element: <PricingPolicy /> },
       { path: 'refund-policy', element: <RefundPolicy /> },
-      {path: 'reviews', element: <Reviews />},
+      { path: 'reviews', element: <Reviews /> },
       { path: '*', element: <NotFound /> },
     ],
   },

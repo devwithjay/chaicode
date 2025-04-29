@@ -3,8 +3,9 @@
 import { useState } from 'react';
 
 import { motion } from 'framer-motion';
-import { FiBell, FiDownload, FiSmartphone, FiZap } from 'react-icons/fi';
-
+import { FiBell,  FiSmartphone, FiZap } from 'react-icons/fi';
+import { FaApple } from 'react-icons/fa';
+import { SiGoogleplay } from 'react-icons/si';
 import { appData } from '@/constants';
 
 const ChaiApp = () => {
@@ -57,7 +58,7 @@ const ChaiApp = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-4 py-3 text-white hover:bg-[var(--surface-brand-hover)]"
             >
-              <FiDownload size={24} />
+              <FaApple size={28} />
               <div className="flex flex-col text-left">
                 <span className="text-xs">Download on the</span>
                 <span className="text-lg font-semibold">App Store</span>
@@ -70,7 +71,7 @@ const ChaiApp = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-4 py-3 text-white hover:bg-[var(--surface-brand-hover)]"
             >
-              <FiDownload size={24} />
+              <SiGoogleplay size={24} />
               <div className="flex flex-col text-left">
                 <span className="text-xs">Get it on</span>
                 <span className="text-lg font-semibold">Google Play</span>

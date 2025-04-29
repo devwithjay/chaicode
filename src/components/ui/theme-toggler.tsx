@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { MoonIcon, SunIcon } from '@/assets';
+import { MoonIcon, SunIcon } from '@/assets/icons';
 
 const ThemeToggler = () => {
   const getInitialTheme = () => {

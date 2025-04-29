@@ -59,7 +59,6 @@ const Navbar = () => {
             <li key={index}>
               <a
                 href={item.link}
-                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5"
               >
