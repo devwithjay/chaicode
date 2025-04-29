@@ -811,19 +811,10 @@ export const footerData: FooterData = {
     title: 'Resources',
     links: [
       { name: 'Docs', url: 'https://docs.chaicode.com/' },
-      {
-        name: 'Privacy Policy',
-        url: 'https://www.chaicode.com/privacy-policy',
-      },
-      {
-        name: 'Terms of Service',
-        url: 'https://www.chaicode.com/terms-of-services',
-      },
-      {
-        name: 'Pricing Policy',
-        url: 'https://www.chaicode.com/pricing-policy',
-      },
-      { name: 'Refund Policy', url: 'https://www.chaicode.com/refund-policy' },
+      { name: 'Privacy Policy', url: '/privacy-policy' },
+      { name: 'Terms of Service', url: '/terms-of-service' },
+      { name: 'Pricing Policy', url: '/pricing-policy' },
+      { name: 'Refund Policy', url: '/refund-policy' },
     ],
   },
 };
