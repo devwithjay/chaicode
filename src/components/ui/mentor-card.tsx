@@ -43,7 +43,7 @@ export function MentorCard({
 
   return (
     <div
-      className="relative h-[350px] w-full max-w-[280px] min-w-[280px] overflow-hidden rounded-2xl border transition-all duration-300"
+      className="relative h-[350px] w-full max-w-[280px] min-w-[280px] overflow-hidden rounded-2xl"
       onMouseOver={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
@@ -60,7 +60,7 @@ export function MentorCard({
       <Disclosure
         onOpenChange={setIsOpen}
         open={isOpen}
-        className="bg-[var(--surface-secondary)] absolute right-0 bottom-0 left-0 m-2 flex flex-col rounded-2xl p-4"
+        className="bg-[var(--surface-primary)] absolute right-0 bottom-0 left-0 m-2 flex flex-col rounded-2xl p-4"
         variants={contentVariants}
         transition={transition}
       >
