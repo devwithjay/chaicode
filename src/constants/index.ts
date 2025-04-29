@@ -20,7 +20,6 @@ import {
   AkashImg,
   AnirudhImg,
   HiteshImg,
-  MukulImg,
   PiyushImg,
   PriyaImg,
   RakeshImg,
@@ -793,13 +792,6 @@ export const mentorsData: MentorData = {
       slug: 'akash-kadlag',
       workingAt: 'Teaching Assistant at Chai Cohort',
       image: AkashImg,
-    },
-    {
-      id: '7',
-      name: 'Mukul Padwal',
-      slug: 'mukul-padwal',
-      workingAt: 'Teaching Assistant at Chai Cohort',
-      image: MukulImg,
     },
   ],
 };
