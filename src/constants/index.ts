@@ -233,7 +233,7 @@ export const navlinks: Navlinks = [
   },
   {
     title: 'Reviews',
-    link: 'https://www.chaicode.com/reviews',
+    link: '/reviews',
   },
 ];
 
