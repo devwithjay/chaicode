@@ -24,7 +24,7 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div
-      className={`flex h-[350px] flex-col overflow-hidden rounded-xl bg-white shadow-md ${className}`}
+      className={`flex flex-col overflow-hidden rounded-xl  ${className} h-[340px]`}
     >
       <a
         href={websiteUrl}
@@ -37,7 +37,6 @@ export const ProductCard = ({
           alt={title}
           className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
         />
-
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 hover:opacity-100">
           <div className="rounded-full bg-black/10 p-2">
             <FaExternalLinkAlt className="text-xl text-white" />
@@ -46,11 +45,11 @@ export const ProductCard = ({
       </a>
 
       <div className="flex flex-1 flex-col bg-[var(--surface-secondary)] p-4">
-        <h3 className="mb-2 text-lg md:text-xl font-bold text-[var(--text-primary)]">
+        <h3 className="mb-2 text-lg font-bold text-[var(--text-primary)] md:text-xl">
           {title}
         </h3>
 
-        <p className="mb-4 flex-1 text-sm md:text-md text-[var(--text-secondary)]">
+        <p className="mb-4 flex-1 text-sm text-[var(--text-secondary)] line-clamp-2 md:text-md">
           {description}
         </p>
 
