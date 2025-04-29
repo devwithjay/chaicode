@@ -4,7 +4,7 @@ import { communityData } from '@/constants';
 
 const Community = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-14 lg:px-14">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-14 lg:px-14 lg:pt-20">
       <h1 className="mx-auto max-w-4xl text-center text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[36px] lg:text-[44px]">
         {communityData.heading}
       </h1>

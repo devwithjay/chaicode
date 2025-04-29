@@ -7,7 +7,7 @@ const FreeAPI = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-16 lg:px-14">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-16 lg:px-14 lg:pt-20">
       <h1 className="mx-auto max-w-5xl text-center text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[36px] lg:text-[44px]">
         {freeApiData.heading}
       </h1>

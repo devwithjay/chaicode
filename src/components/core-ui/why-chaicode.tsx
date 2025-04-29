@@ -6,7 +6,7 @@ import { WhyChaiCodeCard, WhyChaiCodeFeatured } from '@/components/ui/why-chaico
 
 const WhyChaiCode = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 lg:px-14 pt-6 md:pt-10">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 lg:px-14 pt-6 md:pt-10 lg:pt-20">
       <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
         {whyChaiCodeData.heading}
       </h1>
