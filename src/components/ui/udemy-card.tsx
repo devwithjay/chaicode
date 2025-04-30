@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
 type Course = {
@@ -32,16 +33,31 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
     const hasHalfStar = ratingValue % 1 >= 0.5;
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(<FaStar key={`full-${i}`} className="text-xs text-[var(--text-brand)] sm:text-sm" />);
+      stars.push(
+        <FaStar
+          key={`full-${i}`}
+          className="text-xs text-[var(--text-brand)] sm:text-sm"
+        />,
+      );
     }
 
     if (hasHalfStar) {
-      stars.push(<FaStarHalfAlt key="half" className="text-xs text-[var(--text-brand)] sm:text-sm" />);
+      stars.push(
+        <FaStarHalfAlt
+          key="half"
+          className="text-xs text-[var(--text-brand)] sm:text-sm"
+        />,
+      );
     }
 
     const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
     for (let i = 0; i < emptyStars; i++) {
-      stars.push(<FaStar key={`empty-${i}`} className="text-xs text-gray-400 sm:text-sm" />);
+      stars.push(
+        <FaStar
+          key={`empty-${i}`}
+          className="text-xs text-gray-400 sm:text-sm"
+        />,
+      );
     }
 
     return stars;
@@ -49,8 +65,7 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
 
   return (
     <>
-      <div className="flex flex-col-reverse lg:flex-row w-full max-w-md sm:max-w-lg lg:max-w-5xl mx-auto overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow-lg">
-        
+      <div className="mx-auto flex w-full max-w-md flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200 sm:max-w-lg lg:max-w-5xl lg:flex-row">
         <div className="flex flex-col justify-between p-6 lg:w-1/2">
           <div>
             <h2 className="mb-2 text-xl font-bold text-[var(--text-primary)] sm:text-2xl lg:text-3xl">
@@ -66,7 +81,9 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
               </div>
               <div className="flex flex-col items-start">
                 <div className="flex gap-1">{renderStars()}</div>
-                <div className="mt-1 text-xs text-[var(--text-secondary)]">Top Rated</div>
+                <div className="mt-1 text-xs text-[var(--text-secondary)]">
+                  Top Rated
+                </div>
               </div>
             </div>
 
@@ -93,8 +110,8 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
           </a>
         </div>
 
-        <div 
-          className="relative cursor-pointer bg-black lg:w-1/2 video-card" 
+        <div
+          className="video-card relative cursor-pointer bg-black lg:w-1/2"
           onClick={() => setActiveVideo(course.videoId)}
         >
           <style>{`
@@ -114,12 +131,12 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
               e.currentTarget.src = `https://img.youtube.com/vi/${course.videoId}/hqdefault.jpg`;
             }}
           />
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30 transition-all video-card-hover:bg-black/20">
+          <div className="video-card-hover:bg-black/20 absolute inset-0 flex items-center justify-center bg-black/30 transition-all">
             <svg
               viewBox="0 0 544 384"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="w-12 fill-gray-700 transition-all video-card-hover:fill-red-600 sm:w-14"
+              className="video-card-hover:fill-red-600 w-12 fill-gray-700 transition-all sm:w-14"
             >
               <path d="M533.655 60.083C527.374 36.433 508.882 17.842 485.233 11.561C441.885 -2.86102e-06 272 0 272 0C272 0 102.114 -2.86102e-06 58.767 11.561C35.118 17.842 16.626 36.433 10.345 60.083C-9.53674e-07 103.229 0 192 0 192C0 192 -9.53674e-07 280.771 10.345 323.917C16.626 347.567 35.118 366.158 58.767 372.439C102.114 384 272 384 272 384C272 384 441.885 384 485.233 372.439C508.882 366.158 527.374 347.567 533.655 323.917C544 280.771 544 192 544 192C544 192 544 103.229 533.655 60.083ZM216 272V112L358.857 192L216 272Z" />
               <path

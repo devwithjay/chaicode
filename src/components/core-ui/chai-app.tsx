@@ -23,7 +23,7 @@ const ChaiApp = () => {
   };
 
   return (
-    <section className="8 mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-16 md:pt-20 lg:pt-24 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-16 transition-all duration-200 md:pt-20 lg:pt-24 2xl:px-0">
       <div className="text-center">
         <h1 className="text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
           {appData.heading}

@@ -28,14 +28,12 @@ const ThemeToggler = () => {
   };
 
   return (
-    <div className="mr-2 flex items-start justify-end max-lg:mr-5 max-lg:flex-1">
+    <div className="mr-2 flex items-center justify-center max-lg:flex-1">
       <img
         src={theme === 'dark' ? SunIcon : MoonIcon}
         alt="ThemeToggler"
-        width={24}
-        height={24}
         onClick={handleThemeSwitch}
-        className="cursor-pointer align-top"
+        className="cursor-pointer size-5 md:size-7"
         style={rotationStyle}
       />
     </div>

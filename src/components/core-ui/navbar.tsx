@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 import { AnimatePresence, motion } from 'framer-motion';
@@ -46,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] px-6 py-4 2xl:px-0">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] p-6 transition-all duration-200 2xl:px-0">
         <div className="flex cursor-pointer items-center space-x-2">
           <a
             aria-label="Go to ChaiCode homepage"
@@ -60,16 +62,21 @@ const Navbar = () => {
 
         <ul className="hidden items-center space-x-4 text-base text-[var(--text-secondary)] md:flex lg:space-x-8 lg:text-lg">
           {navlinks.map((item, index) => (
-            <li key={index}>
+            <motion.li
+              key={index}
+              whileHover={{ y: -2, scale: 1.05 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
               <a
                 href={item.link}
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5"
+                className="flex items-center gap-1.5 transition-all duration-300 hover:text-[var(--text-primary)]"
+                aria-label={item.title}
               >
                 {getIconForNavItem(item, index)}
                 {item.title}
               </a>
-            </li>
+            </motion.li>
           ))}
         </ul>
 
@@ -81,7 +88,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="hidden md:block"
           >
-            <button className="cursor-pointer rounded-lg bg-[var(--surface-brand)] px-3 py-1.5 text-sm font-medium text-white md:px-5 md:text-base">
+            <button className="cursor-pointer rounded-lg bg-[var(--surface-brand)] px-3 py-1.5 text-sm font-medium text-white transition-all duration-300 ease-in-out hover:brightness-110 md:px-5 md:text-base">
               Login
             </button>
           </a>

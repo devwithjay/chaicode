@@ -37,31 +37,31 @@ const Hero = () => {
   const videoIds = heroData.videoLinks.map((link) => link.split('/embed/')[1]);
 
   return (
-    <section className="mx-auto bg-[var(--surface-primary)] pt-10 text-center md:pt-14 lg:pt-16">
-      <div className="mb-6 inline-flex flex-wrap items-center justify-center rounded-md border border-[var(--border-primary)] px-2.5 py-2 text-xs font-medium text-[var(--text-brand)] max-sm:text-center sm:text-sm md:px-4 md:text-base">
+    <section className="mx-auto bg-[var(--surface-primary)] pt-10 text-center transition-all duration-200 md:pt-14 lg:pt-16">
+      <div className="mb-6 inline-flex flex-wrap items-center justify-center rounded-md border border-[var(--border-primary)] px-2.5 py-2 text-xs font-medium text-[var(--text-brand)] transition-all duration-200 select-none hover:border-[var(--text-brand)] max-sm:text-center sm:text-sm md:px-4 md:text-base">
         <span className="mr-2 text-lg text-[var(--text-brand)] sm:text-xl">
           <FaHandshakeSimple />
         </span>
-        <span>Trusted by 1.5M Code Learners</span>
+        <span className="select-none">Trusted by 1.5M Code Learners</span>
       </div>
 
-      <h1 className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] md:px-0 md:text-[48px] lg:text-[64px]">
+      <h1 className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] transition-all duration-200 md:px-0 md:text-[48px] lg:text-[64px]">
         {heroData.heading}
       </h1>
 
-      <h2 className="mx-auto mt-2 max-w-4xl px-6 text-2xl font-semibold text-[var(--text-brand)] md:px-0 md:text-[30px] lg:text-[38px]">
+      <h2 className="mx-auto mt-1 max-w-4xl px-6 text-2xl leading-tight font-semibold text-[var(--text-brand)] transition-all duration-200 md:px-0 md:text-[30px] lg:text-[38px]">
         {heroData.subHeading}
       </h2>
 
-      <p className="text-md mx-auto mt-6 max-w-3xl px-6 text-[var(--text-secondary)] md:px-0 md:text-lg">
+      <p className="text-md mx-auto mt-6 max-w-3xl px-6 text-[var(--text-secondary)] transition-all duration-200 md:px-0 md:text-lg">
         {heroData.description}
       </p>
 
-      <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2 px-6 md:gap-3 md:px-0">
+      <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2 px-6 transition-all duration-200 md:gap-3 md:px-0">
         {heroData.tagTitles.map((tag, index) => (
           <span
             key={index}
-            className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-3 py-1 text-xs font-normal text-[var(--text-primary)] md:py-1.5 md:text-sm lg:py-2"
+            className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-4 py-1 text-[12px] font-medium text-[var(--text-primary)] transition-all duration-200 ease-in-out select-none hover:border-[var(--text-brand)] md:py-1.5 md:text-[14px] lg:py-2"
           >
             <span className="text-[var(--text-brand)]">
               {getIconForTag(tag, index)}
@@ -74,7 +74,7 @@ const Hero = () => {
       <div className="mt-10 md:mt-15">
         <a
           href={heroData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-6 py-3 text-sm font-medium text-white sm:px-8 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--surface-brand)] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:brightness-110 sm:px-8 sm:py-3 sm:text-base"
         >
           <BsBroadcastPin size={20} />
           {heroData.ctaText}
@@ -89,7 +89,7 @@ const Hero = () => {
           {videoIds.map((id) => (
             <div
               key={id}
-              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-transform hover:scale-101 md:w-[500px]"
+              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-all hover:scale-101 md:w-[500px]"
               onClick={() => setActiveVideo(id)}
             >
               <img

@@ -7,8 +7,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-[var(--surface-primary)]">
-      <header className="sticky top-0 z-50 bg-[var(--surface-primary)]">
+    <div className="bg-[var(--surface-primary)] transition-all duration-200">
+      <header className="sticky top-0 z-50 bg-[var(--surface-primary)] transition-all duration-200">
         <Navbar />
       </header>
       <main className="flex-1">

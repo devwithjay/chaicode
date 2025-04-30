@@ -234,7 +234,7 @@ export const DynamicTweet = ({
   return (
     <div
       className={cn(
-        'flex w-full flex-col gap-2 overflow-hidden rounded-xl bg-[var(--surface-secondary)] p-4',
+        'flex w-full transition-all duration-200 flex-col gap-2 overflow-hidden rounded-xl bg-[var(--surface-secondary)] p-4',
         className
       )}
       {...props}

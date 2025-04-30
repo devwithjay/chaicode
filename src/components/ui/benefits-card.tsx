@@ -22,11 +22,11 @@ interface BenefitsCardProps {
 export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
   return (
     <div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 transition-all duration-200 sm:grid-cols-2 lg:grid-cols-3">
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-xl bg-[var(--surface-secondary)]"
+            className="overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200"
           >
             <div className="h-48 overflow-hidden md:h-54">
               <img
@@ -48,7 +48,7 @@ export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
         ))}
       </div>
 
-      <div className="mt-12 overflow-hidden rounded-xl bg-[var(--surface-secondary)]">
+      <div className="mt-12 overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex items-center justify-center px-6 py-6 lg:py-10">
             <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">

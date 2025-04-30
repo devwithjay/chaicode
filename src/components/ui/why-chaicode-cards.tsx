@@ -66,7 +66,7 @@ export const WhyChaiCodeFeatured = ({
   };
 
   return (
-    <div className="flex h-full flex-col gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] shadow-md hover:shadow-lg">
+    <div className="flex h-full flex-col gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] shadow-md transition-all duration-200 hover:shadow-lg">
       <div className="w-full overflow-hidden rounded-t-xl">
         <img src={imageUrl} alt={name} className="h-auto w-full object-cover" />
       </div>

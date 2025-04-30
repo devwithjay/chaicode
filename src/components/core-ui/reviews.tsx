@@ -16,7 +16,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 md:px-8 md:pt-12 lg:pt-16 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 transition-all duration-200 md:px-8 md:pt-12 lg:pt-16 2xl:px-0">
       <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {reviewsData.heading}
       </h1>
@@ -24,7 +24,7 @@ const Reviews = () => {
         {reviewsData.subHeading}
       </h2>
       <div className="relative mt-10 max-h-[860px] w-full max-w-[1440px] overflow-hidden md:mt-18">
-        <div className="columns-1 gap-6 sm:columns-2 md:columns-3 lg:columns-4">
+        <div className="columns-1 gap-6 transition-all duration-200 sm:columns-2 md:columns-3 lg:columns-4">
           {feedbackTweetIds.map((id) => (
             <div key={id} className="mb-6 break-inside-avoid">
               <DynamicClientTweetCard id={id} />
@@ -34,7 +34,7 @@ const Reviews = () => {
         <div className="absolute right-0 bottom-0 left-0 flex h-32 items-end justify-center bg-gradient-to-t from-[var(--surface-primary)] to-transparent">
           <button
             onClick={handleShowMore}
-            className="mb-4 cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-medium text-black shadow-md"
+            className="mb-4 cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-medium text-black shadow-md transition-all duration-200"
           >
             Show More <FaArrowRightLong className="ml-1 inline" size={16} />
           </button>

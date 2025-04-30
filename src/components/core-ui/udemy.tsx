@@ -4,8 +4,8 @@ import { udemyData } from '@/constants';
 
 const Udemy = () => {
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] pt-6 md:pt-14 lg:pt-20">
-      <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] px-8 md:text-[34px] lg:text-[44px]">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] pt-6 transition-all duration-200 md:pt-14 lg:pt-20">
+      <h1 className="mx-auto max-w-4xl px-8 text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {udemyData.heading}
       </h1>
       <h2 className="mx-auto mt-2 max-w-2xl px-8 text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
