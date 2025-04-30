@@ -10,7 +10,7 @@ interface SliderProps {
   itemClassName?: string;
 }
 
-const Slider = ({ children, className, itemClassName }: SliderProps)  => {
+const Slider = ({ children, className, itemClassName }: SliderProps) => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [totalItems, setTotalItems] = useState(0);
@@ -107,10 +107,10 @@ const Slider = ({ children, className, itemClassName }: SliderProps)  => {
         <div className="mt-6 flex items-center justify-center gap-1">
           <button
             onClick={scrollLeft}
-            className="flex items-center justify-center p-2 text-[var(--text-brand)] disabled:text-gray-400"
+            className="flex items-center justify-center p-1 text-[var(--text-brand)] disabled:text-gray-400 md:p-2"
             disabled={currentIndex === 0}
           >
-            <ChevronLeftIcon className="size-8" />
+            <ChevronLeftIcon className="size-6 md:size-8" />
           </button>
 
           <div className="flex items-center justify-center gap-2">
@@ -129,15 +129,15 @@ const Slider = ({ children, className, itemClassName }: SliderProps)  => {
 
           <button
             onClick={scrollRight}
-            className="flex items-center justify-center p-2 text-[var(--text-brand)] disabled:text-gray-400"
+            className="flex items-center justify-center p-1 text-[var(--text-brand)] disabled:text-gray-400 md:p-2"
             disabled={currentIndex >= totalItems - 1}
           >
-            <ChevronRightIcon className="size-8" />
+            <ChevronRightIcon className="size-6 md:size-8" />
           </button>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Slider;

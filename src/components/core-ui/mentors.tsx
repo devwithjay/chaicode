@@ -13,7 +13,7 @@ const Mentors = () => {
       <h3 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {mentorsData.subHeading}
       </h3>
-      <div className="mt-14 mb-8 -ml-11 w-full overflow-hidden rounded-2xl bg-[var(--surface-primary)]">
+      <div className="mt-14 mb-8 w-full overflow-hidden rounded-2xl bg-[var(--surface-primary)]">
         <Carousel
           itemClassName="gap-4"
           className="size-full rounded-2xl py-6 backdrop-blur-sm"

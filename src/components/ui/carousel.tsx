@@ -69,7 +69,7 @@ export function Carousel({
         className={`group relative flex w-full flex-col gap-4 overflow-hidden ${className}`}
       >
         <div
-          className={`flex overflow-x-auto scroll-smooth px-6 ${itemClassName}`}
+          className={`flex overflow-x-auto scroll-smooth  ${itemClassName}`}
           ref={carouselRef}
           onScroll={handleScroll}
           style={{
@@ -85,19 +85,19 @@ export function Carousel({
           {children}
         </div>
         <button
-          className="disabled:hover:none absolute top-1/2 left-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-1 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0"
+          className="disabled:hover:none absolute top-1/2 left-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-0.5 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0 md:p-1"
           onClick={scrollLeft}
           disabled={!canScrollLeft}
         >
-          <ChevronLeftIcon className="size-8" />
+          <ChevronLeftIcon className="size-6 md:size-8" />
         </button>
 
         <button
-          className="disabled:hover:none absolute top-1/2 right-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-1 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0"
+          className="disabled:hover:none absolute top-1/2 right-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-0.5 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0 md:p-1"
           onClick={scrollRight}
           disabled={!canScrollRight}
         >
-          <ChevronRightIcon className="size-8" />
+          <ChevronRightIcon className="size-6 md:size-8" />
         </button>
       </div>
     </div>
