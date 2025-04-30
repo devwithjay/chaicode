@@ -351,7 +351,7 @@ export const pricingData: PricingData = {
       price: 6999,
       originalPrice: 8999,
       videoId: 'Kjd-SWpe1do',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=227817',
     },
@@ -363,7 +363,7 @@ export const pricingData: PricingData = {
       price: 4999,
       originalPrice: 7999,
       videoId: 'VNb_LawBBWU',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=227321',
     },
@@ -375,7 +375,7 @@ export const pricingData: PricingData = {
       price: 4999,
       originalPrice: 7999,
       videoId: 'oBLpqSHc3lA',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=227963',
     },
@@ -387,7 +387,7 @@ export const pricingData: PricingData = {
       price: 6999,
       originalPrice: 8999,
       videoId: 'yG8JMlldoCE',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=214297',
     },
@@ -399,7 +399,7 @@ export const pricingData: PricingData = {
       price: 5999,
       originalPrice: 7999,
       videoId: 'dz5C-r0Z9AA',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=230409',
     },
@@ -411,7 +411,7 @@ export const pricingData: PricingData = {
       price: 299,
       originalPrice: 599,
       videoId: 'Fw3FezexzV0',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
         'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
     },
@@ -466,9 +466,9 @@ export const udemyData: UdemyData = {
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
-        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+        'https://www.udemy.com/course/web-dev-master/?couponCode=CHAIFRIDAY80',
     },
     {
       title: 'Complete web development course',
@@ -478,9 +478,9 @@ export const udemyData: UdemyData = {
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
-        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+        'https://www.udemy.com/course/web-dev-master/?couponCode=CHAIFRIDAY80',
     },
     {
       title: 'Complete web development course',
@@ -490,9 +490,9 @@ export const udemyData: UdemyData = {
       price: 299,
       originalPrice: 599,
       videoId: 'KZ31wDjYleI',
-      learnMoreText: 'Learn More',
+      learnMoreText: 'View Details',
       learnMoreLink:
-        'https://courses.chaicode.com/learn/batch/about?bundleId=226894',
+        'https://www.udemy.com/course/web-dev-master/?couponCode=CHAIFRIDAY80',
     },
   ],
 };
@@ -544,12 +544,12 @@ export const benefitsData: BenefitsData = {
     description: `The alumni network that you always wished for in your college. We have a dedicated platform where students get to know each other, do projects, make agencies, and join Hackathons.\nOur HR team also posts regular job updates that you can apply directly whenever you are ready.`,
     imageUrls: [
       JKImg,
-      'https://pbs.twimg.com/profile_images/1900208613383376896/vZFa9ezR_400x400.jpg',
-      'https://pbs.twimg.com/profile_images/1743580215765590016/GABZN__C_400x400.jpg',
-      'https://pbs.twimg.com/profile_images/1911152877298458624/S1urBdQX_400x400.jpg',
-      'https://pbs.twimg.com/profile_images/1894995896145977346/AEs7pesh_400x400.jpg',
+      'https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1745999364~exp=1746002964~hmac=e90f19389ac83e03a1c6dd93724979bc00eef2a1984791beb6e3067fc4c3e142&w=1800',
+      'https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129416.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
+      'https://img.freepik.com/premium-photo/handsome-young-man-25-30-years-old-suit_131087-651.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
+      'https://img.freepik.com/free-photo/portrait-handsome-young-man-closeup_176420-15568.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
       'https://images.unsplash.com/photo-1736194689767-9e3c4e7bd7f6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU1fHxtYWxlJTIwaGVhZHNob3R8ZW58MHx8MHx8fDA%3D',
-      'https://pbs.twimg.com/profile_images/1879974632683683840/iL4zMCRJ_400x400.jpg',
+      'https://img.freepik.com/premium-photo/cheerful-young-man-smart-casual-wear_220507-9500.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
       'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww',
       'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
       'https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',

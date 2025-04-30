@@ -8,9 +8,9 @@ const Udemy = () => {
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] px-8 md:text-[34px] lg:text-[44px]">
         {udemyData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-2xl px-8 text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-2xl px-8 text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {udemyData.subHeading}
-      </h3>
+      </h2>
 
       <div className="mt-16 mb-12 w-full px-0 md:mt-18">
         <Slider className="" itemClassName="gap-8">

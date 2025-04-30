@@ -20,9 +20,9 @@ const Reviews = () => {
       <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {reviewsData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {reviewsData.subHeading}
-      </h3>
+      </h2>
       <div className="relative mt-10 max-h-[860px] w-full max-w-[1440px] overflow-hidden md:mt-18">
         <div className="columns-1 gap-6 sm:columns-2 md:columns-3 lg:columns-4">
           {feedbackTweetIds.map((id) => (

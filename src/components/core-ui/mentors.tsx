@@ -10,9 +10,9 @@ const Mentors = () => {
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {mentorsData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {mentorsData.subHeading}
-      </h3>
+      </h2>
       <div className="mt-14 mb-8 w-full overflow-hidden rounded-2xl bg-[var(--surface-primary)]">
         <Carousel
           itemClassName="gap-4"

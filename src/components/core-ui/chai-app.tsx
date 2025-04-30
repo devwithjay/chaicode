@@ -28,9 +28,9 @@ const ChaiApp = () => {
         <h1 className="text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
           {appData.heading}
         </h1>
-        <h3 className="mt-3 text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+        <h2 className="mt-3 text-[16px] text-[var(--text-secondary)] md:text-[22px]">
           {appData.subHeading}
-        </h3>
+        </h2>
       </div>
 
       <div className="mt-16 flex w-full max-w-7xl flex-col items-center gap-14 md:flex-row md:justify-between">

@@ -8,9 +8,9 @@ const Community = () => {
       <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
         {communityData.heading}
       </h1>
-      <h3 className="mx-auto mt-3 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-3 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {communityData.subHeading}
-      </h3>
+      </h2>
 
       <div className="mt-14 mb-8 flex w-full flex-col-reverse items-center justify-center gap-12 md:flex-row lg:gap-20">
         <div className="flex max-w-lg flex-col items-center justify-center text-center md:items-start md:text-left">

@@ -8,9 +8,9 @@ const Benefits = () => {
         {benefitsData.heading}
       </h1>
 
-      <h3 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {benefitsData.subHeading}
-      </h3>
+      </h2>
 
       <div className="mt-8 md:mt-10 lg:mt-16">
         <BenefitsCard {...benefitsData} />

@@ -12,9 +12,9 @@ const FreeAPI = () => {
       <h1 className="mx-auto max-w-5xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
         {freeApiData.heading}
       </h1>
-      <h3 className="mx-auto mt-4 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-4 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {freeApiData.subHeading}
-      </h3>
+      </h2>
 
       <div className="mt-14 flex w-full max-w-7xl flex-col-reverse items-center gap-10 md:flex-row md:justify-between md:gap-8">
         <div className="flex w-full flex-col items-start md:w-1/2">

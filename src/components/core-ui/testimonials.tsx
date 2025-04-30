@@ -8,9 +8,9 @@ const Testimonials = () => {
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {testimonialsData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {testimonialsData.subHeading}
-      </h3>
+      </h2>
       <section className="relative mt-6 flex w-full flex-grow flex-col gap-4 overflow-hidden rounded-2xl border-none transition-all duration-300 md:mt-12 lg:mt-18">
         <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl">
           <Marquee pauseOnHover className="gap-2 p-8 [--duration:100s]">

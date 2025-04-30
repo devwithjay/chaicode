@@ -69,7 +69,7 @@ export function Carousel({
         className={`group relative flex w-full flex-col gap-4 overflow-hidden ${className}`}
       >
         <div
-          className={`flex overflow-x-auto scroll-smooth  ${itemClassName}`}
+          className={`flex overflow-x-auto scroll-smooth ${itemClassName}`}
           ref={carouselRef}
           onScroll={handleScroll}
           style={{
@@ -85,6 +85,7 @@ export function Carousel({
           {children}
         </div>
         <button
+          aria-label="Previous Slide"
           className="disabled:hover:none absolute top-1/2 left-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-0.5 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0 md:p-1"
           onClick={scrollLeft}
           disabled={!canScrollLeft}
@@ -93,6 +94,7 @@ export function Carousel({
         </button>
 
         <button
+          aria-label="Next Slide"
           className="disabled:hover:none absolute top-1/2 right-2 flex -translate-y-1/2 cursor-pointer items-center justify-center rounded-full border-1 border-[var(--text-brand)] bg-orange-50 p-0.5 text-[var(--text-brand)] opacity-100 transition-all duration-300 disabled:opacity-0 md:p-1"
           onClick={scrollRight}
           disabled={!canScrollRight}

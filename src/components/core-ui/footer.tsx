@@ -39,11 +39,15 @@ const getSocialIcon = (label: string) => {
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full max-w-[1440px] bg-[var(--surface-primary)] px-6 md:px-8 pt-20 pb-6 md:pb-12 2xl:px-0">
+    <footer className="mx-auto w-full max-w-[1440px] bg-[var(--surface-primary)] px-6 pt-20 pb-6 md:px-8 md:pb-12 2xl:px-0">
       <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 sm:gap-10 md:flex-row">
         <div className="flex flex-col gap-4">
           <div>
-            <a href="/" className="flex items-center gap-0.5">
+            <a
+              aria-label="Go to ChaiCode homepage"
+              href="/"
+              className="flex items-center gap-0.5"
+            >
               <ChaiLogo />
               <ChaiCodeText />
             </a>
@@ -72,9 +76,9 @@ export function Footer() {
 
         <div className="grid grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           <div className="flex flex-col gap-2">
-            <h4 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
+            <h1 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
               {footerData.products.title}
-            </h4>
+            </h1>
             {footerData.products.links.map((link) => (
               <a
                 key={link.name}
@@ -87,9 +91,9 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <h4 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
+            <h1 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
               {footerData.resources.title}
-            </h4>
+            </h1>
             {footerData.resources.links.map((link) => (
               <a
                 key={link.name}

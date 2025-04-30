@@ -19,7 +19,7 @@ export const WhyChaiCodeCard = ({
   description,
 }: WhyChaiCodeCardProps) => {
   return (
-    <div className="flex h-full flex-col justify-between rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] p-6 shadow-md hover:shadow-lg ">
+    <div className="flex h-full flex-col justify-between rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] p-6 shadow-md hover:shadow-lg">
       <div className="flex flex-col gap-4">
         <h3 className="text-[20px] font-semibold text-[var(--text-brand)] md:text-[22px]">
           {title}
@@ -92,6 +92,9 @@ export const WhyChaiCodeFeatured = ({
                 key={platform}
                 href={url}
                 target="_blank"
+                aria-label={
+                  platform.charAt(0).toUpperCase() + platform.slice(1)
+                }
                 rel="noopener noreferrer"
                 className="text-[var(--text-brand)] hover:scale-103 hover:text-[var(--text-brand-hover)]"
               >

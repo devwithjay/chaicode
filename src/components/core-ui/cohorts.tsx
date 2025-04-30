@@ -7,9 +7,9 @@ const Pricing = () => {
       <h1 className="] mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {pricingData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {pricingData.subHeading}
-      </h3>
+      </h2>
 
       <div className="mt-12 lg:mt-16 mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
         {pricingData.courses.map((course, index) => (
@@ -24,6 +24,7 @@ const Pricing = () => {
               videoId={course.videoId}
               learnMoreText={course.learnMoreText}
               learnMoreLink={course.learnMoreLink}
+              ariaLabel={`Learn more about ${course.title} course`}
             />
           </div>
         ))}

@@ -12,9 +12,9 @@ const WhyChaiCode = () => {
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {whyChaiCodeData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
+      <h2 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {whyChaiCodeData.subHeading}
-      </h3>
+      </h2>
       <div className="mt-16 grid gap-6 lg:grid-cols-3">
         <div className="flex flex-col gap-6">
           {whyChaiCodeData.cards.slice(0, 3).map((card, index) => (

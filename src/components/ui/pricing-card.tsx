@@ -12,6 +12,7 @@ interface PricingCardProps {
   videoId: string;
   learnMoreText: string;
   learnMoreLink: string;
+  ariaLabel: string;
 }
 
 const PricingCard = ({
@@ -24,6 +25,7 @@ const PricingCard = ({
   videoId,
   learnMoreText,
   learnMoreLink,
+  ariaLabel,
 }: PricingCardProps) => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
   const savingsPercentage = Math.round(
@@ -88,7 +90,12 @@ const PricingCard = ({
         </div>
       </div>
 
-      <a href={learnMoreLink} target="_blank" rel="noopener noreferrer">
+      <a
+        href={learnMoreLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={ariaLabel || `Learn more about ${title}`}
+      >
         <button className="w-full cursor-pointer rounded-b-md bg-[var(--surface-brand)] py-2 text-white hover:bg-[var(--surface-brand-hover)]">
           {learnMoreText}
         </button>
