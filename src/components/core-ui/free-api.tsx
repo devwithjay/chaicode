@@ -8,11 +8,11 @@ const FreeAPI = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-16 lg:px-14 lg:pt-20">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 md:pt-16 lg:pt-20 2xl:px-0">
       <h1 className="mx-auto max-w-5xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
         {freeApiData.heading}
       </h1>
-      <h3 className="mx-auto mt-4 max-w-2xl text-center text-[14px] text-[var(--text-secondary)] md:text-[18px]">
+      <h3 className="mx-auto mt-4 max-w-2xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {freeApiData.subHeading}
       </h3>
 
@@ -32,7 +32,7 @@ const FreeAPI = () => {
                 href={freeApiData.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-[var(--surface-brand)] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[var(--surface-brand-hover)] md:text-base"
+                className="rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--surface-brand-hover)] md:px-6 md:py-3 md:text-base"
               >
                 {freeApiData.ctaText}
               </a>

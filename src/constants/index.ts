@@ -192,7 +192,7 @@ type MentorData = {
   }[];
 };
 
-export type FooterData = {
+type FooterData = {
   about: {
     tagline: string;
     copyright: string;
@@ -255,6 +255,7 @@ export const heroData: HeroData = {
     'https://www.youtube.com/embed/VNb_LawBBWU',
     'https://www.youtube.com/embed/yG8JMlldoCE',
     'https://www.youtube.com/embed/oBLpqSHc3lA',
+    'https://www.youtube.com/embed/dz5C-r0Z9AA',
   ],
 };
 

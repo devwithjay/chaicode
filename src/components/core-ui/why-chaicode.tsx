@@ -8,14 +8,14 @@ import { whyChaiCodeData } from '@/constants';
 
 const WhyChaiCode = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-6 md:pt-10 lg:px-14 lg:pt-20">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-6 md:pt-10 lg:pt-20 2xl:px-0">
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {whyChaiCodeData.heading}
       </h1>
-      <h3 className="mx-auto mt-2 max-w-xl text-center text-[14px] text-[var(--text-secondary)] md:text-[18px]">
+      <h3 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {whyChaiCodeData.subHeading}
       </h3>
-      <div className="mt-12 grid gap-6 lg:grid-cols-3">
+      <div className="mt-16 grid gap-6 lg:grid-cols-3">
         <div className="flex flex-col gap-6">
           {whyChaiCodeData.cards.slice(0, 3).map((card, index) => (
             <WhyChaiCodeCard

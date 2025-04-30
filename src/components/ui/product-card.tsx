@@ -24,13 +24,13 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-xl  ${className} h-[340px]`}
+      className={`flex flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow ${className} size-full max-w-[550px]`}
     >
       <a
         href={websiteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative block h-48 w-full overflow-hidden"
+        className="relative h-48 w-full"
       >
         <img
           src={imageUrl}
@@ -44,23 +44,24 @@ export const ProductCard = ({
         </div>
       </a>
 
-      <div className="flex flex-1 flex-col bg-[var(--surface-secondary)] p-4">
-        <h3 className="mb-2 text-lg font-bold text-[var(--text-primary)] md:text-xl">
-          {title}
-        </h3>
-
-        <p className="mb-4 flex-1 text-sm text-[var(--text-secondary)] line-clamp-2 md:text-md">
-          {description}
-        </p>
+      <div className="flex flex-1 flex-col justify-between px-4 py-3">
+        <div>
+          <h3 className="line-clamp-1 text-base font-bold text-[var(--text-primary)] md:text-lg">
+            {title}
+          </h3>
+          <p className="mt-1 line-clamp-2 text-sm text-[var(--text-secondary)] md:text-base">
+            {description}
+          </p>
+        </div>
 
         {socialLinks && (
-          <div className="mt-auto flex space-x-4">
+          <div className="mt-3 flex space-x-4">
             {socialLinks.twitter && (
               <a
                 href={socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 transition-colors hover:text-gray-700 dark:hover:text-gray-300"
+                className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
                 aria-label="Twitter"
               >
                 <FaXTwitter className="text-xl" />
@@ -71,7 +72,7 @@ export const ProductCard = ({
                 href={socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 transition-colors hover:text-blue-500 dark:hover:text-blue-400"
+                className="text-gray-500 hover:text-blue-500 dark:hover:text-blue-400"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin className="text-xl" />
@@ -82,7 +83,7 @@ export const ProductCard = ({
                 href={socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 transition-colors hover:text-gray-700 dark:hover:text-gray-300"
+                className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
                 aria-label="GitHub"
               >
                 <FaGithub className="text-xl" />

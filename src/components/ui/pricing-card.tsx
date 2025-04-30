@@ -1,5 +1,6 @@
-import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 import { useState } from 'react';
+
+import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 
 interface PricingCardProps {
   title: string;
@@ -8,7 +9,7 @@ interface PricingCardProps {
   duration: string;
   price: number;
   originalPrice: number;
-  videoId: string; 
+  videoId: string;
   learnMoreText: string;
   learnMoreLink: string;
 }
@@ -20,7 +21,7 @@ const PricingCard = ({
   duration,
   price,
   originalPrice,
-  videoId, 
+  videoId,
   learnMoreText,
   learnMoreLink,
 }: PricingCardProps) => {
@@ -30,22 +31,22 @@ const PricingCard = ({
   );
 
   return (
-    <div className="flex h-full w-full max-w-md flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg">
-      <div className="relative group">
+    <div className="flex size-full max-w-[1440px] flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg">
+      <div className="group relative">
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt="YouTube Video Thumbnail"
           className="aspect-video w-full object-cover"
         />
         <div
-          className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 cursor-pointer"
-          onClick={() => setActiveVideo(videoId)} 
+          className="absolute inset-0 flex cursor-pointer items-center justify-center bg-black/30 group-hover:bg-black/20"
+          onClick={() => setActiveVideo(videoId)}
         >
           <svg
             viewBox="0 0 544 384"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="w-14 fill-gray-700 group-hover:fill-red-600 "
+            className="w-14 fill-gray-700 group-hover:fill-red-600"
           >
             <path d="M533.655 60.083C527.374 36.433 508.882 17.842 485.233 11.561C441.885 -2.86102e-06 272 0 272 0C272 0 102.114 -2.86102e-06 58.767 11.561C35.118 17.842 16.626 36.433 10.345 60.083C-9.53674e-07 103.229 0 192 0 192C0 192 -9.53674e-07 280.771 10.345 323.917C16.626 347.567 35.118 366.158 58.767 372.439C102.114 384 272 384 272 384C272 384 441.885 384 485.233 372.439C508.882 366.158 527.374 347.567 533.655 323.917C544 280.771 544 192 544 192C544 192 544 103.229 533.655 60.083ZM216 272V112L358.857 192L216 272Z" />
             <path
@@ -75,10 +76,10 @@ const PricingCard = ({
         </div>
 
         <div className="mb-4 flex items-center">
-          <span className="text-[18px] md:text-[19px] font-bold text-green-600 dark:text-green-500">
+          <span className="text-[18px] font-bold text-green-600 md:text-[19px] dark:text-green-500">
             ₹ {price} INR
           </span>
-          <span className="ml-2 text-[12px] md:text-[13px] text-gray-500 line-through dark:text-gray-400">
+          <span className="ml-2 text-[12px] text-gray-500 line-through md:text-[13px] dark:text-gray-400">
             ₹ {originalPrice} INR
           </span>
           <span className="ml-2 rounded-md bg-orange-100 px-2 py-1 text-xs font-medium whitespace-nowrap text-orange-600">

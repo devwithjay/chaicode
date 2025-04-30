@@ -21,7 +21,7 @@ interface BenefitsCardProps {
 
 export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
   return (
-    <div className="p-6">
+    <div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {benefits.map((benefit, index) => (
           <div
@@ -50,12 +50,12 @@ export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
 
       <div className="mt-12 overflow-hidden rounded-xl bg-[var(--surface-secondary)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex items-center justify-center py-6 lg:py-10 px-6 ">
+          <div className="flex items-center justify-center px-6 py-6 lg:py-10">
             <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
               {alumni.imageUrls.map((imageUrl, i) => (
                 <div
                   key={i}
-                  className="size-12 md:size-15 overflow-hidden rounded-full lg:size-18"
+                  className="size-12 overflow-hidden rounded-full md:size-15 lg:size-18"
                 >
                   <img
                     src={imageUrl}

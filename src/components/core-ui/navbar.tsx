@@ -46,7 +46,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex items-center justify-between bg-[var(--surface-primary)] px-4 py-4 md:px-8 lg:px-14">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] px-6 py-4 2xl:px-0">
         <div className="flex cursor-pointer items-center space-x-2">
           <a href="/" className="flex items-center gap-0.5">
             <ChaiLogo />

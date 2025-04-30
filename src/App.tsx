@@ -1,12 +1,14 @@
 import { Outlet } from 'react-router-dom';
+
 import Footer from '@/components/core-ui/footer';
 import Navbar from '@/components/core-ui/navbar';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-[var(--surface-primary)] flex flex-col">
-      <header className="sticky top-0 left-0 z-50">
+    <div className="bg-[var(--surface-primary)]">
+      <header className="sticky top-0 z-50 bg-[var(--surface-primary)]">
         <Navbar />
       </header>
       <main className="flex-1">

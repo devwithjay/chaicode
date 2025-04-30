@@ -23,12 +23,12 @@ const ChaiApp = () => {
   };
 
   return (
-    <section className="flex flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-6 pt-16 sm:px-8 md:pt-20 lg:px-14 lg:pt-24">
+    <section className="8 mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-16 md:pt-20 lg:pt-24 2xl:px-0">
       <div className="text-center">
         <h1 className="text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
           {appData.heading}
         </h1>
-        <h3 className="mt-3 text-[15px] text-[var(--text-secondary)] md:text-[18px]">
+        <h3 className="mt-3 text-[16px] text-[var(--text-secondary)] md:text-[22px]">
           {appData.subHeading}
         </h3>
       </div>
@@ -41,10 +41,10 @@ const ChaiApp = () => {
           <ul className="mt-6 flex flex-col gap-4 text-[var(--text-primary)]">
             {appData.descriptionPoints.map((point, index) => (
               <li key={index} className="flex items-center gap-3">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-100 text-orange-500 sm:h-10 sm:w-10">
-                  {index === 0 && <FiZap size={18} />}
-                  {index === 1 && <FiBell size={18} />}
-                  {index === 2 && <FiSmartphone size={18} />}
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-100 text-orange-500 sm:size-10">
+                  {index === 0 && <FiZap size={20} />}
+                  {index === 1 && <FiBell size={20} />}
+                  {index === 2 && <FiSmartphone size={20} />}
                 </span>
                 <span className="text-sm sm:text-base">{point}</span>
               </li>
@@ -58,10 +58,10 @@ const ChaiApp = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-3"
             >
-              <FaApple size={22} className="sm:size-6" />
+              <FaApple size={22} className="lg:size-5" />
               <div className="flex flex-col text-left">
                 <span className="text-xs">Download on the</span>
-                <span className="text-sm font-semibold sm:text-lg">
+                <span className="text-sm font-semibold lg:text-lg">
                   App Store
                 </span>
               </div>
@@ -73,10 +73,10 @@ const ChaiApp = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-3"
             >
-              <SiGoogleplay size={20} className="sm:size-6" />
+              <SiGoogleplay size={20} className="lg:size-5" />
               <div className="flex flex-col text-left">
                 <span className="text-xs">Get it on</span>
-                <span className="text-sm font-semibold sm:text-lg">
+                <span className="text-sm font-semibold lg:text-lg">
                   Google Play
                 </span>
               </div>
@@ -96,13 +96,13 @@ const ChaiApp = () => {
             <motion.img
               src={appData.androidImageUrl}
               alt="Android Mockup"
-              className="absolute top-8 left-6 w-[280px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2"
+              className="absolute top-8 left-6 w-[230px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[280px]"
             />
 
             <motion.img
               src={appData.iphoneImageUrl}
               alt="iPhone Mockup"
-              className="rounded-5xl absolute top-0 right-6 z-10 w-[280px] -rotate-6 object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2"
+              className="rounded-5xl absolute top-0 right-6 z-10 w-[230px] -rotate-6 object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[280px]"
             />
           </motion.div>
         </div>

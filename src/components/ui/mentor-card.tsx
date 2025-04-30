@@ -60,13 +60,13 @@ export function MentorCard({
       <Disclosure
         onOpenChange={setIsOpen}
         open={isOpen}
-        className="bg-[var(--surface-primary)] absolute right-0 bottom-0 left-0 m-2 flex flex-col rounded-2xl p-4"
+        className="absolute right-0 bottom-0 left-0 m-2 flex flex-col rounded-2xl bg-[var(--surface-primary)] p-4"
         variants={contentVariants}
         transition={transition}
       >
         <DisclosureTrigger>
           <button
-            className="text-[var(--text-primary)] w-fit font-semibold"
+            className="w-fit font-semibold text-[var(--text-primary)]"
             type="button"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -75,9 +75,11 @@ export function MentorCard({
         </DisclosureTrigger>
         <DisclosureContent>
           <div className="flex flex-col gap-4">
-            <p className="text-[var(--text-primary)] text-sm font-medium">{workingAt}</p>
+            <p className="text-sm font-medium text-[var(--text-primary)]">
+              {workingAt}
+            </p>
 
-            <div className="text-[var(--text-primary)] flex flex-col gap-4 text-sm">
+            <div className="flex flex-col gap-4 text-sm text-[var(--text-primary)]">
               <p className="line-clamp-3">{description}</p>
             </div>
           </div>
