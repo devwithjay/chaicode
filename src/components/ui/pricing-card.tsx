@@ -33,7 +33,7 @@ const PricingCard = ({
   );
 
   return (
-    <div className="flex size-full max-w-[1440px] flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg">
+    <div className="flex size-full max-w-[1440px] transition-all duration-200 flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg">
       <div className="group relative">
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}

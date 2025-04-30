@@ -32,7 +32,7 @@ const FreeAPI = () => {
                 href={freeApiData.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[var(--surface-brand-hover)] md:px-6 md:py-3 md:text-base"
+                className="rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 md:px-6 md:py-3 md:text-base"
               >
                 {freeApiData.ctaText}
               </a>

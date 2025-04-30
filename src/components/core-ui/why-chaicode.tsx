@@ -48,7 +48,7 @@ const WhyChaiCode = () => {
       <div className="mt-10 mb-6 md:mt-15">
         <a
           href={whyChaiCodeData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white sm:px-6 sm:py-3 sm:text-base"
+          className="inline-flex items-center duration-200 transition-all hover:brightness-110 justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white sm:px-6 sm:py-3 sm:text-base"
         >
           {whyChaiCodeData.ctaText}
           <LuExternalLink size={20} />

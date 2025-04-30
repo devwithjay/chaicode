@@ -24,7 +24,7 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow ${className} size-full max-w-[550px]`}
+      className={`flex flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow transition-all duration-200 ${className} size-full max-w-[550px]`}
     >
       <a
         href={websiteUrl}

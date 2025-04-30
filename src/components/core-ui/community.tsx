@@ -23,7 +23,7 @@ const Community = () => {
               href={communityData.ctaLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8 rounded-lg bg-[var(--surface-brand)] px-6 py-2 text-sm font-medium text-white hover:bg-[var(--surface-brand-hover)] md:px-8 md:py-3 md:text-base"
+              className="mt-8 rounded-lg bg-[var(--surface-brand)] px-6 py-2 text-sm font-medium text-white transition-all duration-200 hover:brightness-110 md:px-8 md:py-3 md:text-base"
             >
               {communityData.ctaText}
             </a>

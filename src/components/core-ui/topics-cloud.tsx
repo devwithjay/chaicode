@@ -19,7 +19,7 @@ const TopicsCloud = () => {
             href={topic.youtubeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[var(--border-primary)] px-5 py-2 text-sm text-[var(--text-primary)] transition-all duration-200 hover:bg-[var(--surface-brand)] hover:text-white md:text-base"
+            className="rounded-full border border-[var(--border-primary)] px-5 py-2 text-sm text-[var(--text-primary)] transition-all duration-200 hover:bg-[var(--surface-brand)] hover:brightness-110 hover:text-white md:text-base"
           >
             {topic.title}
           </a>

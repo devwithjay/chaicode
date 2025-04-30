@@ -56,7 +56,7 @@ const ChaiApp = () => {
               href={appData.appStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-3"
+              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white transition-all duration-200 hover:brightness-110 sm:px-4 sm:py-3"
             >
               <FaApple size={22} className="lg:size-5" />
               <div className="flex flex-col text-left">
@@ -71,7 +71,7 @@ const ChaiApp = () => {
               href={appData.playStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-3"
+              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white transition-all duration-200 hover:brightness-110 sm:px-4 sm:py-3"
             >
               <SiGoogleplay size={20} className="lg:size-5" />
               <div className="flex flex-col text-left">
