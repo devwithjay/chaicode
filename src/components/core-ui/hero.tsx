@@ -89,7 +89,7 @@ const Hero = () => {
           {videoIds.map((id) => (
             <div
               key={id}
-              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-all hover:scale-101 md:w-[500px]"
+              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-all hover:scale-101 md:w-[450px] lg:w-[550px]"
               onClick={() => setActiveVideo(id)}
             >
               <img
