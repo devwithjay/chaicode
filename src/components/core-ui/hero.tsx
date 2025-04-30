@@ -95,6 +95,7 @@ const Hero = () => {
               <img
                 src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
                 alt="YouTube Video Thumbnail"
+                loading="lazy"
                 className="aspect-video w-full object-cover"
               />
               <div className="video-card-hover:bg-black/20 absolute inset-0 flex items-center justify-center bg-black/30">

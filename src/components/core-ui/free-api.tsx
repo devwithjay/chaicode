@@ -49,6 +49,7 @@ const FreeAPI = () => {
             <img
               src={`https://img.youtube.com/vi/${freeApiData.videoId}/hqdefault.jpg`}
               alt="FreeAPI YouTube Video Thumbnail"
+              loading="lazy"
               className="aspect-video w-full object-cover"
             />
             <div className="video-card-hover:bg-black/20 absolute inset-0 flex items-center justify-center bg-black/30">

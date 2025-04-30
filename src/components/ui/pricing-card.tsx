@@ -38,6 +38,7 @@ const PricingCard = ({
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt="YouTube Video Thumbnail"
+          loading="lazy"
           className="aspect-video w-full object-cover"
         />
         <div

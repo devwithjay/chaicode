@@ -126,7 +126,8 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
           <img
             src={`https://img.youtube.com/vi/${course.videoId}/maxresdefault.jpg`}
             alt="Course Thumbnail"
-            className="h-full w-full object-cover"
+            loading="lazy"
+            className="size-full object-cover"
             onError={(e) => {
               e.currentTarget.src = `https://img.youtube.com/vi/${course.videoId}/hqdefault.jpg`;
             }}
