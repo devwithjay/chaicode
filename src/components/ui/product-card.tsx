@@ -24,7 +24,7 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div
-      className={`flex size-full max-w-[460px] flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow transition-all duration-200 ${className}`}
+      className={`flex size-full max-w-[460px] flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] ${className}`}
     >
       <a
         href={websiteUrl}
@@ -32,12 +32,8 @@ export const ProductCard = ({
         rel="noopener noreferrer"
         className="relative w-full"
       >
-        <img
-          src={imageUrl}
-          alt={title}
-          className="h-48 w-full object-cover transition-transform duration-300 hover:scale-105"
-        />
-        <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 hover:opacity-100">
+        <img src={imageUrl} alt={title} className="h-48 w-full object-cover" />
+        <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0  hover:opacity-100">
           <div className="rounded-full bg-black/10 p-2">
             <FaExternalLinkAlt className="text-xl text-white" />
           </div>

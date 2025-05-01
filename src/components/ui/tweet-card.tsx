@@ -126,7 +126,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
             href={tweet.user.url}
             target="_blank"
             rel="noreferrer"
-            className="text-xs text-[var(--text-secondary)] transition-all duration-75 sm:text-sm md:text-base"
+            className="text-xs text-[var(--text-secondary)] sm:text-sm md:text-base"
           >
             @{truncate(tweet.user.screen_name, 16)}
           </a>
@@ -135,7 +135,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
     </div>
     <a href={tweet.url} target="_blank" rel="noreferrer">
       <span className="sr-only">Link to tweet</span>
-      <Twitter className="size-5 items-start text-[var(--text-primary)] transition-all ease-in-out hover:scale-105 sm:size-6 md:size-7" />
+      <Twitter className="size-5 items-start text-[var(--text-primary)] hover:scale-105 sm:size-6 md:size-7" />
     </a>
   </div>
 );
