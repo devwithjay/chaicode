@@ -1,35 +1,90 @@
 'use client';
 
+import { useEffect, useRef } from 'react';
+
+import { motion, useAnimation, useInView } from 'framer-motion';
 import { FaYoutube } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 
 import { ytData } from '@/constants';
 
+const easing = [0.6, 0.05, 0.01, 0.99];
+
+const headingVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: easing },
+  },
+};
+
+const leftImageVariants = {
+  hidden: { opacity: 0, x: -50 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.7, ease: easing, delay: 0.2 },
+  },
+};
+
+const rightCardsVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.7, ease: easing, delay: 0.3 },
+  },
+};
+
 const YouTube = () => {
+  const ref = useRef(null);
+  const controls = useAnimation();
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
+
+  useEffect(() => {
+    if (isInView) controls.start('visible');
+  }, [isInView, controls]);
+
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-16 transition-all duration-200 md:px-8 md:pt-20 lg:px-12 lg:pt-24 2xl:px-0">
-      <h1 className="mx-auto max-w-4xl text-center text-[22px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-16 md:px-8 md:pt-20 lg:px-12 lg:pt-24 2xl:px-0"
+    >
+      <motion.h1
+        variants={headingVariants}
+        className="mx-auto max-w-4xl text-center text-[22px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]"
+      >
         {ytData.heading}
-      </h1>
-      <h2 className="mx-auto mt-2 max-w-2xl text-center text-[14px] text-[var(--text-secondary)] sm:text-[16px] md:text-[20px] lg:text-[22px]">
+      </motion.h1>
+
+      <motion.h2
+        variants={headingVariants}
+        className="mx-auto mt-2 max-w-2xl text-center text-[14px] text-[var(--text-secondary)] sm:text-[16px] md:text-[20px] lg:text-[22px]"
+      >
         {ytData.subHeading}
-      </h2>
+      </motion.h2>
 
       <div className="mt-14 flex w-full flex-col items-center gap-10 md:flex-row md:justify-between">
-        <div className="w-full md:w-1/2">
+        <motion.div variants={leftImageVariants} className="w-full md:w-1/2">
           <img
             src={ytData.imageUrl}
             alt="YouTube Preview"
             className="w-full rounded-xl object-contain"
             loading="lazy"
           />
-        </div>
+        </motion.div>
 
-        <div className="w-full space-y-6 md:w-1/2">
+        <motion.div
+          variants={rightCardsVariants}
+          className="w-full space-y-6 md:w-1/2"
+        >
           {ytData.channels.map((channel, index) => (
             <div
               key={index}
-              className="flex flex-col items-start justify-between gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] px-5 py-6 transition-all duration-200 hover:border-[var(--text-brand)] md:flex-row"
+              className="flex flex-col items-start justify-between gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] px-5 py-6 hover:border-[var(--text-brand)] md:flex-row"
             >
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-3">
@@ -64,15 +119,15 @@ const YouTube = () => {
                 href={channel.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 self-start rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[var(--surface-brand-hover)] md:self-center"
+                className="inline-flex items-center gap-2 self-start rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--surface-brand-hover)] md:self-center"
               >
                 Visit Channel <FiExternalLink size={16} />
               </a>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
