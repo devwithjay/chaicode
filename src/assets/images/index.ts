@@ -5,6 +5,7 @@ import BountiesImg from './bounties.jpg';
 import ChocoUIImg from './chocoui.jpg';
 import CodingHostelImg from './coding-hostel.jpg';
 import CommunityImg from './community.png';
+import HCLaptop from './hc-laptop.jpg';
 import HiteshChoudharyImg from './hitesh-choudhary.jpg';
 import IphoneMockupImg from './iphone-mockup.png';
 import JKImg from './jk.png';
@@ -23,6 +24,7 @@ export {
   ChocoUIImg,
   CodingHostelImg,
   CommunityImg,
+  HCLaptop,
   HiteshChoudharyImg,
   IphoneMockupImg,
   JKImg,
