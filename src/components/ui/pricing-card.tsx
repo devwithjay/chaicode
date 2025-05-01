@@ -44,11 +44,12 @@ const PricingCard = ({
   }, []);
 
   return (
-    <div className="flex size-full max-w-[1440px] flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg transition-all duration-200">
-      <div className="group relative transition-all duration-200">
+    <div className="flex size-full max-w-[1440px] flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)]">
+      <div className="group relative">
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt="YouTube Video Thumbnail"
+          loading="lazy"
           className="aspect-video w-full object-cover"
         />
         <div
@@ -126,6 +127,7 @@ const PricingCard = ({
               title="YouTube Video"
               allow="autoplay; encrypted-media"
               allowFullScreen
+              loading="lazy"
               className="size-full rounded-lg"
             ></iframe>
             <button
