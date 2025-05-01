@@ -24,18 +24,18 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow transition-all duration-200 ${className} size-full max-w-[550px]`}
+      className={`flex size-full max-w-[460px] flex-col overflow-hidden rounded-xl bg-[var(--surface-secondary)] shadow transition-all duration-200 ${className}`}
     >
       <a
         href={websiteUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative h-48 w-full"
+        className="relative w-full"
       >
         <img
           src={imageUrl}
           alt={title}
-          className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
+          className="h-48 w-full object-cover transition-transform duration-300 hover:scale-105"
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 hover:opacity-100">
           <div className="rounded-full bg-black/10 p-2">
@@ -43,8 +43,7 @@ export const ProductCard = ({
           </div>
         </div>
       </a>
-
-      <div className="flex flex-1 flex-col justify-between px-4 py-3">
+      <div className="flex flex-1 flex-col justify-between p-4">
         <div>
           <h3 className="line-clamp-1 text-base font-bold text-[var(--text-primary)] md:text-lg">
             {title}
@@ -53,16 +52,14 @@ export const ProductCard = ({
             {description}
           </p>
         </div>
-
         {socialLinks && (
-          <div className="mt-3 flex space-x-4">
+          <div className="mt-4 flex space-x-4">
             {socialLinks.twitter && (
               <a
                 href={socialLinks.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-                aria-label="Twitter"
               >
                 <FaXTwitter className="text-xl" />
               </a>
@@ -73,7 +70,6 @@ export const ProductCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-blue-500 dark:hover:text-blue-400"
-                aria-label="LinkedIn"
               >
                 <FaLinkedin className="text-xl" />
               </a>
@@ -84,7 +80,6 @@ export const ProductCard = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
-                aria-label="GitHub"
               >
                 <FaGithub className="text-xl" />
               </a>

@@ -119,7 +119,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
               <button
                 key={index}
                 onClick={() => scrollToIndex(index)}
-                className={`size-1.5 cursor-pointer rounded-full transition-all duration-200 md:size-2 ${
+                className={`size-2 cursor-pointer rounded-full transition-all duration-200 ${
                   currentIndex === index
                     ? 'scale-125 bg-[var(--text-brand)]'
                     : 'scale-100 bg-gray-400'

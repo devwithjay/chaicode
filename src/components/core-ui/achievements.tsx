@@ -1,10 +1,10 @@
-import { Carousel } from '@/components/ui/carousel';
+import Marquee from '@/components/ui/marquee';
 import { ProductCard } from '@/components/ui/product-card';
 import { achievementsData } from '@/constants';
 
 const Achievements = () => {
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-6 pt-12 transition-all duration-200 md:px-8 md:pt-16 lg:px-12 lg:pt-20 2xl:px-0">
+    <section className="mx-auto flex flex-col items-center justify-center bg-[var(--surface-primary)] pt-12 transition-all duration-200 md:pt-16 lg:pt-20">
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {achievementsData.heading}
       </h1>
@@ -13,11 +13,14 @@ const Achievements = () => {
       </h2>
 
       <div className="mt-16 mb-12 w-full transition-all duration-200 md:mt-18">
-        <Carousel className="w-full" itemClassName="gap-6">
+        <Marquee
+          pauseOnHover
+          className="flex h-full items-center bg-transparent [--duration:30s]"
+        >
           {achievementsData.productsData.map((product) => (
             <div
               key={product.id}
-              className="min-w-[300px] sm:min-w-[350px] lg:min-w-[400px]"
+              className="mx-3 min-w-[300px] sm:min-w-[350px] lg:min-w-[400px]"
             >
               <ProductCard
                 imageUrl={product.imageUrl}
@@ -28,7 +31,7 @@ const Achievements = () => {
               />
             </div>
           ))}
-        </Carousel>
+        </Marquee>
       </div>
     </section>
   );
