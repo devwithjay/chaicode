@@ -76,7 +76,7 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
 
   return (
     <>
-      <div className="mx-auto flex w-full flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200 sm:max-w-lg xl:max-w-[1200px] xl:flex-row">
+      <div className="mx-auto flex w-full flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] sm:max-w-lg xl:max-w-[1200px] xl:flex-row">
         <div className="flex flex-col justify-between p-6 xl:w-1/2">
           <div>
             <h2 className="mb-2 text-xl font-bold text-[var(--text-primary)] sm:text-2xl lg:text-3xl">
@@ -115,7 +115,7 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
             href={course.learnMoreLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-block w-full rounded bg-[var(--surface-brand)] px-4 py-3 text-center font-semibold text-white transition-all duration-200 hover:brightness-110"
+            className="mt-auto inline-block w-full rounded bg-[var(--surface-brand)] px-4 py-3 text-center font-semibold text-white hover:bg-[var(--surface-brand-hover)]"
           >
             {course.learnMoreText}
           </a>
