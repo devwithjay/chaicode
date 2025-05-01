@@ -9,7 +9,10 @@ interface BenefitItem {
 interface AlumniSection {
   heading: string;
   description: string;
-  imageUrls: string[];
+  alumniList: {
+    url: string;
+    website: string;
+  }[];
 }
 
 interface BenefitsCardProps {
@@ -26,7 +29,7 @@ export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200"
+            className="overflow-hidden rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] transition-all duration-200 hover:border-[var(--text-brand)]"
           >
             <div className="h-48 overflow-hidden md:h-54">
               <img
@@ -48,21 +51,24 @@ export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
         ))}
       </div>
 
-      <div className="mt-12 overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200">
+      <div className="mt-12 overflow-hidden rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] transition-all duration-200 hover:border-[var(--text-brand)]">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex items-center justify-center px-6 py-6 lg:py-10">
             <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
-              {alumni.imageUrls.map((imageUrl, i) => (
-                <div
+              {alumni.alumniList.map(({ url, website }, i) => (
+                <a
                   key={i}
-                  className="size-12 overflow-hidden rounded-full md:size-15 lg:size-18"
+                  href={website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="size-12 cursor-pointer overflow-hidden rounded-full border-2 border-[var(--border-primary)] transition-all duration-200 hover:border-[var(--text-brand)] md:size-15 lg:size-18"
                 >
                   <img
-                    src={imageUrl}
+                    src={url}
                     alt={`Alumni ${i + 1}`}
                     className="size-full object-cover"
                   />
-                </div>
+                </a>
               ))}
             </div>
           </div>

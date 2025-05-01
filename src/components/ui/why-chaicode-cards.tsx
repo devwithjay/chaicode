@@ -19,7 +19,7 @@ export const WhyChaiCodeCard = ({
   description,
 }: WhyChaiCodeCardProps) => {
   return (
-    <div className="flex h-full flex-col justify-between rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] p-6 shadow-md transition-all duration-200 hover:shadow-lg">
+    <div className="flex h-full flex-col justify-between rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] p-6 shadow-md transition-all duration-200 hover:border-[var(--text-brand)] hover:shadow-lg">
       <div className="flex flex-col gap-4">
         <h3 className="text-[20px] font-semibold text-[var(--text-brand)] md:text-[22px]">
           {title}
@@ -66,7 +66,7 @@ export const WhyChaiCodeFeatured = ({
   };
 
   return (
-    <div className="flex h-full flex-col gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] shadow-md transition-all duration-200 hover:shadow-lg">
+    <div className="flex h-full flex-col gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] shadow-md transition-all duration-200 hover:border-[var(--text-brand)] hover:shadow-lg">
       <div className="w-full overflow-hidden rounded-t-xl">
         <img src={imageUrl} alt={name} className="h-auto w-full object-cover" />
       </div>

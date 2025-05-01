@@ -111,7 +111,10 @@ type BenefitsData = {
   alumni: {
     heading: string;
     description: string;
-    imageUrls: string[];
+    alumniList: {
+      url: string;
+      website: string;
+    }[];
   };
 };
 
@@ -539,23 +542,60 @@ export const benefitsData: BenefitsData = {
       imageUrl: RevisionClassImg,
     },
   ],
+
   alumni: {
-    heading: 'Alumni Network and Job Listings',
-    description: `The alumni network that you always wished for in your college. We have a dedicated platform where students get to know each other, do projects, make agencies, and join Hackathons.\nOur HR team also posts regular job updates that you can apply directly whenever you are ready.`,
-    imageUrls: [
-      JKImg,
-      'https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1745999364~exp=1746002964~hmac=e90f19389ac83e03a1c6dd93724979bc00eef2a1984791beb6e3067fc4c3e142&w=1800',
-      'https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129416.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
-      'https://img.freepik.com/premium-photo/handsome-young-man-25-30-years-old-suit_131087-651.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
-      'https://img.freepik.com/free-photo/portrait-handsome-young-man-closeup_176420-15568.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
-      'https://images.unsplash.com/photo-1736194689767-9e3c4e7bd7f6?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTU1fHxtYWxlJTIwaGVhZHNob3R8ZW58MHx8MHx8fDA%3D',
-      'https://img.freepik.com/premium-photo/cheerful-young-man-smart-casual-wear_220507-9500.jpg?ga=GA1.1.902893527.1736835207&semt=ais_hybrid&w=740',
-      'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YXZhdGFyfGVufDB8fDB8fHww',
-      'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODF8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D',
-      'https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE3fHxhdmF0YXJ8ZW58MHx8MHx8fDA%3D',
-      'https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTM3fHxhdmF0YXJ8ZW58MHx8MHx8fDA%3D',
+    heading: 'Our Alumni, Our Pride',
+    description: `We’ve built the kind of alumni network you wish your college had. From projects and peer learning to job updates and hackathons — it's all happening here.\nStudents collaborate, grow, and explore new opportunities, while our HR team regularly shares job listings to support your career.`,
+    alumniList: [
+      { url: JKImg, website: 'https://devwithjay.com' },
+      {
+        url: 'https://img.freepik.com/free-photo/close-up-portrait-young-bearded-man-white-shirt-jacket-posing-camera-with-broad-smile-isolated-gray_171337-629.jpg?t=st=1745999364~exp=1746002964~hmac=e90f19389ac83e03a1c6dd93724979bc00eef2a1984791beb6e3067fc4c3e142&w=1800',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129416.jpg',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://img.freepik.com/premium-photo/handsome-young-man-25-30-years-old-suit_131087-651.jpg',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://img.freepik.com/free-photo/portrait-handsome-young-man-closeup_176420-15568.jpg',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1736194689767-9e3c4e7bd7f6?w=900',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://img.freepik.com/premium-photo/cheerful-young-man-smart-casual-wear_220507-9500.jpg',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=900',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=900',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://plus.unsplash.com/premium_photo-1689977807477-a579eda91fa2?w=900',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?w=900',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://plus.unsplash.com/premium_photo-1689977871600-e755257fb5f8?w=900',
+        website: 'https://devwithjay.com',
+      },
+      {
+        url: 'https://plus.unsplash.com/premium_photo-1689539137236-b68e436248de?w=900',
+        website: 'https://devwithjay.com',
+      },
     ],
   },
 };
