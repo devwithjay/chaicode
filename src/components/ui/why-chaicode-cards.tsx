@@ -83,7 +83,7 @@ export const WhyChaiCodeFeatured = ({
         <p className="text-base text-[var(--text-primary)] md:text-lg">
           {approachDescription}
         </p>
-        <div className="mt-auto flex flex-wrap gap-4 pt-6 md:pt-8">
+        <div className="mt-auto flex flex-wrap items-center justify-center gap-4 pt-6 md:pt-8">
           {Object.entries(socialLinks).map(([platform, url]) => {
             if (!url) return null;
             const Icon = socialIcons[platform as keyof typeof socialIcons];
@@ -98,7 +98,7 @@ export const WhyChaiCodeFeatured = ({
                 rel="noopener noreferrer"
                 className="text-[var(--text-brand)] hover:brightness-110"
               >
-                <Icon className="size-6 lg:size-7" />
+                <Icon className="size-6" />
               </a>
             );
           })}

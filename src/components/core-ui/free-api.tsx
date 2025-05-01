@@ -1,11 +1,24 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import { FaFileAlt } from 'react-icons/fa';
 
 import { freeApiData } from '@/constants';
 
 const FreeAPI = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveVideo(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-10 transition-all duration-200 md:px-8 md:pt-16 lg:px-12 lg:pt-20 2xl:px-0">
@@ -32,8 +45,9 @@ const FreeAPI = () => {
                 href={freeApiData.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 md:px-6 md:py-3 md:text-base"
+                className="inline-flex items-center gap-2 rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 md:px-6 md:py-3 md:text-base"
               >
+                <FaFileAlt className="text-base text-white" />
                 {freeApiData.ctaText}
               </a>
             </div>
@@ -43,7 +57,7 @@ const FreeAPI = () => {
         {freeApiData.videoId && (
           <div
             key={freeApiData.videoId}
-            className="video-card relative w-full max-w-[500px] cursor-pointer overflow-hidden rounded-2xl shadow-md transition-transform hover:scale-101 md:w-1/2"
+            className="video-card relative w-full max-w-[500px] cursor-pointer overflow-hidden rounded-2xl transition-transform md:w-1/2"
             onClick={() => setActiveVideo(freeApiData.videoId)}
           >
             <img

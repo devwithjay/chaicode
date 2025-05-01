@@ -33,7 +33,7 @@ const ThemeToggler = () => {
         src={theme === 'dark' ? SunIcon : MoonIcon}
         alt="ThemeToggler"
         onClick={handleThemeSwitch}
-        className="cursor-pointer size-5 md:size-7"
+        className="cursor-pointer size-5 md:size-6"
         style={rotationStyle}
       />
     </div>

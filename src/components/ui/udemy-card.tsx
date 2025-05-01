@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { FaStar, FaStarHalfAlt } from 'react-icons/fa';
 
@@ -63,9 +63,20 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
     return stars;
   };
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveVideo(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
   return (
     <>
-      <div className="mx-auto flex w-full max-w-md flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200 sm:max-w-lg lg:max-w-5xl lg:flex-row">
+      <div className="mx-auto flex w-full flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200 sm:max-w-lg lg:max-w-full lg:flex-row">
         <div className="flex flex-col justify-between p-6 lg:w-1/2">
           <div>
             <h2 className="mb-2 text-xl font-bold text-[var(--text-primary)] sm:text-2xl lg:text-3xl">

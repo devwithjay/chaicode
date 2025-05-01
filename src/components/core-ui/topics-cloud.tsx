@@ -19,8 +19,9 @@ const TopicsCloud = () => {
             href={topic.youtubeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[var(--border-primary)] px-5 py-2 text-sm text-[var(--text-primary)] transition-all duration-200 hover:bg-[var(--surface-brand)] hover:text-white hover:brightness-110 md:text-base"
+            className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-5 py-2 text-sm text-[var(--text-primary)] transition-all duration-200 hover:bg-[var(--surface-brand)] hover:text-white md:text-base"
           >
+            <span className="text-lg md:text-xl">{topic.icon}</span>
             {topic.title}
           </a>
         ))}

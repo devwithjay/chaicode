@@ -12,6 +12,7 @@ import {
   TopicsCloud,
   Udemy,
   WhyChaiCode,
+  YouTube,
 } from '@/components/core-ui';
 
 const HomePage = () => {
@@ -30,6 +31,7 @@ const HomePage = () => {
       <Community />
       <FreeAPI />
       <ChaiApp />
+      <YouTube />
     </>
   );
 };

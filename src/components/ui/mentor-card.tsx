@@ -47,11 +47,11 @@ export function MentorCard({
       onMouseOver={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      <div className="h-full w-full">
+      <div className="size-full">
         <motion.img
           src={image}
           alt={name}
-          className="pointer-events-none h-full w-full object-cover select-none"
+          className="pointer-events-none size-full object-cover select-none"
           animate={isOpen ? 'expanded' : 'collapsed'}
           variants={imageVariants}
           transition={transition}

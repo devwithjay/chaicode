@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { AiOutlineGift } from 'react-icons/ai';
-import { BsBroadcastPin, BsCameraVideo } from 'react-icons/bs';
+import { BsCameraVideo } from 'react-icons/bs';
 import { FaCodeBranch, FaHandshakeSimple } from 'react-icons/fa6';
 import { LuMessageSquare } from 'react-icons/lu';
 import { MdPeopleAlt } from 'react-icons/md';
+import { IoCode } from 'react-icons/io5';
 
 import Marquee from '@/components/ui/marquee';
 import { heroData } from '@/constants';
@@ -31,32 +32,47 @@ const getIconForTag = (_item: string, index: number) => {
   }
 };
 
+
+
 const Hero = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   const videoIds = heroData.videoLinks.map((link) => link.split('/embed/')[1]);
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveVideo(null);
+      }
+    };
+  
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
   return (
     <section className="mx-auto bg-[var(--surface-primary)] pt-10 text-center transition-all duration-200 md:pt-14 lg:pt-16">
-      <div className="mb-6 inline-flex flex-wrap items-center justify-center rounded-md border border-[var(--border-primary)] px-2.5 py-2 text-xs font-medium text-[var(--text-brand)] transition-all duration-200 select-none hover:border-[var(--text-brand)] max-sm:text-center sm:text-sm md:px-4 md:text-base">
+      <div className="mb-6 inline-flex flex-wrap items-center justify-center rounded-md border border-[var(--border-primary)] px-2.5 py-2 text-xs font-medium text-[var(--text-brand)] transition-all duration-200 select-none hover:border-[var(--text-brand)] sm:text-sm md:px-4 md:text-base">
         <span className="mr-2 text-lg text-[var(--text-brand)] sm:text-xl">
           <FaHandshakeSimple />
         </span>
-        <span className="select-none">Trusted by 1.5M Code Learners</span>
+        <span className="select-none">Trusted by 1.5M+ Code Learners</span>
+        <span className="ml-2 md:ml-3 flex items-center gap-1">
+          <span className="relative flex size-1.5 md:size-2">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-red-500 opacity-75"></span>
+            <span className="relative inline-flex size-1.5 md:size-2 rounded-full bg-red-600"></span>
+          </span>
+        </span>
       </div>
-
       <h1 className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] transition-all duration-200 md:text-[48px] lg:px-0 lg:text-[64px]">
         {heroData.heading}
       </h1>
-
       <h2 className="mx-auto mt-1 max-w-4xl px-6 text-2xl leading-tight font-semibold text-[var(--text-brand)] transition-all duration-200 md:text-[30px] lg:px-0 lg:text-[38px]">
         {heroData.subHeading}
       </h2>
-
       <p className="text-md mx-auto mt-6 max-w-3xl px-6 text-[var(--text-secondary)] transition-all duration-200 md:px-0 md:text-lg">
         {heroData.description}
       </p>
-
       <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2 px-6 transition-all duration-200 md:gap-3 md:px-0">
         {heroData.tagTitles.map((tag, index) => (
           <span
@@ -70,17 +86,15 @@ const Hero = () => {
           </span>
         ))}
       </div>
-
       <div className="mt-10 md:mt-15">
         <a
           href={heroData.ctaLink}
           className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--surface-brand)] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:brightness-110 sm:px-8 sm:py-3 sm:text-base"
         >
-          <BsBroadcastPin size={20} />
+          <IoCode size={20} />
           {heroData.ctaText}
         </a>
       </div>
-
       <div className="mt-10 w-full md:mt-15">
         <Marquee
           pauseOnHover
@@ -116,7 +130,7 @@ const Hero = () => {
           ))}
         </Marquee>
       </div>
-
+      
       {activeVideo && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
@@ -143,7 +157,6 @@ const Hero = () => {
           </div>
         </div>
       )}
-
       <style>{`
         .video-card:hover .video-card-hover\\:bg-black\\/20 {
           background-color: rgba(0, 0, 0, 0.2);

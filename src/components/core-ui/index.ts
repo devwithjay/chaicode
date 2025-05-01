@@ -11,6 +11,7 @@ import Testimonials from '@/components/core-ui/testimonials';
 import TopicsCloud from '@/components/core-ui/topics-cloud';
 import Udemy from '@/components/core-ui/udemy';
 import WhyChaiCode from '@/components/core-ui/why-chaicode';
+import YouTube from '@/components/core-ui/youtube';
 
 export {
   Achievements,
@@ -26,4 +27,5 @@ export {
   TopicsCloud,
   Udemy,
   WhyChaiCode,
+  YouTube,
 };

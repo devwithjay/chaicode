@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { FaCalendarAlt, FaClock } from 'react-icons/fa';
 
@@ -31,6 +31,17 @@ const PricingCard = ({
   const savingsPercentage = Math.round(
     ((originalPrice - price) / originalPrice) * 100,
   );
+
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setActiveVideo(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
 
   return (
     <div className="flex size-full max-w-[1440px] flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg transition-all duration-200">
@@ -80,10 +91,10 @@ const PricingCard = ({
 
         <div className="mb-4 flex items-center">
           <span className="text-[18px] font-bold text-green-600 md:text-[19px] dark:text-green-500">
-            ₹ {price} INR
+            ₹ {price.toLocaleString('en-IN')} INR
           </span>
           <span className="ml-2 text-[12px] text-gray-500 line-through md:text-[13px] dark:text-gray-400">
-            ₹ {originalPrice} INR
+            ₹ {originalPrice.toLocaleString('en-IN')} INR
           </span>
           <span className="ml-2 rounded-md bg-orange-100 px-2 py-1 text-xs font-medium whitespace-nowrap text-orange-600">
             Save {savingsPercentage}%

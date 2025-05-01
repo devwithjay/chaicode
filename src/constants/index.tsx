@@ -1,6 +1,26 @@
 import React from 'react';
-import { FaPython, FaReact, FaHtml5, FaJs, FaDocker, FaGitAlt, FaLinux, FaNodeJs } from 'react-icons/fa';
-import { SiDjango, SiNextdotjs, SiCplusplus, SiKubernetes, SiTypescript, SiVuedotjs, SiFlutter, SiGo } from 'react-icons/si';
+
+import {
+  FaDocker,
+  FaGitAlt,
+  FaHtml5,
+  FaJs,
+  FaLinux,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from 'react-icons/fa';
+import {
+  SiCplusplus,
+  SiDjango,
+  SiFlutter,
+  SiGo,
+  SiKubernetes,
+  SiNextdotjs,
+  SiTypescript,
+  SiVuedotjs,
+} from 'react-icons/si';
+
 import {
   AndroidMockupImg,
   BharatUIImg,
@@ -679,22 +699,86 @@ export const topicsCloudData: TopicsCloudData = {
   heading: 'Topics Cloud',
   subHeading: 'You can find videos and courses on topics and much more',
   topics: [
-    { title: 'Django', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiDjango /> },
-    { title: 'Python', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaPython /> },
-    { title: 'React', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaReact /> },
-    { title: 'HTML', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaHtml5 /> },
-    { title: 'Javascript', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaJs /> },
-    { title: 'NextJS', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiNextdotjs /> },
-    { title: 'C++', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiCplusplus /> },
-    { title: 'Kubernetes', youtubeLink: 'https://youtu.be/...', icon: <SiKubernetes /> },
-    { title: 'Docker', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaDocker /> },
-    { title: 'Backend', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaNodeJs /> },
-    { title: 'Git', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaGitAlt /> },
-    { title: 'TypeScript', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiTypescript /> },
-    { title: 'Vue JS', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiVuedotjs /> },
-    { title: 'Flutter', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiFlutter /> },
-    { title: 'Linux', youtubeLink: 'https://youtube.com/playlist?...', icon: <FaLinux /> },
-    { title: 'Golang', youtubeLink: 'https://youtube.com/playlist?...', icon: <SiGo /> },
+    {
+      title: 'Django',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiDjango />,
+    },
+    {
+      title: 'Python',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaPython />,
+    },
+    {
+      title: 'React',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaReact />,
+    },
+    {
+      title: 'HTML',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaHtml5 />,
+    },
+    {
+      title: 'Javascript',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaJs />,
+    },
+    {
+      title: 'NextJS',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiNextdotjs />,
+    },
+    {
+      title: 'C++',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiCplusplus />,
+    },
+    {
+      title: 'Kubernetes',
+      youtubeLink: 'https://youtu.be/...',
+      icon: <SiKubernetes />,
+    },
+    {
+      title: 'Docker',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaDocker />,
+    },
+    {
+      title: 'Backend',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaNodeJs />,
+    },
+    {
+      title: 'Git',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaGitAlt />,
+    },
+    {
+      title: 'TypeScript',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiTypescript />,
+    },
+    {
+      title: 'Vue JS',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiVuedotjs />,
+    },
+    {
+      title: 'Flutter',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiFlutter />,
+    },
+    {
+      title: 'Linux',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <FaLinux />,
+    },
+    {
+      title: 'Golang',
+      youtubeLink: 'https://youtube.com/playlist?...',
+      icon: <SiGo />,
+    },
   ],
 };
 
