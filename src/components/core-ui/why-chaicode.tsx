@@ -15,7 +15,7 @@ const WhyChaiCode = () => {
       <h2 className="mx-auto mt-2 max-w-xl text-center text-[16px] text-[var(--text-secondary)] md:text-[22px]">
         {whyChaiCodeData.subHeading}
       </h2>
-      <div className="mt-8 md:mt-16 grid gap-6 lg:grid-cols-3">
+      <div className="mt-8 grid gap-6 md:mt-16 lg:grid-cols-3">
         <div className="flex flex-col gap-6">
           {whyChaiCodeData.cards.slice(0, 3).map((card, index) => (
             <WhyChaiCodeCard
@@ -48,7 +48,7 @@ const WhyChaiCode = () => {
       <div className="mt-10 mb-6 md:mt-15">
         <a
           href={whyChaiCodeData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white transition-all duration-200 hover:brightness-110 sm:px-6 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-[var(--surface-brand-hover)] sm:px-6 sm:py-3 sm:text-base"
         >
           {whyChaiCodeData.ctaText}
           <LuExternalLink size={20} />

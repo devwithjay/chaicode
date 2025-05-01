@@ -16,7 +16,7 @@ body {
   --surface-secondary: #f6f6f6;
   --surface-brand: #ff7d0c;
   --surface-brand-secondary: #fff1e3;
-  --surface-brand-hover: #f78018;
+  --surface-brand-hover: #f4790e;
   --border-primary: #f8c6ae;
 }
 
@@ -28,7 +28,7 @@ body {
   --surface-primary: #09090b;
   --surface-secondary: #141418;
   --surface-brand: #fe9332;
-  --surface-brand-hover: #f68922;
+  --surface-brand-hover: #f97d09;
   --border-primary: #946c5c;
 }
 @layer utilities {

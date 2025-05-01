@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] px-6 py-4 md:py-6 transition-all duration-200 md:px-8 lg:px-12 2xl:px-0">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] px-6 py-4 transition-all duration-200 md:px-8 md:py-6 lg:px-12 2xl:px-0">
         <div className="flex cursor-pointer items-center space-x-2">
           <a
             aria-label="Go to ChaiCode homepage"
@@ -88,7 +88,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="hidden md:block"
           >
-            <button className="cursor-pointer rounded-lg bg-[var(--surface-brand)] px-3 py-1.5 text-sm font-medium text-white transition-all duration-300 ease-in-out hover:brightness-110 md:px-5 md:text-base">
+            <button className="cursor-pointer rounded-lg bg-[var(--surface-brand)] px-3 py-1.5 text-sm font-medium text-white transition-all duration-200 ease-in-out hover:bg-[var(--surface-brand-hover)] md:px-5 md:text-base">
               Login
             </button>
           </a>

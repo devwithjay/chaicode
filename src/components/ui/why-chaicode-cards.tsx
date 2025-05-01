@@ -96,7 +96,7 @@ export const WhyChaiCodeFeatured = ({
                   platform.charAt(0).toUpperCase() + platform.slice(1)
                 }
                 rel="noopener noreferrer"
-                className="text-[var(--text-brand)] hover:brightness-110"
+                className="text-[var(--text-brand)] hover:bg-[var(--surface-brand-hover)]"
               >
                 <Icon className="size-6" />
               </a>

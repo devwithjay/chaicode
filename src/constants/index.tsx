@@ -9,6 +9,7 @@ import {
   FaNodeJs,
   FaPython,
   FaReact,
+  FaServer,
 } from 'react-icons/fa';
 import {
   SiCplusplus,
@@ -701,82 +702,108 @@ export const topicsCloudData: TopicsCloudData = {
   topics: [
     {
       title: 'Django',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoDOf-6vAcKmazT92uLnWAgy&feature=shared',
       icon: <SiDjango />,
     },
     {
       title: 'Python',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBsMugTFALhdLlZ5VOqCg2s&feature=shared',
       icon: <FaPython />,
     },
     {
       title: 'React',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoDqgPchmvIsL4hTnJIrtige&feature=shared',
       icon: <FaReact />,
     },
     {
       title: 'HTML',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoDBNF5s-WH6aLbthSEIMhMI&feature=shared',
       icon: <FaHtml5 />,
     },
     {
       title: 'Javascript',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&feature=shared',
       icon: <FaJs />,
     },
     {
       title: 'NextJS',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBAaWGtn9GA2PTw0HO0tXzq&feature=shared',
       icon: <SiNextdotjs />,
     },
     {
       title: 'C++',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoCPfgKZS8UE0MDuwiKvL8zi&feature=shared',
       icon: <SiCplusplus />,
     },
     {
+      title: 'MCP Server',
+      youtubeLink: 'https://youtu.be/dZyQNy3-HjU?feature=shared',
+      icon: <FaServer />,
+    },
+    {
       title: 'Kubernetes',
-      youtubeLink: 'https://youtu.be/...',
+      youtubeLink: 'https://youtu.be/7XDeI5fyj3w?feature=shared',
       icon: <SiKubernetes />,
     },
     {
+      title: 'React Native',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoAKL_sTfg5CgCxlrpH5b2jS&feature=shared',
+      icon: <FaReact />,
+    },
+    {
       title: 'Docker',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWTJLvDP4Veld5F05rJAmOcp&feature=shared',
       icon: <FaDocker />,
     },
     {
       title: 'Backend',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLu71SKxNbfoBGh_8p_NS-ZAh6v7HhYqHW&feature=shared',
       icon: <FaNodeJs />,
     },
     {
       title: 'Git',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWT4v4iK1h6qejyhGObFH9_o&feature=shared',
       icon: <FaGitAlt />,
     },
     {
       title: 'TypeScript',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWRPSfKzwZsIm-Axxq-LxqhW&feature=shared',
       icon: <SiTypescript />,
     },
     {
       title: 'Vue JS',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWTpHQgiV4rZFlnuS8XDl71A&feature=shared',
       icon: <SiVuedotjs />,
     },
     {
       title: 'Flutter',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWT-ooTYHCqgxMTGA233JMrP&feature=shared',
       icon: <SiFlutter />,
     },
     {
       title: 'Linux',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWSH1yebxsz5BVF2acAV5hhw&feature=shared',
       icon: <FaLinux />,
     },
     {
       title: 'Golang',
-      youtubeLink: 'https://youtube.com/playlist?...',
+      youtubeLink:
+        'https://youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N&feature=shared',
       icon: <SiGo />,
     },
   ],

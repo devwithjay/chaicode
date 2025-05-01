@@ -114,7 +114,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
             <ChevronLeftIcon className="size-6 md:size-8" />
           </button>
 
-          <div className="flex items-center justify-center gap-4 p-2 ">
+          <div className="flex items-center justify-center gap-4 p-2">
             {Array.from({ length: totalItems }).map((_, index) => (
               <button
                 key={index}

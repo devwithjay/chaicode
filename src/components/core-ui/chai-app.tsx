@@ -34,7 +34,7 @@ const ChaiApp = () => {
       </div>
 
       <div className="mt-16 flex w-full flex-col items-center gap-14 md:flex-row md:justify-between">
-        <div className="flex w-full  flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
+        <div className="flex w-full flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
           <p className="text-sm text-[var(--text-primary)] md:text-base lg:text-lg">
             {appData.description}
           </p>
@@ -56,7 +56,7 @@ const ChaiApp = () => {
               href={appData.appStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white transition-all duration-200 hover:brightness-110 sm:px-4 sm:py-3"
+              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white transition-all duration-200 hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-3"
             >
               <FaApple size={22} className="lg:size-5" />
               <div className="flex flex-col text-left">
@@ -71,7 +71,7 @@ const ChaiApp = () => {
               href={appData.playStoreLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white transition-all duration-200 hover:brightness-110 sm:px-4 sm:py-3"
+              className="flex items-center gap-2 rounded-lg bg-[var(--surface-brand)] px-3 py-2 text-white transition-all duration-200 hover:bg-[var(--surface-brand-hover)] sm:px-4 sm:py-3"
             >
               <SiGoogleplay size={20} className="lg:size-5" />
               <div className="flex flex-col text-left">

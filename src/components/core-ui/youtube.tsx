@@ -64,7 +64,7 @@ const YouTube = () => {
                 href={channel.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 self-start rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition hover:brightness-110 md:self-center"
+                className="inline-flex items-center gap-2 self-start rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-[var(--surface-brand-hover)] md:self-center"
               >
                 Visit Channel <FiExternalLink size={16} />
               </a>

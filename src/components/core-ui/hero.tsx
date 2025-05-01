@@ -1,13 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { AiOutlineGift } from 'react-icons/ai';
 import { BsCameraVideo } from 'react-icons/bs';
 import { FaCodeBranch, FaHandshakeSimple } from 'react-icons/fa6';
+import { IoCode } from 'react-icons/io5';
 import { LuMessageSquare } from 'react-icons/lu';
 import { MdPeopleAlt } from 'react-icons/md';
-import { IoCode } from 'react-icons/io5';
 
 import Marquee from '@/components/ui/marquee';
 import { heroData } from '@/constants';
@@ -32,8 +32,6 @@ const getIconForTag = (_item: string, index: number) => {
   }
 };
 
-
-
 const Hero = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -45,7 +43,7 @@ const Hero = () => {
         setActiveVideo(null);
       }
     };
-  
+
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, []);
@@ -57,10 +55,10 @@ const Hero = () => {
           <FaHandshakeSimple />
         </span>
         <span className="select-none">Trusted by 1.5M+ Code Learners</span>
-        <span className="ml-2 md:ml-3 flex items-center gap-1">
+        <span className="ml-2 flex items-center gap-1 md:ml-3">
           <span className="relative flex size-1.5 md:size-2">
             <span className="absolute inline-flex size-full animate-ping rounded-full bg-red-500 opacity-75"></span>
-            <span className="relative inline-flex size-1.5 md:size-2 rounded-full bg-red-600"></span>
+            <span className="relative inline-flex size-1.5 rounded-full bg-red-600 md:size-2"></span>
           </span>
         </span>
       </div>
@@ -89,7 +87,7 @@ const Hero = () => {
       <div className="mt-10 md:mt-15">
         <a
           href={heroData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--surface-brand)] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:brightness-110 sm:px-8 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--surface-brand)] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-[var(--surface-brand-hover)] sm:px-8 sm:py-3 sm:text-base"
         >
           <IoCode size={20} />
           {heroData.ctaText}
@@ -109,7 +107,6 @@ const Hero = () => {
               <img
                 src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
                 alt="YouTube Video Thumbnail"
-                loading="lazy"
                 className="aspect-video w-full object-cover"
               />
               <div className="video-card-hover:bg-black/20 absolute inset-0 flex items-center justify-center bg-black/30">
@@ -130,7 +127,7 @@ const Hero = () => {
           ))}
         </Marquee>
       </div>
-      
+
       {activeVideo && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
@@ -145,7 +142,6 @@ const Hero = () => {
               title="YouTube Video"
               allow="autoplay; encrypted-media"
               allowFullScreen
-              loading="lazy"
               className="h-full w-full rounded-lg"
             ></iframe>
             <button

@@ -45,7 +45,7 @@ const FreeAPI = () => {
                 href={freeApiData.ctaLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:brightness-110 md:px-6 md:py-3 md:text-base"
+                className="inline-flex items-center gap-2 rounded-md bg-[var(--surface-brand)] px-4 py-2 text-sm font-semibold text-white transition-all duration-200 hover:bg-[var(--surface-brand-hover)] md:px-6 md:py-3 md:text-base"
               >
                 <FaFileAlt className="text-base text-white" />
                 {freeApiData.ctaText}
@@ -63,7 +63,6 @@ const FreeAPI = () => {
             <img
               src={`https://img.youtube.com/vi/${freeApiData.videoId}/hqdefault.jpg`}
               alt="FreeAPI YouTube Video Thumbnail"
-              loading="lazy"
               className="aspect-video w-full object-cover"
             />
             <div className="video-card-hover:bg-black/20 absolute inset-0 flex items-center justify-center bg-black/30">
@@ -98,7 +97,6 @@ const FreeAPI = () => {
               title="YouTube Video"
               allow="autoplay; encrypted-media"
               allowFullScreen
-              loading="lazy"
               className="size-full rounded-lg"
             ></iframe>
             <button

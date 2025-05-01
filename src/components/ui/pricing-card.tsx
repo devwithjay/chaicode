@@ -49,7 +49,6 @@ const PricingCard = ({
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt="YouTube Video Thumbnail"
-          loading="lazy"
           className="aspect-video w-full object-cover"
         />
         <div
@@ -108,7 +107,7 @@ const PricingCard = ({
         rel="noopener noreferrer"
         aria-label={ariaLabel || `Learn more about ${title}`}
       >
-        <button className="w-full cursor-pointer rounded-b-md bg-[var(--surface-brand)] py-2 text-white hover:brightness-110">
+        <button className="w-full cursor-pointer rounded-b-md bg-[var(--surface-brand)] py-2 text-white hover:bg-[var(--surface-brand-hover)]">
           {learnMoreText}
         </button>
       </a>
@@ -127,8 +126,7 @@ const PricingCard = ({
               title="YouTube Video"
               allow="autoplay; encrypted-media"
               allowFullScreen
-              loading="lazy"
-              className="h-full w-full rounded-lg"
+              className="size-full rounded-lg"
             ></iframe>
             <button
               onClick={() => setActiveVideo(null)}
