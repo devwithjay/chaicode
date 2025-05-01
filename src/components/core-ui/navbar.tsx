@@ -48,7 +48,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] px-6 py-4 transition-all duration-200 md:px-8 md:py-6 lg:px-12 2xl:px-0">
+      <nav className="mx-auto flex max-w-[1440px] items-center justify-between bg-[var(--surface-primary)] px-6 py-4 md:px-8 md:py-6 lg:px-12 2xl:px-0">
         <div className="flex cursor-pointer items-center space-x-2">
           <a
             aria-label="Go to ChaiCode homepage"
@@ -70,7 +70,7 @@ const Navbar = () => {
               <a
                 href={item.link}
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 transition-all duration-300 hover:text-[var(--text-primary)]"
+                className="flex items-center gap-1.5 hover:text-[var(--text-primary)]"
                 aria-label={item.title}
               >
                 {getIconForNavItem(item, index)}

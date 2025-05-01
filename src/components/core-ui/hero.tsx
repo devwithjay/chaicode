@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 
+import { motion } from 'framer-motion';
 import { AiOutlineGift } from 'react-icons/ai';
 import { BsCameraVideo } from 'react-icons/bs';
 import { FaCodeBranch, FaHandshakeSimple } from 'react-icons/fa6';
@@ -13,6 +14,7 @@ import Marquee from '@/components/ui/marquee';
 import { heroData } from '@/constants';
 
 const iconSize = 18;
+const easing = [0.22, 0.9, 0.36, 1];
 
 const getIconForTag = (_item: string, index: number) => {
   const commonProps = { width: iconSize, height: iconSize };
@@ -32,6 +34,26 @@ const getIconForTag = (_item: string, index: number) => {
   }
 };
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.4, ease: easing },
+  },
+};
+
 const Hero = () => {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
@@ -49,8 +71,17 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="mx-auto bg-[var(--surface-primary)] pt-10 text-center transition-all duration-200 md:pt-14 lg:pt-16">
-      <div className="mb-6 inline-flex flex-wrap items-center justify-center rounded-md border border-[var(--border-primary)] px-2.5 py-2 text-xs font-medium text-[var(--text-brand)] transition-all duration-200 select-none hover:border-[var(--text-brand)] sm:text-sm md:px-4 md:text-base">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-100px' }}
+      variants={containerVariants}
+      className="mx-auto bg-[var(--surface-primary)] pt-10 text-center md:pt-14 lg:pt-16"
+    >
+      <motion.div
+        variants={itemVariants}
+        className="mb-6 inline-flex flex-wrap items-center justify-center rounded-md border border-[var(--border-primary)] px-2.5 py-2 text-xs font-medium text-[var(--text-brand)] select-none hover:border-[var(--text-brand)] sm:text-sm md:px-4 md:text-base"
+      >
         <span className="mr-2 text-lg text-[var(--text-brand)] sm:text-xl">
           <FaHandshakeSimple />
         </span>
@@ -61,39 +92,59 @@ const Hero = () => {
             <span className="relative inline-flex size-1.5 rounded-full bg-red-600 md:size-2"></span>
           </span>
         </span>
-      </div>
-      <h1 className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] transition-all duration-200 md:text-[48px] lg:px-0 lg:text-[64px]">
-        {heroData.heading}
-      </h1>
-      <h2 className="mx-auto mt-1 max-w-4xl px-6 text-2xl leading-tight font-semibold text-[var(--text-brand)] transition-all duration-200 md:text-[30px] lg:px-0 lg:text-[38px]">
-        {heroData.subHeading}
-      </h2>
-      <p className="text-md mx-auto mt-6 max-w-3xl px-6 text-[var(--text-secondary)] transition-all duration-200 md:px-0 md:text-lg">
-        {heroData.description}
-      </p>
-      <div className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2 px-6 transition-all duration-200 md:gap-3 md:px-0">
-        {heroData.tagTitles.map((tag, index) => (
-          <span
-            key={index}
-            className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-4 py-1 text-[12px] font-medium text-[var(--text-primary)] transition-all duration-200 ease-in-out select-none hover:border-[var(--text-brand)] md:py-1.5 md:text-[14px] lg:py-2"
-          >
-            <span className="text-[var(--text-brand)]">
-              {getIconForTag(tag, index)}
-            </span>
-            {tag}
-          </span>
-        ))}
-      </div>
-      <div className="mt-10 md:mt-15">
-        <a
-          href={heroData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--surface-brand)] px-6 py-3 text-sm font-medium text-white transition-all duration-200 hover:bg-[var(--surface-brand-hover)] sm:px-8 sm:py-3 sm:text-base"
+      </motion.div>
+
+      <motion.div
+        variants={itemVariants}
+        className="flex flex-col items-center"
+      >
+        <motion.h1
+          variants={itemVariants}
+          className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] md:text-[48px] lg:px-0 lg:text-[64px]"
         >
-          <IoCode size={20} />
-          {heroData.ctaText}
-        </a>
-      </div>
-      <div className="mt-10 w-full md:mt-15">
+          {heroData.heading}
+        </motion.h1>
+        <motion.h2
+          variants={itemVariants}
+          className="mx-auto mt-1 max-w-4xl px-6 text-2xl leading-tight font-semibold text-[var(--text-brand)] md:text-[30px] lg:px-0 lg:text-[38px]"
+        >
+          {heroData.subHeading}
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+          className="text-md mx-auto mt-6 max-w-3xl px-6 text-[var(--text-secondary)] md:px-0 md:text-lg"
+        >
+          {heroData.description}
+        </motion.p>
+        <motion.div
+          variants={itemVariants}
+          className="mx-auto mt-8 flex max-w-4xl flex-wrap justify-center gap-2 px-6 md:gap-3 md:px-0"
+        >
+          {heroData.tagTitles.map((tag, index) => (
+            <motion.span
+              key={index}
+              variants={itemVariants}
+              className="flex items-center gap-2 rounded-full border border-[var(--border-primary)] px-4 py-1 text-[12px] font-medium text-[var(--text-primary)] select-none hover:border-[var(--text-brand)] md:py-1.5 md:text-[14px] lg:py-2"
+            >
+              <span className="text-[var(--text-brand)]">
+                {getIconForTag(tag, index)}
+              </span>
+              {tag}
+            </motion.span>
+          ))}
+        </motion.div>
+        <motion.div variants={itemVariants} className="mt-10 md:mt-15">
+          <a
+            href={heroData.ctaLink}
+            className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--surface-brand)] px-6 py-3 text-sm font-medium text-white hover:bg-[var(--surface-brand-hover)] sm:px-8 sm:py-3 sm:text-base"
+          >
+            <IoCode size={20} />
+            {heroData.ctaText}
+          </a>
+        </motion.div>
+      </motion.div>
+
+      <motion.div variants={itemVariants} className="mt-10 w-full md:mt-15">
         <Marquee
           pauseOnHover
           className="flex h-full items-center bg-transparent [--duration:40s]"
@@ -101,12 +152,13 @@ const Hero = () => {
           {videoIds.map((id) => (
             <div
               key={id}
-              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-200 md:w-[450px] lg:w-[550px]"
+              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl md:w-[450px] lg:w-[550px]"
               onClick={() => setActiveVideo(id)}
             >
               <img
                 src={`https://img.youtube.com/vi/${id}/hqdefault.jpg`}
                 alt="YouTube Video Thumbnail"
+                loading="lazy"
                 className="aspect-video w-full object-cover"
               />
               <div className="video-card-hover:bg-black/20 absolute inset-0 flex items-center justify-center bg-black/30">
@@ -126,7 +178,7 @@ const Hero = () => {
             </div>
           ))}
         </Marquee>
-      </div>
+      </motion.div>
 
       {activeVideo && (
         <div
@@ -162,7 +214,7 @@ const Hero = () => {
           fill: #ff0000;
         }
       `}</style>
-    </section>
+    </motion.section>
   );
 };
 

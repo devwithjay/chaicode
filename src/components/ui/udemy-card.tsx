@@ -76,8 +76,8 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
 
   return (
     <>
-      <div className="mx-auto flex w-full flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200 sm:max-w-lg lg:max-w-[1200px] lg:flex-row">
-        <div className="flex flex-col justify-between p-6 lg:w-1/2">
+      <div className="mx-auto flex w-full flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] transition-all duration-200 sm:max-w-lg xl:max-w-[1200px] xl:flex-row">
+        <div className="flex flex-col justify-between p-6 xl:w-1/2">
           <div>
             <h2 className="mb-2 text-xl font-bold text-[var(--text-primary)] sm:text-2xl lg:text-3xl">
               {course.title}
@@ -122,7 +122,7 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
         </div>
 
         <div
-          className="video-card relative w-full cursor-pointer bg-black lg:w-1/2"
+          className="video-card relative w-full cursor-pointer bg-black xl:w-1/2"
           onClick={() => setActiveVideo(course.videoId)}
         >
           <style>{`
