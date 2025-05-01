@@ -40,15 +40,6 @@ const cardGroupVariants = {
   },
 };
 
-const featuredCardVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: { duration: 0.7, ease: easing, delay: 0.3 },
-  },
-};
-
 const ctaVariants = {
   hidden: { opacity: 0, y: 10 },
   visible: {
@@ -102,7 +93,7 @@ const WhyChaiCode = () => {
           ))}
         </motion.div>
 
-        <motion.div variants={featuredCardVariants}>
+        <motion.div variants={cardGroupVariants}>
           <WhyChaiCodeFeatured
             name={whyChaiCodeData.featured.name}
             description={whyChaiCodeData.featured.description}
