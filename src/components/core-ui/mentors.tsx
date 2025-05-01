@@ -45,7 +45,7 @@ const carouselVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: easing, delay: 0.2 },
+    transition: { duration: 0.6, ease: easing, delay: 0.2 },
   },
 };
 
