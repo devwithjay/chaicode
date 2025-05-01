@@ -33,8 +33,8 @@ const PricingCard = ({
   );
 
   return (
-    <div className="flex size-full max-w-[1440px] transition-all duration-200 flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg">
-      <div className="group relative">
+    <div className="flex size-full max-w-[1440px] flex-col overflow-hidden rounded-lg bg-[var(--surface-secondary)] shadow-lg transition-all duration-200">
+      <div className="group relative transition-all duration-200">
         <img
           src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
           alt="YouTube Video Thumbnail"
@@ -97,7 +97,7 @@ const PricingCard = ({
         rel="noopener noreferrer"
         aria-label={ariaLabel || `Learn more about ${title}`}
       >
-        <button className="w-full cursor-pointer rounded-b-md bg-[var(--surface-brand)] py-2 text-white hover:bg-[var(--surface-brand-hover)]">
+        <button className="w-full cursor-pointer rounded-b-md bg-[var(--surface-brand)] py-2 text-white hover:brightness-110">
           {learnMoreText}
         </button>
       </a>

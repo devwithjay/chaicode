@@ -45,11 +45,11 @@ const Hero = () => {
         <span className="select-none">Trusted by 1.5M Code Learners</span>
       </div>
 
-      <h1 className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] transition-all duration-200 md:px-0 md:text-[48px] lg:text-[64px]">
+      <h1 className="mx-auto max-w-4xl px-6 text-4xl leading-tight font-bold text-[var(--text-primary)] transition-all duration-200 md:text-[48px] lg:px-0 lg:text-[64px]">
         {heroData.heading}
       </h1>
 
-      <h2 className="mx-auto mt-1 max-w-4xl px-6 text-2xl leading-tight font-semibold text-[var(--text-brand)] transition-all duration-200 md:px-0 md:text-[30px] lg:text-[38px]">
+      <h2 className="mx-auto mt-1 max-w-4xl px-6 text-2xl leading-tight font-semibold text-[var(--text-brand)] transition-all duration-200 md:text-[30px] lg:px-0 lg:text-[38px]">
         {heroData.subHeading}
       </h2>
 
@@ -89,7 +89,7 @@ const Hero = () => {
           {videoIds.map((id) => (
             <div
               key={id}
-              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-all hover:scale-101 md:w-[450px] lg:w-[550px]"
+              className="video-card relative mx-2 w-[350px] cursor-pointer overflow-hidden rounded-xl shadow-md transition-all duration-200 md:w-[450px] lg:w-[550px]"
               onClick={() => setActiveVideo(id)}
             >
               <img

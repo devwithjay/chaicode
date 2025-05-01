@@ -104,7 +104,7 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
             href={course.learnMoreLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-auto inline-block w-full rounded bg-[var(--surface-brand)] px-4 py-3 text-center font-semibold text-white hover:bg-[var(--surface-brand-hover)]"
+            className="mt-auto inline-block w-full rounded bg-[var(--surface-brand)] px-4 py-3 text-center font-semibold text-white transition-all duration-200 hover:brightness-110"
           >
             {course.learnMoreText}
           </a>

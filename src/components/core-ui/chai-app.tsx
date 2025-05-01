@@ -23,7 +23,7 @@ const ChaiApp = () => {
   };
 
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-16 transition-all duration-200 md:pt-20 lg:pt-24 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-16 transition-all duration-200 md:px-8 md:pt-20 lg:px-12 lg:pt-24 2xl:px-0">
       <div className="text-center">
         <h1 className="text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">
           {appData.heading}
@@ -33,8 +33,8 @@ const ChaiApp = () => {
         </h2>
       </div>
 
-      <div className="mt-16 flex w-full max-w-7xl flex-col items-center gap-14 md:flex-row md:justify-between">
-        <div className="flex w-full max-w-lg flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
+      <div className="mt-16 flex w-full flex-col items-center gap-14 md:flex-row md:justify-between">
+        <div className="flex w-full  flex-col items-center text-center md:w-1/2 md:items-start md:text-left">
           <p className="text-sm text-[var(--text-primary)] md:text-base lg:text-lg">
             {appData.description}
           </p>
@@ -96,13 +96,13 @@ const ChaiApp = () => {
             <motion.img
               src={appData.androidImageUrl}
               alt="Android Mockup"
-              className="absolute top-8 left-6 w-[230px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[280px]"
+              className="absolute top-8 left-6 w-[230px] -rotate-6 rounded-2xl object-cover shadow-xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 lg:w-[280px]"
             />
 
             <motion.img
               src={appData.iphoneImageUrl}
               alt="iPhone Mockup"
-              className="rounded-5xl absolute top-0 right-6 z-10 w-[230px] -rotate-6 object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 md:w-[280px]"
+              className="rounded-5xl absolute top-0 right-6 z-10 w-[230px] -rotate-6 object-cover shadow-2xl transition-transform duration-400 group-hover:-translate-y-2 group-hover:-rotate-2 lg:w-[280px]"
             />
           </motion.div>
         </div>

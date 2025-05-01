@@ -4,7 +4,7 @@ import { testimonialsData, tweetLoveIds } from '@/constants';
 
 const Testimonials = () => {
   return (
-    <section className="flex flex-col items-center transition-all duration-200 justify-center bg-[var(--surface-primary)] pt-12 md:pt-16 lg:pt-24">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] pt-12 transition-all duration-200 md:pt-16 lg:pt-24">
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {testimonialsData.heading}
       </h1>

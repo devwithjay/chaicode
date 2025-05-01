@@ -3,7 +3,7 @@ import { pricingData } from '@/constants';
 
 const Pricing = () => {
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-8 transition-all duration-200 md:pt-12 lg:pt-16 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-8 transition-all duration-200 md:px-8 md:pt-12 lg:px-12 lg:pt-16 2xl:px-0">
       <h1 className="] mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {pricingData.heading}
       </h1>

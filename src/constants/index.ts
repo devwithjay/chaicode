@@ -318,7 +318,7 @@ export const achievementsData: AchievementsData = {
       imageUrl: SnappyUIImg,
       title: 'SnappyUI',
       description: 'A minimal and intuitive component library.',
-      websiteUrl: 'https://snappyui.in/',
+      websiteUrl: 'https://snappy-ui-240237131712.us-central1.run.app/',
       socialLinks: {
         twitter: 'https://x.com/snappyui',
         linkedin: 'https://www.linkedin.com/company/snappyui/',

@@ -16,7 +16,7 @@ const Reviews = () => {
   };
 
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 transition-all duration-200 md:px-8 md:pt-12 lg:pt-16 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 transition-all duration-200 md:px-8 md:pt-12 lg:px-12 lg:pt-16 2xl:px-0">
       <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {reviewsData.heading}
       </h1>
@@ -34,7 +34,7 @@ const Reviews = () => {
         <div className="absolute right-0 bottom-0 left-0 flex h-32 items-end justify-center bg-gradient-to-t from-[var(--surface-primary)] to-transparent">
           <button
             onClick={handleShowMore}
-            className="mb-4 cursor-pointer rounded-full bg-white px-4 py-2 text-sm font-medium text-black shadow-md transition-all duration-200"
+            className="mb-4 cursor-pointer rounded-full hover:bg-white/90 hover:text-black/90 bg-white px-4 py-2 text-sm font-medium text-black shadow-md transition-all duration-200"
           >
             Show More <FaArrowRightLong className="ml-1 inline" size={16} />
           </button>
@@ -43,7 +43,7 @@ const Reviews = () => {
       <div className="mt-10 mb-6 md:mt-14">
         <a
           href={reviewsData.ctaLink}
-          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white sm:px-6 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium hover:brightness-110 text-white sm:px-6 sm:py-3 sm:text-base"
         >
           {reviewsData.ctaText}
           <LuExternalLink size={20} />

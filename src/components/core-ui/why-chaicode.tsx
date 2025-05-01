@@ -8,7 +8,7 @@ import { whyChaiCodeData } from '@/constants';
 
 const WhyChaiCode = () => {
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-6 transition-all duration-200 md:pt-10 lg:pt-20 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-6 transition-all duration-200 md:px-8 md:pt-10 lg:px-12 lg:pt-20 2xl:px-0">
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {whyChaiCodeData.heading}
       </h1>
@@ -48,7 +48,7 @@ const WhyChaiCode = () => {
       <div className="mt-10 mb-6 md:mt-15">
         <a
           href={whyChaiCodeData.ctaLink}
-          className="inline-flex items-center duration-200 transition-all hover:brightness-110 justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white sm:px-6 sm:py-3 sm:text-base"
+          className="inline-flex items-center justify-center gap-3 rounded-lg bg-[var(--text-brand)] px-4 py-3 text-sm font-medium text-white transition-all duration-200 hover:brightness-110 sm:px-6 sm:py-3 sm:text-base"
         >
           {whyChaiCodeData.ctaText}
           <LuExternalLink size={20} />

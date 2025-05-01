@@ -39,8 +39,8 @@ const getSocialIcon = (label: string) => {
 
 export function Footer() {
   return (
-    <footer className="mx-auto w-full max-w-[1440px] bg-[var(--surface-primary)] px-6 pt-20 pb-6 transition-all duration-200 md:px-8 md:pb-12 2xl:px-0">
-      <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 sm:gap-10 md:flex-row">
+    <footer className="mx-auto w-full max-w-[1440px] bg-[var(--surface-primary)] px-6 pt-20 pb-6 transition-all duration-200 md:px-8 md:pb-12 lg:px-12 2xl:px-0">
+      <div className="mx-auto flex flex-col justify-between gap-8 sm:gap-10 md:flex-row">
         <div className="flex flex-col gap-4">
           <div>
             <a

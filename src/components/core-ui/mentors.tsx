@@ -6,7 +6,7 @@ import { mentorsData } from '@/constants';
 
 const Mentors = () => {
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-12 transition-all duration-200 md:px-8 md:pt-16 lg:pt-20 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-12 transition-all duration-200 md:px-8 lg:px-12 md:pt-16 lg:pt-20 2xl:px-0">
       <h1 className="mx-auto max-w-4xl text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {mentorsData.heading}
       </h1>

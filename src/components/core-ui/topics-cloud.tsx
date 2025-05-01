@@ -4,7 +4,7 @@ import { topicsCloudData } from '@/constants';
 
 const TopicsCloud = () => {
   return (
-    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 transition-all duration-200 md:px-8 md:pt-10 lg:pt-18 2xl:px-0">
+    <section className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 transition-all duration-200 md:px-8 md:pt-10 lg:px-12 lg:pt-18 2xl:px-0">
       <h1 className="mx-auto max-w-4xl text-center text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[34px] lg:text-[44px]">
         {topicsCloudData.heading}
       </h1>
@@ -19,7 +19,7 @@ const TopicsCloud = () => {
             href={topic.youtubeLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full border border-[var(--border-primary)] px-5 py-2 text-sm text-[var(--text-primary)] transition-all duration-200 hover:bg-[var(--surface-brand)] hover:brightness-110 hover:text-white md:text-base"
+            className="rounded-full border border-[var(--border-primary)] px-5 py-2 text-sm text-[var(--text-primary)] transition-all duration-200 hover:bg-[var(--surface-brand)] hover:text-white hover:brightness-110 md:text-base"
           >
             {topic.title}
           </a>

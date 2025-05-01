@@ -79,7 +79,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
   }, [children]);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full transition-all duration-200">
       <div
         className={`group relative flex w-full flex-col overflow-hidden ${className}`}
       >
@@ -108,18 +108,18 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
           <button
             aria-label="Previous Slide"
             onClick={scrollLeft}
-            className="flex items-center justify-center p-1 text-[var(--text-brand)] disabled:text-gray-400 md:p-2"
+            className="flex cursor-pointer items-center justify-center p-1 text-[var(--text-brand)] transition-all duration-200 disabled:text-gray-400 md:p-2"
             disabled={currentIndex === 0}
           >
             <ChevronLeftIcon className="size-6 md:size-8" />
           </button>
 
-          <div className="flex items-center justify-center gap-3 p-2">
+          <div className="flex items-center justify-center gap-4 p-2 ">
             {Array.from({ length: totalItems }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => scrollToIndex(index)}
-                className={`size-1.5 rounded-full md:size-2 ${
+                className={`size-1.5 cursor-pointer rounded-full transition-all duration-200 md:size-2 ${
                   currentIndex === index
                     ? 'scale-125 bg-[var(--text-brand)]'
                     : 'scale-100 bg-gray-400'
@@ -132,7 +132,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
           <button
             aria-label="Next Slide"
             onClick={scrollRight}
-            className="flex items-center justify-center p-1 text-[var(--text-brand)] disabled:text-gray-400 md:p-2"
+            className="flex cursor-pointer items-center justify-center p-1 text-[var(--text-brand)] transition-all duration-200 disabled:text-gray-400 md:p-2"
             disabled={currentIndex >= totalItems - 1}
           >
             <ChevronRightIcon className="size-6 md:size-8" />

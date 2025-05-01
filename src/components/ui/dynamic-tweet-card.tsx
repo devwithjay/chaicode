@@ -1,4 +1,5 @@
 import { Suspense } from 'react';
+
 import {
   type EnrichedTweet,
   type TweetProps,
@@ -6,6 +7,7 @@ import {
   enrichTweet,
 } from 'react-tweet';
 import { type Tweet, getTweet } from 'react-tweet/api';
+
 import { cn } from '@/lib/utils';
 
 interface TwitterIconProps {
@@ -62,10 +64,7 @@ export const TweetSkeleton = ({
   [key: string]: unknown;
 }) => (
   <div
-    className={cn(
-      'flex w-full flex-col gap-2 rounded-xl p-4',
-      className
-    )}
+    className={cn('flex w-full flex-col gap-2 rounded-xl p-4', className)}
     {...props}
   >
     <div className="flex flex-row gap-2">
@@ -86,7 +85,7 @@ export const TweetNotFound = ({
   <div
     className={cn(
       'flex w-full flex-col items-center justify-center gap-2 rounded-xl p-4',
-      className
+      className,
     )}
     {...props}
   >
@@ -96,42 +95,34 @@ export const TweetNotFound = ({
 
 export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="flex flex-row justify-between tracking-tight">
-    <div className="flex items-center space-x-2">
-      <a href={tweet.user.url} target="_blank" rel="noreferrer">
-        <img
-          title={`Profile picture of ${tweet.user.name}`}
-          alt={tweet.user.screen_name}
-          height={48}
-          width={48}
-          src={tweet.user.profile_image_url_https}
-          className="size-10 overflow-hidden rounded-full"
-        />
-      </a>
+    <a
+      href={tweet.user.url}
+      target="_blank"
+      rel="noreferrer"
+      className="flex items-center space-x-2"
+    >
+      <img
+        title={`Profile picture of ${tweet.user.name}`}
+        alt={tweet.user.screen_name}
+        height={48}
+        width={48}
+        src={tweet.user.profile_image_url_https}
+        className="size-10 overflow-hidden rounded-full"
+      />
       <div>
-        <a
-          href={tweet.user.url}
-          target="_blank"
-          rel="noreferrer"
-          className="flex items-center text-sm font-semibold whitespace-nowrap text-[var(--text-primary)]"
-        >
+        <div className="flex items-center text-sm font-semibold whitespace-nowrap text-[var(--text-primary)]">
           {truncate(tweet.user.name, 20)}
           {tweet.user.verified ||
             (tweet.user.is_blue_verified && (
               <Verified className="ml-1 inline size-4 text-blue-500" />
             ))}
-        </a>
-        <div className="flex items-center space-x-1">
-          <a
-            href={tweet.user.url}
-            target="_blank"
-            rel="noreferrer"
-            className="text-xs text-[var(--text-secondary)]"
-          >
-            @{truncate(tweet.user.screen_name, 16)}
-          </a>
+        </div>
+        <div className="text-xs text-[var(--text-secondary)]">
+          @{truncate(tweet.user.screen_name, 16)}
         </div>
       </div>
-    </div>
+    </a>
+
     <a href={tweet.url} target="_blank" rel="noreferrer">
       <span className="sr-only">Link to tweet</span>
       <Twitter className="size-5 text-[var(--text-primary)] hover:scale-105" />
@@ -172,12 +163,15 @@ export const TweetBody = ({ tweet }: { tweet: EnrichedTweet }) => (
 );
 
 export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
-  if (!tweet.video && !tweet.photos && 
-      // @ts-expect-error - tweet.card is not defined
-      !tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url) {
+  if (
+    !tweet.video &&
+    !tweet.photos &&
+    // @ts-expect-error - tweet.card is not defined
+    !tweet?.card?.binding_values?.thumbnail_image_large?.image_value.url
+  ) {
     return null;
   }
-  
+
   return (
     <div className="mt-2">
       {tweet.video && (
@@ -213,7 +207,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
           <img
             // @ts-expect-error - tweet.card is not defined
             src={tweet.card.binding_values.thumbnail_image_large.image_value.url}
-            className="w-full h-auto max-h-40 rounded-lg object-cover shadow-sm"
+            className="h-auto max-h-40 w-full rounded-lg object-cover shadow-sm"
             alt={tweet.text}
           />
         )}
@@ -234,8 +228,8 @@ export const DynamicTweet = ({
   return (
     <div
       className={cn(
-        'flex w-full transition-all duration-200 flex-col gap-2 overflow-hidden rounded-xl bg-[var(--surface-secondary)] p-4',
-        className
+        'flex w-full flex-col gap-2 overflow-hidden rounded-xl bg-[var(--surface-secondary)] p-4 transition-all duration-200',
+        className,
       )}
       {...props}
     >
@@ -259,7 +253,12 @@ export const DynamicClientTweetCard = ({
     <div className="w-full">
       <Suspense fallback={fallback}>
         {/* @ts-expect-error Async Server Component */}
-        <DynamicTweetCardInner id={id} components={components} onError={onError} {...props} />
+        <DynamicTweetCardInner
+          id={id}
+          components={components}
+          onError={onError}
+          {...props}
+        />
       </Suspense>
     </div>
   );
