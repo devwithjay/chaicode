@@ -8,6 +8,7 @@ import {
 } from 'react-tweet';
 import { type Tweet, getTweet } from 'react-tweet/api';
 
+import FallbackImg from '@/assets/images/fallback-avatar.svg';
 import { cn } from '@/lib/utils';
 
 interface TwitterIconProps {
@@ -104,6 +105,10 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
           alt={tweet.user.screen_name}
           height={48}
           width={48}
+          onError={(e) => {
+            e.currentTarget.onerror = null;
+            e.currentTarget.src = FallbackImg;
+          }}
           src={tweet.user.profile_image_url_https}
           className="size-10 overflow-hidden rounded-full sm:size-11 md:size-12"
         />
