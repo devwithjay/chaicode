@@ -50,7 +50,7 @@ const Reviews = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-8 md:pt-14 lg:px-14"
+      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-8 md:pt-14 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={headingVariants}

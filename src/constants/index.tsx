@@ -925,7 +925,7 @@ export const ytData: YTData = {
 export const footerData: FooterData = {
   about: {
     tagline: 'Home for programmers',
-    copyright: '© 2025 ChaiCode. All rights reserved.',
+    copyright: 'ChaiCode. All rights reserved.',
     socialLinks: [
       { label: 'YouTube', url: 'https://www.youtube.com/@chaiaurcode' },
       { label: 'Twitter', url: 'https://twitter.com/hiteshdotcom' },

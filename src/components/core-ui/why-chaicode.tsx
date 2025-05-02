@@ -63,7 +63,7 @@ const WhyChaiCode = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="mx-auto mt-12 flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 md:px-8 lg:mt-22 lg:px-12 2xl:px-0"
+      className="mx-auto mt-12 flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-8 lg:mt-22 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={headingVariants}
