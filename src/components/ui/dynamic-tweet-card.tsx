@@ -1,5 +1,5 @@
+import FallBackImg from '@/assets/images/fallback-avatar.svg';
 import { Suspense } from 'react';
-
 import {
   type EnrichedTweet,
   type TweetProps,
@@ -107,6 +107,10 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
         height={48}
         width={48}
         src={tweet.user.profile_image_url_https}
+        onError={(e) => {
+          e.currentTarget.onerror = null;
+          e.currentTarget.src = FallBackImg; 
+        }}
         className="size-10 overflow-hidden rounded-full"
       />
       <div>

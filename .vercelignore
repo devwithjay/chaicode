@@ -1,0 +1,16 @@
+# Ignore node_modules — handled by Vercel during install
+node_modules
+
+# Ignore config and env files from upload
+.vite
+.env
+.env.local
+.vscode
+*.log
+
+# Ignore test files
+**/*.test.*
+**/__tests__/
+
+# Ignore source maps by default
+**/*.map
