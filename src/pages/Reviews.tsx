@@ -5,7 +5,7 @@ import { feedbackTweetIds, reviewsData } from '@/constants';
 
 const Reviews = () => {
   return (
-    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-8 transition-all duration-200 md:pt-14 lg:px-14">
+    <section className="flex flex-col items-center justify-center bg-[var(--surface-primary)] px-8 pt-8   md:pt-14 lg:px-14">
       <h1 className="mx-auto max-w-4xl text-[28px] leading-tight font-bold text-[var(--text-brand)] md:text-[34px] lg:text-[44px]">
         {reviewsData.heading}
       </h1>

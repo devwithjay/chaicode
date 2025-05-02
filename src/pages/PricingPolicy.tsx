@@ -2,7 +2,7 @@
 
 const PricingPolicy = () => {
   return (
-    <section className="mx-auto max-w-5xl bg-[var(--surface-primary)] px-6 py-20 transition-all duration-200">
+    <section className="mx-auto max-w-5xl bg-[var(--surface-primary)] px-6 py-20  ">
       <h1 className="mb-10 text-4xl font-bold text-[var(--text-brand)] md:text-5xl">
         Pricing Policy
       </h1>

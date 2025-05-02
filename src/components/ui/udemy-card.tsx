@@ -79,15 +79,15 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
       <div className="mx-auto flex w-full flex-col-reverse overflow-hidden rounded-xl bg-[var(--surface-secondary)] sm:max-w-lg xl:max-w-[1200px] xl:flex-row">
         <div className="flex flex-col justify-between p-6 xl:w-1/2">
           <div>
-            <h2 className="mb-2 text-xl font-bold text-[var(--text-primary)] sm:text-2xl lg:text-3xl">
+            <h2 className="mb-2 text-xl font-bold text-[var(--text-primary)] sm:text-2xl xl:text-3xl">
               {course.title}
             </h2>
-            <p className="mb-4 text-sm text-[var(--text-secondary)] sm:text-base lg:text-lg">
+            <p className="mb-4 text-sm text-[var(--text-secondary)] sm:text-base xl:text-lg">
               {course.description}
             </p>
 
             <div className="mb-4 flex items-center gap-2">
-              <div className="text-2xl font-semibold text-[var(--text-primary)] lg:text-4xl">
+              <div className="text-2xl font-semibold text-[var(--text-primary)] xl:text-4xl">
                 {course.rating}
               </div>
               <div className="flex flex-col items-start">
@@ -99,13 +99,13 @@ const UdemyCard: React.FC<UdemyCardProps> = ({ course }) => {
             </div>
 
             <div className="mb-6 flex items-center space-x-3">
-              <span className="text-xl font-bold text-green-600 dark:text-green-500">
+              <span className="text-xl font-bold text-green-600 xl:text-2xl dark:text-green-500">
                 ₹{course.price}
               </span>
-              <span className="text-sm text-[var(--text-secondary)] line-through">
+              <span className="text-sm text-[var(--text-secondary)] line-through xl:text-base">
                 ₹{course.originalPrice}
               </span>
-              <span className="rounded bg-orange-100 px-2 py-1 text-xs text-orange-600">
+              <span className="rounded bg-orange-100 px-2 py-1 text-xs text-orange-600 xl:text-sm">
                 {discount}% off
               </span>
             </div>

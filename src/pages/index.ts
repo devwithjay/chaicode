@@ -1,9 +1,17 @@
 import HomePage from '@/pages/HomePage';
-import PrivacyPolicy from '@/pages/PrivacyPolicy';
-import TermsOfService from '@/pages/TermsOfService';
-import PricingPolicy from '@/pages/PricingPolicy';
-import RefundPolicy from '@/pages/RefundPolicy';
 import NotFound from '@/pages/NotFound';
-import Reviews from '@/pages/Reviews'
+import PricingPolicy from '@/pages/PricingPolicy';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import RefundPolicy from '@/pages/RefundPolicy';
+import Reviews from '@/pages/Reviews';
+import TermsOfService from '@/pages/TermsOfService';
 
-export {HomePage, PricingPolicy, TermsOfService, PrivacyPolicy, RefundPolicy, NotFound, Reviews}
+export {
+  HomePage,
+  NotFound,
+  PricingPolicy,
+  PrivacyPolicy,
+  RefundPolicy,
+  Reviews,
+  TermsOfService,
+};
