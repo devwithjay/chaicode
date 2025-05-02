@@ -1,11 +1,8 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import {
-  motion,
-  useAnimation,
-  useInView,
-} from 'framer-motion';
+
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 import PricingCard from '@/components/ui/pricing-card';
 import { pricingData } from '@/constants';
@@ -69,7 +66,7 @@ const Pricing = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-8 transition-all duration-200 md:px-8 md:pt-12 lg:px-12 lg:pt-16 2xl:px-0"
+      className="mx-auto mt-8 flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 md:mt-12 md:px-8 lg:mt-16 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={titleVariants}
@@ -89,14 +86,10 @@ const Pricing = () => {
         variants={containerVariants}
         initial="hidden"
         animate={controls}
-        className="perspective-1000 mt-12 mb-12 grid grid-cols-1 gap-6 transition-all duration-200 sm:grid-cols-2 md:gap-8 lg:mt-16 lg:grid-cols-3"
+        className="perspective-1000 mt-12 mb-12 grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:mt-16 lg:grid-cols-3"
       >
         {pricingData.courses.map((course, index) => (
-          <motion.div
-            key={index}
-            variants={cardVariants}
-            className="w-full"
-          >
+          <motion.div key={index} variants={cardVariants} className="w-full">
             <div className="h-full w-full transition-all duration-300">
               <PricingCard
                 title={course.title}

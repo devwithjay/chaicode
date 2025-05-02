@@ -76,7 +76,7 @@ const Hero = () => {
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
       variants={containerVariants}
-      className="mx-auto bg-[var(--surface-primary)] pt-10 text-center md:pt-14 lg:pt-16"
+      className="mx-auto mt-10 bg-[var(--surface-primary)] text-center md:mt-14 lg:mt-16"
     >
       <motion.div
         variants={itemVariants}

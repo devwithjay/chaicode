@@ -66,7 +66,7 @@ const Mentors = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-12 transition-all duration-200 md:px-8 md:pt-16 lg:px-12 lg:pt-20 2xl:px-0"
+      className="mx-auto mt-12 flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 md:mt-16 md:px-8 lg:mt-20 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={headingVariants}
@@ -84,7 +84,7 @@ const Mentors = () => {
 
       <motion.div
         variants={carouselVariants}
-        className="mt-14 mb-8 w-full overflow-hidden rounded-2xl bg-[var(--surface-primary)] "
+        className="mt-14 mb-8 w-full overflow-hidden rounded-2xl bg-[var(--surface-primary)]"
       >
         <Carousel
           itemClassName="gap-4"

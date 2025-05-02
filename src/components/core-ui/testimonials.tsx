@@ -83,7 +83,7 @@ const Testimonials = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="flex flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] pt-12 md:pt-16 lg:pt-24"
+      className="mt-12 flex flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] md:mt-16 lg:mt-24"
     >
       <motion.h1
         variants={headingVariants}

@@ -50,7 +50,7 @@ const Community = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="mx-auto flex max-w-[1440px] flex-col items-center justify-between bg-[var(--surface-primary)] px-8 pt-10 md:px-8 md:pt-14 lg:px-12 lg:pt-20 2xl:px-0"
+      className="mx-auto mt-10 flex max-w-[1440px] flex-col items-center justify-between bg-[var(--surface-primary)] px-8 md:mt-14 md:px-8 lg:mt-20 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={headingVariants}

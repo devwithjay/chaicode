@@ -73,7 +73,7 @@ const Achievements = () => {
       initial="hidden"
       animate={controls}
       variants={containerVariants}
-      className="mx-auto flex flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] pt-12 md:pt-16 lg:pt-20"
+      className="mx-auto mt-12 flex flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] md:mt-16 lg:mt-20"
     >
       <motion.h1
         variants={headingVariants}

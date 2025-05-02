@@ -51,7 +51,7 @@ const YouTube = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-16 md:px-8 md:pt-20 lg:px-12 lg:pt-24 2xl:px-0"
+      className="mx-auto mt-16 flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 md:mt-20 md:px-8 lg:mt-24 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={headingVariants}

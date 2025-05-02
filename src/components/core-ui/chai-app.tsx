@@ -63,7 +63,7 @@ const ChaiApp = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 pt-16 md:px-8 md:pt-20 lg:px-12 lg:pt-24 2xl:px-0"
+      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center overflow-hidden bg-[var(--surface-primary)] px-8 mt-16 md:px-8 md:mt-20 lg:px-12 lg:mt-24 2xl:px-0"
     >
       <motion.div variants={headingVariants} className="text-center">
         <h1 className="text-[24px] leading-tight font-bold text-[var(--text-brand)] sm:text-[28px] md:text-[36px] lg:text-[44px]">

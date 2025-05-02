@@ -49,7 +49,7 @@ const TopicsCloud = () => {
       ref={ref}
       initial="hidden"
       animate={controls}
-      className="mx-auto flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 pt-6 md:px-8 md:pt-10 lg:px-12 lg:pt-18 2xl:px-0"
+      className="mx-auto mt-6 flex max-w-[1440px] flex-col items-center justify-center bg-[var(--surface-primary)] px-4 md:mt-10 md:px-8 lg:mt-18 lg:px-12 2xl:px-0"
     >
       <motion.h1
         variants={headingVariants}
