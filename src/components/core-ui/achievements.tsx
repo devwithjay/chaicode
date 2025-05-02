@@ -44,13 +44,13 @@ const subHeadingVariants = {
 };
 
 const productCardVariants = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, scale: 0.92 },
   visible: (index: number) => ({
     opacity: 1,
-    y: 0,
+    scale: 1,
     transition: {
-      duration: 0.6,
-      delay: 0.2 + index * 0.1,
+      duration: 0.8,
+      delay: 0.5 + (index % 5) * 0.08,
       ease: easing,
     },
   }),
