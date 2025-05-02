@@ -8,7 +8,7 @@ import {
 } from 'react-tweet';
 import { type Tweet, getTweet } from 'react-tweet/api';
 
-import FallbackImg from '@/assets/images/fallback-avatar.svg';
+import { FallbackImg } from '@/assets/images';
 import { cn } from '@/lib/utils';
 
 interface TwitterIconProps {
@@ -96,20 +96,29 @@ export const TweetNotFound = ({
   </div>
 );
 
+const isValidImage = (url: string): boolean => {
+  return /^https:\/\/pbs\.twimg\.com\/profile_images\//.test(url);
+};
+
 export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
   <div className="flex flex-row justify-between tracking-tight">
     <div className="flex items-center space-x-2 md:space-x-3">
       <a href={tweet.user.url} target="_blank" rel="noreferrer">
         <img
-          title={`Profile picture of ${tweet.user.name}`}
-          alt={tweet.user.screen_name}
-          height={48}
-          width={48}
+          src={
+            isValidImage(tweet.user.profile_image_url_https)
+              ? tweet.user.profile_image_url_https
+              : FallbackImg
+          }
           onError={(e) => {
             e.currentTarget.onerror = null;
             e.currentTarget.src = FallbackImg;
           }}
-          src={tweet.user.profile_image_url_https}
+          title={`Profile picture of ${tweet.user.name}`}
+          alt={tweet.user.screen_name}
+          height={48}
+          width={48}
+          loading='lazy'
           className="size-10 overflow-hidden rounded-full sm:size-11 md:size-12"
         />
       </a>

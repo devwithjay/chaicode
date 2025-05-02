@@ -6,9 +6,6 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  build: {
-    sourcemap: true,
-  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

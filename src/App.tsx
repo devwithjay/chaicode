@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-[var(--surface-primary)]">
+    <div className="bg-[var(--surface-primary)] overflow-x-hidden">
       <header className="sticky top-0 z-50 bg-[var(--surface-primary)]">
         <Navbar />
       </header>
