@@ -11,6 +11,7 @@ import {
   IoMenuOutline,
   IoPlayOutline,
 } from 'react-icons/io5';
+import { useLocation } from 'react-router-dom';
 
 import { ChaiCodeText, ChaiLogo } from '@/components/ui/icons';
 import ThemeToggler from '@/components/ui/theme-toggler';
@@ -41,10 +42,13 @@ const getIconForNavItem = (_item: NavItem, index: number) => {
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
+
+  const isExternal = (link: string) => !link.startsWith('/');
 
   return (
     <>
@@ -69,8 +73,13 @@ const Navbar = () => {
             >
               <a
                 href={item.link}
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 hover:text-[var(--text-primary)]"
+                target={isExternal(item.link) ? '_blank' : undefined}
+                rel={isExternal(item.link) ? 'noopener noreferrer' : undefined}
+                className={`flex items-center gap-1.5 ${
+                  location.pathname === item.link
+                    ? 'text-[var(--text-brand)]'
+                    : 'hover:text-[var(--text-primary)]'
+                }`}
                 aria-label={item.title}
               >
                 {getIconForNavItem(item, index)}
@@ -172,9 +181,17 @@ const Navbar = () => {
                   >
                     <a
                       href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 py-2 transition-transform hover:translate-x-1"
+                      target={isExternal(item.link) ? '_blank' : undefined}
+                      rel={
+                        isExternal(item.link)
+                          ? 'noopener noreferrer'
+                          : undefined
+                      }
+                      className={`flex items-center gap-2 py-2 transition-transform hover:translate-x-1 ${
+                        location.pathname === item.link
+                          ? 'text-[var(--text-brand)]'
+                          : ''
+                      }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {getIconForNavItem(item, index)}
@@ -214,6 +231,7 @@ const Navbar = () => {
           )}
         </AnimatePresence>
       </nav>
+
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

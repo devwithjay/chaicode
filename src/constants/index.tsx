@@ -271,7 +271,7 @@ export const navlinks: Navlinks = [
   },
   {
     title: 'Docs',
-    link: 'https://www.chaidocs.com',
+    link: 'https://chaidocs.vercel.app/',
   },
   {
     title: 'Reviews',
