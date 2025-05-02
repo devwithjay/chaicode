@@ -68,7 +68,7 @@ export const WhyChaiCodeFeatured = ({
   return (
     <div className="flex h-full flex-col gap-6 rounded-xl border border-[var(--border-primary)] bg-[var(--surface-secondary)] shadow-md hover:border-[var(--text-brand)] hover:shadow-lg">
       <div className="w-full overflow-hidden rounded-t-xl">
-        <img src={imageUrl} alt={name} className="h-auto w-full object-cover" />
+        <img src={imageUrl} alt={name} loading='lazy' className="h-auto w-full object-cover" />
       </div>
       <div className="flex flex-grow flex-col px-6 pb-6">
         <h3 className="mb-3 text-[24px] font-bold text-[var(--text-brand)] md:mb-4 md:text-[26px]">

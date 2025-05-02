@@ -35,6 +35,7 @@ export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
               <img
                 src={benefit.imageUrl || '/api/placeholder/400/300'}
                 alt={benefit.title}
+                loading="lazy"
                 className="h-auto w-full object-cover opacity-90"
               />
             </div>
@@ -66,6 +67,7 @@ export function BenefitsCard({ benefits, alumni }: BenefitsCardProps) {
                   <img
                     src={url}
                     alt={`Alumni ${i + 1}`}
+                    loading="lazy"
                     className="size-full object-cover"
                   />
                 </a>

@@ -141,11 +141,13 @@ const ChaiApp = () => {
             <motion.img
               src={appData.androidImageUrl}
               alt="Android Mockup"
+              loading='lazy'
               className="absolute top-8 left-6 w-[230px] -rotate-6 rounded-2xl object-cover transition-transform duration-300 group-hover:-translate-y-2 group-hover:-rotate-2 lg:w-[280px]"
             />
             <motion.img
               src={appData.iphoneImageUrl}
               alt="iPhone Mockup"
+              loading='lazy'
               className="rounded-5xl absolute top-0 right-6 z-10 w-[230px] -rotate-6 object-cover transition-transform duration-300 group-hover:-translate-y-2 group-hover:-rotate-2 lg:w-[280px]"
             />
           </motion.div>

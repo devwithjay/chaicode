@@ -118,7 +118,7 @@ export const TweetHeader = ({ tweet }: { tweet: EnrichedTweet }) => (
           alt={tweet.user.screen_name}
           height={48}
           width={48}
-          loading='lazy'
+          loading="lazy"
           className="size-10 overflow-hidden rounded-full sm:size-11 md:size-12"
         />
       </a>
@@ -210,6 +210,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => (
             src={photo.url}
             title={'Photo by ' + tweet.user.name}
             alt={tweet.text}
+            loading="lazy"
             className="mx-auto h-auto max-h-48 w-full shrink-0 snap-center snap-always rounded-xl object-cover shadow-sm md:rounded-2xl"
           />
         ))}

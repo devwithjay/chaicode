@@ -51,6 +51,7 @@ export function MentorCard({
         <motion.img
           src={image}
           alt={name}
+          loading='lazy'
           className="pointer-events-none size-full object-cover select-none"
           animate={isOpen ? 'expanded' : 'collapsed'}
           variants={imageVariants}

@@ -200,6 +200,7 @@ export const TweetMedia = ({ tweet }: { tweet: EnrichedTweet }) => {
               src={photo.url}
               title={'Photo by ' + tweet.user.name}
               alt={tweet.text}
+              loading='lazy'
               className="h-auto w-full rounded-lg object-cover shadow-sm"
             />
           ))}

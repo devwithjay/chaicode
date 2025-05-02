@@ -96,6 +96,7 @@ const Community = () => {
             <img
               src={communityData.imageUrl}
               alt="Community"
+              loading='lazy'
               className="h-auto w-full object-cover"
             />
           </motion.div>

@@ -194,6 +194,7 @@ const Hero = () => {
               title="YouTube Video"
               allow="autoplay; encrypted-media"
               allowFullScreen
+              loading='lazy'
               className="h-full w-full rounded-lg"
             ></iframe>
             <button
