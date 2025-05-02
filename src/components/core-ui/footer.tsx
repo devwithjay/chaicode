@@ -76,7 +76,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:gap-16">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:gap-16">
           <div className="flex flex-col gap-2">
             <h1 className="mb-1.5 text-sm font-semibold text-[var(--text-primary)] sm:text-lg md:mb-3">
               {footerData.products.title}

@@ -7,14 +7,22 @@ import './App.css';
 
 function App() {
   return (
-    <div className="bg-[var(--surface-primary)] overflow-x-hidden">
-      <header className="sticky top-0 z-50 bg-[var(--surface-primary)]">
+    <div className="bg-[var(--surface-primary)]">
+      <header className="sticky top-0 left-0 z-40 bg-[var(--surface-primary)]">
         <Navbar />
       </header>
-      <main className="flex-1">
+      <main
+        className="flex-1 overflow-x-hidden"
+        style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+        }}
+      >
         <Outlet />
       </main>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }
