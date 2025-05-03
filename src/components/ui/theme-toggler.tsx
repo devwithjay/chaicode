@@ -4,6 +4,8 @@ import { MoonIcon, SunIcon } from '@/assets/icons';
 
 const ThemeToggler = () => {
   const getInitialTheme = () => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) return storedTheme;
     const prefersDark = window.matchMedia(
       '(prefers-color-scheme: dark)',
     ).matches;
@@ -15,6 +17,7 @@ const ThemeToggler = () => {
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme); 
   }, [theme]);
 
   const handleThemeSwitch = () => {
@@ -33,7 +36,7 @@ const ThemeToggler = () => {
         src={theme === 'dark' ? SunIcon : MoonIcon}
         alt="ThemeToggler"
         onClick={handleThemeSwitch}
-        className="cursor-pointer size-5 md:size-6"
+        className="size-5 cursor-pointer md:size-6"
         style={rotationStyle}
       />
     </div>
