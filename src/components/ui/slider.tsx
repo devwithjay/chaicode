@@ -111,7 +111,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
             className="flex cursor-pointer items-center justify-center p-1 text-[var(--text-brand)] disabled:text-gray-400 md:p-2"
             disabled={currentIndex === 0}
           >
-            <ChevronLeftIcon className="size-6 md:size-8" />
+            <ChevronLeftIcon className="size-6 transition-all duration-200 md:size-8" />
           </button>
 
           <div className="flex items-center justify-center gap-4 p-2">
@@ -119,7 +119,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
               <button
                 key={index}
                 onClick={() => scrollToIndex(index)}
-                className={`size-2 cursor-pointer rounded-full ${
+                className={`size-2 cursor-pointer rounded-full transition-all duration-200 ${
                   currentIndex === index
                     ? 'scale-125 bg-[var(--text-brand)]'
                     : 'scale-100 bg-gray-400'
@@ -135,7 +135,7 @@ const Slider = ({ children, className, itemClassName }: SliderProps) => {
             className="flex cursor-pointer items-center justify-center p-1 text-[var(--text-brand)] disabled:text-gray-400 md:p-2"
             disabled={currentIndex >= totalItems - 1}
           >
-            <ChevronRightIcon className="size-6 md:size-8" />
+            <ChevronRightIcon className="size-6 transition-all duration-200 md:size-8" />
           </button>
         </div>
       </div>
